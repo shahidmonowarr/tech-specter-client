@@ -1,0 +1,13 @@
+.banner {
+    background: linear-gradient(#000000b3, #000000ab),
+      url("https://i.ibb.co/gtPQ7Qk/african-business-male-people-shaking-hands-1.jpg");
+    background-attachment: fixed;
+    font-family: 'Alfa Slab One', cursive;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }

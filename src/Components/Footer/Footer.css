@@ -1,0 +1,25 @@
+.icon{
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    color: rgb(252, 249, 249);
+    font-size: 30px;
+}
+.footer-container{
+    bottom: 0;
+    background-color: rgb(30, 36, 30);
+    padding: 50px;
+    color: rgb(235, 227, 227);
+}
+
+.footer-menu{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.footer-menu:hover{
+    color: blue;
+}
+
