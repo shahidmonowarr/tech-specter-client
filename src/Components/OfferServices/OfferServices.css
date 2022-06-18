@@ -6,6 +6,10 @@
 .offer-button:hover{
     background-color: #850101;
 }
+.offer-button a{
+    text-decoration: none;
+    color: #fff;
+}
 
 .spec{
     display:flex;

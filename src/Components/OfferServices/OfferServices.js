@@ -2,12 +2,16 @@ import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import service1 from '../../images/blood-concept.jpg';
 import service2 from '../../images/travel-concept.jpg';
+import service3 from '../../images/delivery-concept.jpg';
 import ib1 from '../../images/blood-analysis.png';
 import ib2 from '../../images/blood-transfusion.png';
 import ib3 from '../../images/blood-bag.png';
 import it1 from '../../images/calendar.png';
 import it2 from '../../images/pickup.png';
 import it3 from '../../images/tool.png';
+import if1 from '../../images/fast-food.png';
+import if2 from '../../images/best-cook.png';
+import if3 from '../../images/fast-delivery.png';
 import './OfferServices.css';
 
 const OfferServices = () => {
@@ -55,9 +59,8 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Blood Bag</h5>
                             </div>
                             <div className='mt-2'>
-                                <Button className='px-5 offer-button'>Read More</Button>
+                                <Button className='px-5 offer-button'><a target="_blank" href='https://medipharma-health-care.web.app/'>Read More</a></Button>
                             </div>
-
                         </div>
                     </Col>
                 </Row>
@@ -105,9 +108,57 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Tent Benefit</h5>
                             </div>
                             <div className='mt-2'>
-                                <Button className='px-5 offer-button'>Read More</Button>
+                                <Button className='px-5 offer-button'><a target="_blank" href='https://travel-booking-website-b1db8.web.app/'>Read More</a></Button>
                             </div>
 
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div> 
+
+        {/* Food delivery Section   */}
+          <div className='py-5'>
+            <Container >
+                <Row spacing={10}>
+                    <Col sm={12} md={5} lg={5}>
+                        <div className="drone-wrapper">
+                            <div className="drone-media">
+                                <img src={service3} alt="" />
+                            </div>
+                            <div className="drone-info">
+                                <span>FOOD</span>
+                                <strong>For Delivery</strong>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col sm={12} md={7} lg={7}>
+                        <div className='text-start'>
+                            <div sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                <div className="dash" ></div>
+                                <h5   color="#D72323" >About</h5>
+
+                            </div>
+                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Specializing in Drone Services
+                                <br />    and Aerial Photography</h1>
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>There are many variations of passages of drone size available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
+                                Let you shine on darkness and follow your path where ever you go. It comes with GPS tracker and motion sensor so that you don't get lose.
+                            </p>
+                            <div className='spec mb-2'>
+                                <img width="45px" src={if1} alt="" />
+                                <h5 className='ps-2'>Fast Food</h5>
+                            </div>
+                            <div className='spec mb-3'>
+                                <img width="45px" src={if2} alt="" />
+                                <h5 className='ps-2'>Best Cook</h5>
+                            </div>
+                            <div className='spec mb-3'>
+                                <img width="45px" src={if3} alt="" />
+                                <h5 className='ps-2'>Fast Delivery</h5>
+                            </div>
+                            <div className='mt-2'>
+                                <Button className='px-5 offer-button'><a target="_blank" href='https://foodsense-c7769.firebaseapp.com/'>Read More</a></Button>
+                            </div>
                         </div>
                     </Col>
                 </Row>
