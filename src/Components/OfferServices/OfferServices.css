@@ -1,0 +1,90 @@
+.offer-button{
+    background-color: #D11F1F;
+    font-weight: 500;
+    border: none;
+}
+.offer-button:hover{
+    background-color: #850101;
+}
+
+.spec{
+    display:flex;
+    gap: 3;
+    align-items: center;
+}
+.spec img{
+    width: 45px;
+}
+
+.drone-wrapper::before{
+    content: '';
+    left: 0;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    width: 210px;
+    height: 180px;
+    background-color: #d72323;
+}
+.drone-wrapper{
+    padding: 20px 60px 60px 20px;
+    position: relative;
+    z-index: 1;
+}
+.drone-wrapper::after{
+    content: '';
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    width: 40%;
+    height: 60%;
+}
+
+.drone-media img{
+    width: 100%;
+    height: 460px;
+}
+
+.drone-info::after{
+    position: absolute;
+    right: 0;
+    top: -30px;
+    content: '';
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #801414;
+    border-right: 30px solid transparent;
+    box-sizing: border-box;
+}
+.drone-info{
+    position: absolute;
+    text-align: right;
+    bottom: 30px;
+    right: 30px;
+    background-color: #d72323;
+    padding: 20px;
+}
+.drone-info span{
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 60px;
+    display: block;
+}
+.drone-info strong{
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: block;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+.dash{
+    height: 4px;
+    width: 30px;
+    background: #d72323;
+}
