@@ -137,8 +137,8 @@ const OfferServices = () => {
                                 <h5   color="#D72323" >About</h5>
 
                             </div>
-                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Specializing in Drone Services
-                                <br />    and Aerial Photography</h1>
+                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>More than anything, having fresh food 
+                                <br />    brought to you is convenient.</h1>
                             <p  sx={{ width: { xs: 1, sm: '80%' } }}>The very first thing we would say here is people nowadays are rapidly coping up with the progressive world's updated technology day to day and when they have an option to order their favourite  food with a single click, why wouldn't they?we mean it is a very easy to get the food delivered at your door step.
                             </p>
                             <div className='spec mb-2'>
