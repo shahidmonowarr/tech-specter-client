@@ -3,6 +3,7 @@ import Footer from './Components/Footer/Footer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Header from './Components/Header/Header';
+import OfferServices from './Components/OfferServices/OfferServices';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home></Home>
+        </Route>
+        <Route path="/services">
+          <OfferServices></OfferServices>
         </Route>
         <Route></Route>
       </Switch>

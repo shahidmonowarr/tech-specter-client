@@ -41,10 +41,9 @@ const OfferServices = () => {
                                 <h5   color="#D72323" >About</h5>
 
                             </div>
-                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Specializing in Drone Services
-                                <br />    and Aerial Photography</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>There are many variations of passages of drone size available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-                                Let you shine on darkness and follow your path where ever you go. It comes with GPS tracker and motion sensor so that you don't get lose.
+                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Encourage your friends and family to become 
+                                <br />    Regular blood donors</h1>
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>Volunteer with the blood service to reach out to members of your community, provide care to donors, and help manage blood donation sessions/drives. Find out your blood type and register as a blood donor
                             </p>
                             <div className='spec mb-2'>
                                 <img width="45px" src={ib1} alt="" />
@@ -90,10 +89,9 @@ const OfferServices = () => {
                                 <h5   color="#D72323" >About</h5>
 
                             </div>
-                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Specializing in Drone Services
-                                <br />    and Aerial Photography</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>There are many variations of passages of drone size available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-                                Let you shine on darkness and follow your path where ever you go. It comes with GPS tracker and motion sensor so that you don't get lose.
+                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Best travel agency websites are a great source of information for travelers
+                                <br />  We are here for you.</h1>
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Travelling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others.
                             </p>
                             <div className='spec mb-2'>
                                 <img width="45px" src={it1} alt="" />
@@ -141,8 +139,7 @@ const OfferServices = () => {
                             </div>
                             <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Specializing in Drone Services
                                 <br />    and Aerial Photography</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>There are many variations of passages of drone size available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-                                Let you shine on darkness and follow your path where ever you go. It comes with GPS tracker and motion sensor so that you don't get lose.
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>The very first thing we would say here is people nowadays are rapidly coping up with the progressive world's updated technology day to day and when they have an option to order their favourite  food with a single click, why wouldn't they?we mean it is a very easy to get the food delivered at your door step.
                             </p>
                             <div className='spec mb-2'>
                                 <img width="45px" src={if1} alt="" />
