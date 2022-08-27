@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import service1 from '../../images/blood-concept.jpg';
 import service2 from '../../images/travel-concept.jpg';
 import service3 from '../../images/delivery-concept.jpg';
 import ib1 from '../../images/blood-analysis.png';
@@ -18,8 +17,8 @@ const OfferServices = () => {
     return (
         <div>
             <h1 className='mt-5'>Services we provide</h1>
-            {/* Blood section  */}
-
+        
+        {/* Blood section 
           <div className='py-5'>
             <Container >
                 <Row spacing={10}>
@@ -56,6 +55,54 @@ const OfferServices = () => {
                             <div className='spec mb-3'>
                                 <img width="45px" src={ib3} alt="" />
                                 <h5 className='ps-2'>Blood Bag</h5>
+                            </div>
+                            <div className='mt-2'>
+                                <Button className='px-5 offer-button'><a target="_blank" href='https://medipharma-health-care.web.app/'>Read More</a></Button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
+        </div>  */}
+
+        {/* Courses section  */}
+        <div className='py-5'>
+            <Container >
+                <Row spacing={10}>
+                    <Col sm={12} md={5} lg={5}>
+                        <div className="drone-wrapper">
+                            <div className="drone-media">
+                                <img src="https://i.ibb.co/YL1ZwG1/happy-entrepreneur-analyzing-business-chart-during-web-conference-home.jpg" alt="" />
+                            </div>
+                            <div className="drone-info">
+                                <span>Courses</span>
+                                <strong>For Programmers</strong>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col sm={12} md={7} lg={7}>
+                        <div className='text-start'>
+                            <div sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                <div className="dash" ></div>
+                                <h5   color="#D72323" >About</h5>
+
+                            </div>
+                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Develop your career with amazing resources 
+                                <br />    Grab your best courses</h1>
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>Volunteer with the blood service to reach out to members of your community, provide care to donors, and help manage blood donation sessions/drives. Find out your blood type and register as a blood donor
+                            </p>
+                            <div className='spec mb-2'>
+                                <img width="45px" src={ib1} alt="" />
+                                <h5 className='ps-2'>Web Development</h5>
+                            </div>
+                            <div className='spec mb-3'>
+                                <img width="45px" src={ib2} alt="" />
+                                <h5 className='ps-2'>Mobile Development</h5>
+                            </div>
+                            <div className='spec mb-3'>
+                                <img width="45px" src={ib3} alt="" />
+                                <h5 className='ps-2'>Graphics Design</h5>
                             </div>
                             <div className='mt-2'>
                                 <Button className='px-5 offer-button'><a target="_blank" href='https://medipharma-health-care.web.app/'>Read More</a></Button>
@@ -116,7 +163,7 @@ const OfferServices = () => {
         </div> 
 
         {/* Food delivery Section   */}
-          <div className='py-5'>
+          {/* <div className='py-5'>
             <Container >
                 <Row spacing={10}>
                     <Col sm={12} md={5} lg={5}>
@@ -160,7 +207,7 @@ const OfferServices = () => {
                     </Col>
                 </Row>
             </Container>
-        </div> 
+        </div>  */}
         </div>
     );
 };
