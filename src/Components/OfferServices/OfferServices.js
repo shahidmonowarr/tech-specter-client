@@ -8,9 +8,6 @@ import ib3 from '../../images/blood-bag.png';
 import it1 from '../../images/calendar.png';
 import it2 from '../../images/pickup.png';
 import it3 from '../../images/tool.png';
-import if1 from '../../images/fast-food.png';
-import if2 from '../../images/best-cook.png';
-import if3 from '../../images/fast-delivery.png';
 import './OfferServices.css';
 
 const OfferServices = () => {

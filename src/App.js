@@ -4,6 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Header from './Components/Header/Header';
 import OfferServices from './Components/OfferServices/OfferServices';
+import Login from './Pages/Login/Login/Login';
+import NotFound from './Pages/NotFound/NotFound';
+import Register from './Pages/Login/Register/Register';
 
 function App() {
   return (
@@ -20,7 +23,15 @@ function App() {
         <Route path="/services">
           <OfferServices></OfferServices>
         </Route>
-        <Route></Route>
+        <Route path="/login">
+          <Login></Login>
+        </Route>
+        <Route path="/register">
+          <Register></Register>
+        </Route>
+        <Route path="*">
+          <NotFound></NotFound>
+        </Route>
       </Switch>
       <Footer></Footer> 
       </BrowserRouter>
