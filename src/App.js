@@ -1,12 +1,13 @@
 import './App.css';
-import Footer from './Components/Footer/Footer';
+import Footer from './Components/Shared/Footer/Footer';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './Pages/Home/Home';
-import Header from './Components/Header/Header';
+import Header from './Components/Shared/Header/Header';
 import OfferServices from './Components/OfferServices/OfferServices';
 import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Login/Register/Register';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}/>
         <Route path="home" element={<Home></Home>}/>
-        <Route path="services" element={<OfferServices/>}/>
+        <Route path="services" element={
+          <RequireAuth>
+            <OfferServices/>
+          </RequireAuth>
+        }/>
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
         <Route path="*" element={<NotFound/>}/>

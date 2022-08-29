@@ -2,10 +2,11 @@
     display: flex;
 }
 .logo img{
-    width: 10%;
+    width: 8%;
 }
 .logo h5{
     padding-top: 5px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
 }
+

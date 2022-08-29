@@ -1,9 +1,47 @@
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from 'mdb-react-ui-kit';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { useForm } from 'react-hook-form';
+import { Spinner } from 'react-bootstrap';
+import Loading from '../../../Components/Shared/Loading/Loading';
+
 
 const Login = () => {
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  let signInError;
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
+
+  if(loading || gLoading){
+    return <Loading></Loading>
+  }
+
+  if(error || gError){
+    signInError= <p className='text-danger mt-1'><small>{error?.message || gError?.message}</small></p>
+  }
+
+  if(user || gUser){
+    navigate(from, {replace: true});
+  }
+
+  const onSubmit = data => {
+    signInWithEmailAndPassword(data.email, data.password);
+  }
+
     return (
         <div>
             <MDBContainer className="my-5">
@@ -24,19 +62,67 @@ const Login = () => {
         </div>
 
         <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>SignIn to your account</h5>
+        <form onSubmit={handleSubmit(onSubmit)}>
 
-          <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>
-          <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
 
-        <MDBBtn className="mb-4 px-5" color='dark' size='lg'>Login</MDBBtn>
+          {/* for email */}
+          <div>
+           <div className='text-start ms-5'> <label >Email</label><br/></div>
+          <input ClassName='mb-2'
+          placeholder='Enter Your Email'
+          style={{ width: '82%', marginBottom: '10px', borderRadius: '8px', height:'40px' }}
+          label='Email address' 
+          id='formControlLg' 
+          type='email' 
+          {...register("email",  {
+            required:{
+              value: true,
+              message: 'email is required'
+            },
+            pattern: {
+              value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+            message: 'Provide a valid Email'}
+          })}
+          size="lg"/>
+          <label className='label mb-2 text-danger'>
+          {errors.email?.type === 'required' && <span className='label-text-alt text-red'>{errors.email.message}</span>}
+          {errors.email?.type === 'pattern' && <span className='label-text-alt text-red'>{errors.email.message}</span>}
+          </label>
+          </div>
+
+          {/* for password */}
+          <div>
+          <div className='text-start ms-5'> <label >Password</label></div>
+          <input  
+          className='mb-2' 
+          placeholder='Enter Your Password'
+          style={{ width: '82%', marginBottom: '20px', borderRadius: '8px', height:'40px' }} 
+          id='formControlLg' type='password'
+          {...register("password",  {
+            required:{
+              value: true,
+              message: 'password is required'
+            },
+            minLength:{
+              value: 6,
+              message: 'Must be 6 characters or longer'
+          }})} 
+          size="lg"/>
+          <label className='label mb-2 text-danger'>
+          {errors.password?.type === 'required' && <span className='label-text-alt text-red'>{errors.password.message}</span>}
+          {errors.password?.type === 'minLength' && <span className='label-text-alt text-red'>{errors.password.message}</span>}
+          </label>
+          </div>
+
+          {signInError}
+        <input type="submit" value="Login" className="mb-4 px-5" style={{ backgroundColor: 'black', color:'whitesmoke', fontWeight:'bolder',width: '82%', marginBottom: '20px', borderRadius: '8px', height:'40px'  }}/>
+        </form>
+
         <a className="small text-muted" href="#!">Forgot password?</a>
         <p className="mb-2 pb-lg-2" style={{color: 'black'}}>Don't have an account? <span   ><Link style={{color: '#393f81',fontWeight:'bold'}} to="/register">Register here</Link> </span></p>
-        <p>Or SignIn with:</p>
 
-                {/* <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='facebook-f' size="sm"/>
-                </MDBBtn> */}
-                <MDBBtn className="mb-2 mx-auto w-30" size="lg" style={{backgroundColor: '#dd4b39'}}>
+        <p>Or SignIn with:</p>
+                <MDBBtn onClick={() => signInWithGoogle()} className="mb-2 mx-auto w-30" size="lg" style={{backgroundColor: '#dd4b39'}} >
                 <MDBIcon fab icon="google" style={{ color: '#f6ca64', fontWeight:'bold' }} className="mx-2"/>
                 google
               </MDBBtn>

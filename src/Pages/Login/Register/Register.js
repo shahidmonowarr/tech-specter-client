@@ -1,8 +1,47 @@
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from 'mdb-react-ui-kit';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBRow } from 'mdb-react-ui-kit';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import { useForm } from 'react-hook-form';
+import Loading from '../../../Components/Shared/Loading/Loading';
 
 const Register = () => {
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const navigate = useNavigate();
+
+  let signInError;
+
+  if(loading || gLoading || updating){
+    return <Loading></Loading>
+  }
+
+  if(error || gError || updateError){
+    signInError= <p className='text-danger mt-1'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+  }
+
+  if(user || gUser){
+    console.log(user || gUser);
+  }
+
+  const onSubmit = async data => {
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({displayName: data.name});
+    console.log('update done');
+    navigate('/home');
+  }
+
     return (
         <div>
             <MDBContainer className="my-5">
@@ -24,27 +63,84 @@ const Register = () => {
 
         <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>SignUp to your account</h5>
 
-        <MDBRow>
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
-                </MDBCol>
+        <form onSubmit={handleSubmit(onSubmit)}>
 
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
-                </MDBCol>
-              </MDBRow>
-          <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>
-          <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
+          {/* for name */}
+          <div>
+           <div className='text-start ms-5'> <label >Name</label><br/></div>
+          <input ClassName='mb-2'
+          placeholder='Enter Your Name'
+          style={{ width: '82%', marginBottom: '10px', borderRadius: '8px', height:'40px' }}
+           
+          type='text' 
+          {...register("name",  {
+            required:{
+              value: true,
+              message: 'name is required'
+            }})}
+          size="lg"/>
+          <label className='label mb-2 text-danger'>
+          {errors.name?.type === 'required' && <span className='label-text-alt text-red'>{errors.name.message}</span>}
+          </label>
+          </div>
 
-        <MDBBtn className="mb-4 px-5" color='dark' size='lg'>SIGN UP</MDBBtn>
+          {/* for email */}
+          <div>
+           <div className='text-start ms-5'> <label >Email</label><br/></div>
+          <input ClassName='mb-2'
+          placeholder='Enter Your Email'
+          style={{ width: '82%', marginBottom: '10px', borderRadius: '8px', height:'40px' }}
+          label='Email address' 
+          id='formControlLg' 
+          type='email' 
+          {...register("email",  {
+            required:{
+              value: true,
+              message: 'email is required'
+            },
+            pattern: {
+              value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+            message: 'Provide a valid Email'}
+          })}
+          size="lg"/>
+          <label className='label mb-2 text-danger'>
+          {errors.email?.type === 'required' && <span className='label-text-alt text-red'>{errors.email.message}</span>}
+          {errors.email?.type === 'pattern' && <span className='label-text-alt text-red'>{errors.email.message}</span>}
+          </label>
+          </div>
+
+          {/* for password */}
+          <div>
+          <div className='text-start ms-5'> <label >Password</label></div>
+          <input  
+          className='mb-2' 
+          placeholder='Enter Your Password'
+          style={{ width: '82%', marginBottom: '20px', borderRadius: '8px', height:'40px' }} 
+          id='formControlLg' type='password'
+          {...register("password",  {
+            required:{
+              value: true,
+              message: 'password is required'
+            },
+            minLength:{
+              value: 6,
+              message: 'Must be 6 characters or longer'
+          }})} 
+          size="lg"/>
+          <label className='label mb-2 text-danger'>
+          {errors.password?.type === 'required' && <span className='label-text-alt text-red'>{errors.password.message}</span>}
+          {errors.password?.type === 'minLength' && <span className='label-text-alt text-red'>{errors.password.message}</span>}
+          </label>
+          </div>
+
+          {signInError}
+        <input type="submit" value="SignUp" className="mb-4 px-5" style={{ backgroundColor: 'black', color:'whitesmoke', fontWeight:'bolder',width: '82%', marginBottom: '20px', borderRadius: '8px', height:'40px'  }}/>
+        </form>
+
         <p className="mb-2 pb-lg-2" style={{color: 'black'}}>Already have an account? <span   ><Link style={{color: '#393f81',fontWeight:'bold'}} to="/login">Login here</Link> </span></p>
         <p>Or SignUp with:</p>
 
-                {/* <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='facebook-f' size="sm"/>
-                </MDBBtn> */}
-
-            <MDBBtn className="mb-2 mx-auto w-30" size="lg" style={{backgroundColor: '#dd4b39'}}>
+            <MDBBtn onClick={() => signInWithGoogle()} className="mb-2 mx-auto w-30" size="lg" style={{backgroundColor: '#dd4b39'}}>
                 <MDBIcon fab icon="google" style={{ color: '#f6ca64', fontWeight:'bold' }} className="mx-2"/>
                 google
               </MDBBtn>
