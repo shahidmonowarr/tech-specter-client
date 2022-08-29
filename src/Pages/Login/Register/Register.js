@@ -1,5 +1,6 @@
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from 'mdb-react-ui-kit';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
@@ -36,6 +37,7 @@ const Register = () => {
           <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
 
         <MDBBtn className="mb-4 px-5" color='dark' size='lg'>SIGN UP</MDBBtn>
+        <p className="mb-2 pb-lg-2" style={{color: 'black'}}>Already have an account? <span   ><Link style={{color: '#393f81',fontWeight:'bold'}} to="/login">Login here</Link> </span></p>
         <p>Or SignUp with:</p>
 
                 {/* <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>

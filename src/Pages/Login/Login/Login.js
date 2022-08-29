@@ -1,5 +1,6 @@
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from 'mdb-react-ui-kit';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -29,7 +30,7 @@ const Login = () => {
 
         <MDBBtn className="mb-4 px-5" color='dark' size='lg'>Login</MDBBtn>
         <a className="small text-muted" href="#!">Forgot password?</a>
-        <p className="mb-2 pb-lg-2" style={{color: 'black'}}>Don't have an account? <a href="#!" style={{color: '#393f81',fontWeight:'bold'}}>Register here</a></p>
+        <p className="mb-2 pb-lg-2" style={{color: 'black'}}>Don't have an account? <span   ><Link style={{color: '#393f81',fontWeight:'bold'}} to="/register">Register here</Link> </span></p>
         <p>Or SignIn with:</p>
 
                 {/* <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>

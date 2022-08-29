@@ -1,6 +1,6 @@
 import './App.css';
 import Footer from './Components/Footer/Footer';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Header from './Components/Header/Header';
 import OfferServices from './Components/OfferServices/OfferServices';
@@ -13,26 +13,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header></Header>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path="/services">
-          <OfferServices></OfferServices>
-        </Route>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="/register">
-          <Register></Register>
-        </Route>
-        <Route path="*">
-          <NotFound></NotFound>
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home></Home>}/>
+        <Route path="home" element={<Home></Home>}/>
+        <Route path="services" element={<OfferServices/>}/>
+        <Route path="login" element={<Login/>}/>
+        <Route path="register" element={<Register/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
       <Footer></Footer> 
       </BrowserRouter>
     </div>

@@ -6,7 +6,7 @@ import './Home.css';
 
 const Home = () => {
     return (
-        <div>
+        <div id='home'>
             <Banner></Banner>
             <OfferServices></OfferServices>
             <Contact></Contact>

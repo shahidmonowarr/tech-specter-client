@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import logo from '../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
     return (
-        <Navbar bg="dark" variant='dark' expand="lg">
+        <Navbar bg="dark" variant='dark'sticky='top' expand="lg">
       <Container>
         <Navbar.Brand href="#home">
             <div className='logo'>
@@ -24,6 +25,7 @@ const Header = () => {
               <NavDropdown.Item className='fw-bold' href="#action/3.1">Travel</NavDropdown.Item>
               <NavDropdown.Item className='fw-bold' href="#action/3.1">Action</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={HashLink} to="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
