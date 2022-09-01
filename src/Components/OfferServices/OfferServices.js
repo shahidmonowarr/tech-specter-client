@@ -9,6 +9,7 @@ import it1 from '../../images/calendar.png';
 import it2 from '../../images/pickup.png';
 import it3 from '../../images/tool.png';
 import './OfferServices.css';
+import { Link } from 'react-router-dom';
 
 const OfferServices = () => {
     return (
@@ -102,7 +103,10 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Graphics Design</h5>
                             </div>
                             <div className='mt-2'>
-                                <Button className='px-5 offer-button'><a target="_blank" href='https://medipharma-health-care.web.app/'>Read More</a></Button>
+                            <Link to='allCourses'>
+                                <Button className='px-5 offer-button'>Read More</Button>
+                            </Link>
+                                
                             </div>
                         </div>
                     </Col>

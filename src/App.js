@@ -8,6 +8,9 @@ import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import AddCourse from './Pages/Dashboard/AddCourse/AddCourse';
+import AllCourses from './Pages/CoursesPage/AllCourses/AllCourses';
+import SingleCourse from './Pages/CoursesPage/SingleCourse/SingleCourse';
 
 function App() {
   return (
@@ -22,6 +25,13 @@ function App() {
             <OfferServices/>
           </RequireAuth>
         }/>
+        <Route path="addCourse" element={
+          <RequireAuth>
+            <AddCourse/>
+          </RequireAuth>
+        }/>
+        <Route path="allCourses" element={<AllCourses/>}/>
+        <Route path="singleCourse" element={<SingleCourse/>}/>
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
         <Route path="*" element={<NotFound/>}/>
