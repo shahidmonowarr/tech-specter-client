@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.0.3",
     "react-hook-form": "^7.34.2",
+    "react-rating": "^2.0.5",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",

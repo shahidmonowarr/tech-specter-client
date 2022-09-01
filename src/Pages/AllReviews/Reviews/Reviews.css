@@ -1,0 +1,58 @@
+.reviews {
+    background: aliceblue;
+    height: auto;
+  }
+  
+  .reviews > div {
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  
+  .review-title h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #444;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .review-title {
+    text-align: center;
+  }
+  
+  .reviews .card {
+    background: #fff;
+    box-shadow: 0 8px 30px 7px #c9dff0;
+    min-height: 340px;
+    padding: 0 10px 10px;
+    border-radius: 20px;
+    border: 0;
+  }
+  
+  .reviews .card h5 {
+    color: #ed5217;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  
+  .reviews .card h5 span {
+    font-size: 18px;
+    color: #666666;
+  }
+  
+  .reviews .card p {
+    font-size: 18px;
+    color: #777;
+    padding-bottom: 15px;
+  }
+
+  .reviews .card .img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    box-shadow: 0 8px 20px -4px #95abbb;
+    width: 100px;
+    height: 100px;
+  }
