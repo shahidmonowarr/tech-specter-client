@@ -18,18 +18,18 @@ const Header = () => {
     return (
         <Navbar bg="dark" variant='dark'sticky='top' expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={HashLink} to="/home">
             <div className='logo'>
             <img width="30px" src={logo} alt="" />
             <h5>TECH SPECTER</h5>
             </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
             <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
-            <Nav.Link as={HashLink} to="/services">services</Nav.Link>
+            <Nav.Link as={HashLink} to="/services">Services</Nav.Link>
             {/* <NavDropdown title="Services" id="basic-nav-dropdown">
               <NavDropdown.Item className='fw-bold' href="#action/3.1">Blood</NavDropdown.Item>
               <NavDropdown.Item className='fw-bold' href="#action/3.1">Travel</NavDropdown.Item>

@@ -24,7 +24,7 @@ const Reviews = () => {
     className="reviews p-md-3"
   >
 
-      <div className="mb-5 py-4">
+      <div className="container mb-5 py-4">
         <div className="review-title text-center">
           <h2>
             Review

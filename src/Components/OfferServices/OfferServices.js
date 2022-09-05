@@ -103,7 +103,7 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Graphics Design</h5>
                             </div>
                             <div className='mt-2'>
-                            <Link to='allCourses'>
+                            <Link to='/allCourses'>
                                 <Button className='px-5 offer-button'>Read More</Button>
                             </Link>
                                 
