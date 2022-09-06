@@ -28,6 +28,7 @@ const AddCourse = () => {
                 <input {...register("name",)} placeholder="name" /> <br />
                 <input type="number"{...register("price")} placeholder="price" /> <br />
                 <input type="text" {...register("image")} placeholder="image" /> <br />
+                <input type="text" {...register("category")} placeholder="development / design / marketing" /> <br />
                 <input type="text" {...register("description")} placeholder="description" /> <br />
                 <input className='submit-btn' type="submit" />
             </form>
