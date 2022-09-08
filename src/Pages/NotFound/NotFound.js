@@ -1,10 +1,13 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const NotFound = () => {
     return (
-        <div>
-            <h2>Not Found 404 Error</h2>
-        </div>
+        <Container>
+        <Row className="justify-content-md-center">
+          <Col md="auto"><img className="img-fluid" src="https://i.ibb.co/fYJjCJJ/20824298-6342464.jpg" alt="404 error"height="auto"/></Col>
+        </Row>
+      </Container>
     );
 };
 

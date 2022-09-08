@@ -24,8 +24,8 @@ const Header = () => {
             <h5>TECH SPECTER</h5>
             </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav " />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle/>
+        <Navbar.Collapse>
           <Nav className="ms-auto">
             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
             <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>

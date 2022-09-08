@@ -13,6 +13,7 @@ import AllCourses from './Pages/CoursesPage/AllCourses/AllCourses';
 import SingleCourse from './Pages/CoursesPage/SingleCourse/SingleCourse';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Reviews from './Pages/AllReviews/Reviews/Reviews';
+import CourseDetails from './Pages/CoursesPage/CourseDetails/CourseDetails';
 
 function App() {
   return (
@@ -40,6 +41,11 @@ function App() {
         <Route path="reviews" element={<Reviews/>}/>
         <Route path="allCourses" element={<AllCourses/>}/>
         <Route path="singleCourse" element={<SingleCourse/>}/>
+        <Route path="courseDetails/:courseId" element={
+          <RequireAuth>
+            <CourseDetails/>
+          </RequireAuth>
+        }/>
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
         <Route path="*" element={<NotFound/>}/>
