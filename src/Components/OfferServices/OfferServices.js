@@ -104,7 +104,7 @@ const OfferServices = () => {
                             </div>
                             <div className='mt-2'>
                             <Link to='/allCourses'>
-                                <Button className='px-5 offer-button'>Read More</Button>
+                                <Button className='px-5 btn-danger offer-button'>Read More</Button>
                             </Link>
                                 
                             </div>
@@ -154,7 +154,7 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Tent Benefit</h5>
                             </div>
                             <div className='mt-2'>
-                                <Button className='px-5 offer-button'><a target="_blank" href='https://travel-booking-website-b1db8.web.app/'>Read More</a></Button>
+                                <Button className='px-5 btn-danger offer-button'><a target="_blank" href='https://travel-booking-website-b1db8.web.app/'>Read More</a></Button>
                             </div>
 
                         </div>

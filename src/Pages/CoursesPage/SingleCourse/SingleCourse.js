@@ -14,10 +14,10 @@ const SingleCourse = ({singleCourse}) => {
 
     return (
         <Col className="my-3 text-center" sm={12} md={6} lg={4}>
-          <Card style={{ height: "105%" }} className="mx-1  shadow">
+          <Card style={{ height: "100%" }} className="mx-1 mb-3  shadow">
             <div className="text-center">
               <Card.Img
-                style={{ width: "80%", height: "80%" }}
+                style={{ width: "80%", height: "200px" }}
                 variant="top"
                 src={image}
               />
@@ -26,10 +26,10 @@ const SingleCourse = ({singleCourse}) => {
               <Card.Title style={{ color: "#42a5f5" }} className="text-uppercase">
                 {name}
               </Card.Title>
-              <Card.Title>Price: {price}.00 $</Card.Title>
-              <Card.Text>{description}...</Card.Text>
+              <Card.Title>Price: {price}.00 BDT</Card.Title>
+              <Card.Text>{description.slice(0,160)}...</Card.Text>
               
-                <button onClick={()=> navigateToCourseDetails(_id)} className="btn mt-2 btn-danger">Buy Now</button>
+                <button onClick={()=> navigateToCourseDetails(_id)} className="btn mt-2 btn-danger">See Details</button>
             </Card.Body>
           </Card>
       </Col>

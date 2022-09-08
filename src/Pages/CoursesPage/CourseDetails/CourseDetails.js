@@ -40,7 +40,7 @@ const CourseDetails = () => {
           <hr />
             <Card.Body>
                 <Card.Title>Price: 
-                {course.price} $
+                {course.price} BDT
               </Card.Title>
               <Card.Text>
                 {course.description}
@@ -54,7 +54,7 @@ const CourseDetails = () => {
                   <li>Immediate solution to your problem </li>
                   <li>Commitment to deliver your project on time</li>
                 </ul>
-              <Button variant="primary">Order Now</Button>
+              <Button variant="danger">Order Now</Button>
             </Card.Body>
           </Card>
         </Col>
