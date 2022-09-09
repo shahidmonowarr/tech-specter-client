@@ -25,7 +25,7 @@ const Header = () => {
             </div>
         </Navbar.Brand>
         <Navbar.Toggle/>
-        <Navbar.Collapse>
+        <Navbar.Collapse data-toggle="offcanvas">
           <Nav className="ms-auto">
             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
             <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>

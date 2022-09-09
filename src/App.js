@@ -14,6 +14,7 @@ import SingleCourse from './Pages/CoursesPage/SingleCourse/SingleCourse';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Reviews from './Pages/AllReviews/Reviews/Reviews';
 import CourseDetails from './Pages/CoursesPage/CourseDetails/CourseDetails';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}/>
         <Route path="home" element={<Home></Home>}/>
+        <Route path="dashboard" element={
+          <RequireAuth>
+            <Dashboard/>
+          </RequireAuth>
+        }/>
         <Route path="services" element={
           <RequireAuth>
             <OfferServices/>
@@ -41,7 +47,7 @@ function App() {
         <Route path="reviews" element={<Reviews/>}/>
         <Route path="allCourses" element={<AllCourses/>}/>
         <Route path="singleCourse" element={<SingleCourse/>}/>
-        <Route path="courseDetails/:courseId" element={
+        <Route path="courseDetails/:serviceId" element={
           <RequireAuth>
             <CourseDetails/>
           </RequireAuth>

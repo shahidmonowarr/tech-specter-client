@@ -88,23 +88,23 @@ const OfferServices = () => {
                             </div>
                             <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Develop your career with amazing resources 
                                 <br />    Grab your best courses</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>Volunteer with the blood service to reach out to members of your community, provide care to donors, and help manage blood donation sessions/drives. Find out your blood type and register as a blood donor
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>An online learning platform is a webspace or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more.
                             </p>
                             <div className='spec mb-2'>
                                 <img width="45px" src={ib1} alt="" />
-                                <h5 className='ps-2'>Web Development</h5>
+                                <h5 className='ps-2'>Development</h5>
                             </div>
                             <div className='spec mb-3'>
                                 <img width="45px" src={ib2} alt="" />
-                                <h5 className='ps-2'>Mobile Development</h5>
+                                <h5 className='ps-2'>Design</h5>
                             </div>
                             <div className='spec mb-3'>
                                 <img width="45px" src={ib3} alt="" />
-                                <h5 className='ps-2'>Graphics Design</h5>
+                                <h5 className='ps-2'>Marketing</h5>
                             </div>
                             <div className='mt-2'>
                             <Link to='/allCourses'>
-                                <Button className='px-5 btn-danger offer-button'>Read More</Button>
+                                <Button className='px-5 btn-danger offer-button'>See Courses</Button>
                             </Link>
                                 
                             </div>
@@ -137,9 +137,9 @@ const OfferServices = () => {
                                 <h5   color="#D72323" >About</h5>
 
                             </div>
-                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Best travel agency websites are a great source of information for travelers
+                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Best travel agency websites are a great source of information for travelers.
                                 <br />  We are here for you.</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Travelling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others.
+                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Traveling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others.
                             </p>
                             <div className='spec mb-2'>
                                 <img width="45px" src={it1} alt="" />
@@ -154,7 +154,7 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Tent Benefit</h5>
                             </div>
                             <div className='mt-2'>
-                                <Button className='px-5 btn-danger offer-button'><a target="_blank" href='https://travel-booking-website-b1db8.web.app/'>Read More</a></Button>
+                                <Button className='px-5 btn-danger offer-button'><a target="_blank" href='https://travel-booking-website-b1db8.web.app/'>See Places</a></Button>
                             </div>
 
                         </div>

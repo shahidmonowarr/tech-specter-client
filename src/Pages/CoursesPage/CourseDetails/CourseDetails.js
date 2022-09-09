@@ -7,11 +7,11 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const CourseDetails = () => {
-  const { courseId } = useParams();
+  const { serviceId } = useParams();
   const [course, setCourse] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/course/${courseId}`;
+    const url = `http://localhost:5000/course/${serviceId}`;
 
     fetch(url)
       .then((res) => res.json())
