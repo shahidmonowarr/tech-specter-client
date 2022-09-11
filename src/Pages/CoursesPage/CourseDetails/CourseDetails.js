@@ -5,18 +5,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import Rating from "react-rating";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
+import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
 
 const CourseDetails = () => {
   const { serviceId } = useParams();
-  const [course, setCourse] = useState({});
-
-  useEffect(() => {
-    const url = `http://localhost:5000/course/${serviceId}`;
-
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setCourse(data));
-  }, []);
+  const [course] = useCourseDetails(serviceId);
   return (
     <Container >
       <h1 style={{textTransform:'uppercase', fontWeight:'bolder', fontSize:'60px'}}>{course.category}</h1>
@@ -54,7 +48,9 @@ const CourseDetails = () => {
                   <li>Immediate solution to your problem </li>
                   <li>Commitment to deliver your project on time</li>
                 </ul>
+              <Link to={`/checkOut/${serviceId}`}>
               <Button variant="danger">Order Now</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>

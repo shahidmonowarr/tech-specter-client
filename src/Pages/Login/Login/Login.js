@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import { useForm } from 'react-hook-form';
 import { Spinner } from 'react-bootstrap';
 import Loading from '../../../Components/Shared/Loading/Loading';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -36,6 +37,7 @@ const Login = () => {
 
   if(user || gUser){
     navigate(from, {replace: true});
+    toast('Login Successful');
   }
 
   const onSubmit = data => {

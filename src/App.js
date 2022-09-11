@@ -15,6 +15,9 @@ import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Reviews from './Pages/AllReviews/Reviews/Reviews';
 import CourseDetails from './Pages/CoursesPage/CourseDetails/CourseDetails';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import CheckOut from './Pages/CheckOut/CheckOut/CheckOut';
+import { ToastContainer } from 'react-toastify';
+import Order from './Pages/Dashboard/Order/Order';
 
 function App() {
   return (
@@ -29,10 +32,14 @@ function App() {
             <Dashboard/>
           </RequireAuth>
         }/>
-        <Route path="services" element={
+        <Route path="orders" element={
           <RequireAuth>
-            <OfferServices/>
+            <Order/>
           </RequireAuth>
+        }/>
+
+        <Route path="services" element={
+            <OfferServices/>
         }/>
         <Route path="addCourse" element={
           <RequireAuth>
@@ -52,11 +59,17 @@ function App() {
             <CourseDetails/>
           </RequireAuth>
         }/>
+        <Route path="checkOut/:serviceId" element={
+          <RequireAuth>
+            <CheckOut/>
+          </RequireAuth>
+        }/>
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Footer></Footer> 
+      
       </BrowserRouter>
     </div>
   );
