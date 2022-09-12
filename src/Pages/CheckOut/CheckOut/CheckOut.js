@@ -1,11 +1,11 @@
 import axios from "axios";
 import React from "react";
-import { toast } from 'react-toastify';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import auth from "../../../firebase.init";
 import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
 import "./CheckOut.css";
+import { toast } from 'react-toastify';
 
 const CheckOut = () => {
   const { serviceId } = useParams();

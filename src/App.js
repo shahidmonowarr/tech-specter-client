@@ -16,25 +16,20 @@ import Reviews from './Pages/AllReviews/Reviews/Reviews';
 import CourseDetails from './Pages/CoursesPage/CourseDetails/CourseDetails';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import CheckOut from './Pages/CheckOut/CheckOut/CheckOut';
-import { ToastContainer } from 'react-toastify';
-import Order from './Pages/Dashboard/Order/Order';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header></Header>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home></Home>}/>
         <Route path="home" element={<Home></Home>}/>
         <Route path="dashboard" element={
           <RequireAuth>
             <Dashboard/>
-          </RequireAuth>
-        }/>
-        <Route path="orders" element={
-          <RequireAuth>
-            <Order/>
           </RequireAuth>
         }/>
 
@@ -68,8 +63,8 @@ function App() {
         <Route path="register" element={<Register/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
-      <Footer></Footer> 
-      
+      <Footer/> 
+      <ToastContainer />
       </BrowserRouter>
     </div>
   );

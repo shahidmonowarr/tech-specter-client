@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useForm } from 'react-hook-form';
 import Loading from '../../../Components/Shared/Loading/Loading';
+import { reload } from 'firebase/auth';
 
 const Register = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -38,8 +39,10 @@ const Register = () => {
   const onSubmit = async data => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({displayName: data.name});
-    console.log('update done');
+    alert('Profile Updated');
+    reload();
     navigate('/home');
+    
   }
 
     return (

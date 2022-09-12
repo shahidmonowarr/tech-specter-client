@@ -1,5 +1,5 @@
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from 'mdb-react-ui-kit';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -27,17 +27,19 @@ const Login = () => {
 
   let from = location.state?.from?.pathname || "/";
 
+  useEffect( () =>{
+    if (user || gUser) {
+        navigate(from, { replace: true });
+        toast('Logged In Successful');
+    }
+}, [user, gUser, from, navigate])
+
   if(loading || gLoading){
     return <Loading></Loading>
   }
 
   if(error || gError){
     signInError= <p className='text-danger mt-1'><small>{error?.message || gError?.message}</small></p>
-  }
-
-  if(user || gUser){
-    navigate(from, {replace: true});
-    toast('Login Successful');
   }
 
   const onSubmit = data => {
