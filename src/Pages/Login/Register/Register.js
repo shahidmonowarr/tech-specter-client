@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { useForm } from 'react-hook-form';
 import Loading from '../../../Components/Shared/Loading/Loading';
 import { reload } from 'firebase/auth';
+import useToken from '../../../hooks/useToken/useToken';
 
 const Register = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -20,6 +21,8 @@ const Register = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  const [token] = useToken(user || gUser);
+
   const navigate = useNavigate();
 
   let signInError;
@@ -32,8 +35,8 @@ const Register = () => {
     signInError= <p className='text-danger mt-1'><small>{error?.message || gError?.message || updateError?.message}</small></p>
   }
 
-  if(user || gUser){
-    console.log(user || gUser);
+  if(token){
+    navigate('/home');
   }
 
   const onSubmit = async data => {
@@ -42,6 +45,7 @@ const Register = () => {
     alert('Profile Updated');
     reload();
     navigate('/home');
+
     
   }
 

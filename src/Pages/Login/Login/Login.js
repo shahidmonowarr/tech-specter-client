@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import { Spinner } from 'react-bootstrap';
 import Loading from '../../../Components/Shared/Loading/Loading';
 import { toast } from 'react-toastify';
+import useToken from '../../../hooks/useToken/useToken';
 
 
 const Login = () => {
@@ -21,6 +22,8 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
+  const [token] = useToken(user || gUser)
+
   let signInError;
   const navigate = useNavigate();
   const location = useLocation();
@@ -28,11 +31,11 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
 
   useEffect( () =>{
-    if (user || gUser) {
+    if (token) {
         navigate(from, { replace: true });
         toast('Logged In Successful');
     }
-}, [user, gUser, from, navigate])
+}, [token, from, navigate])
 
   if(loading || gLoading){
     return <Loading></Loading>
