@@ -28,7 +28,9 @@ const Header = () => {
         <Navbar.Collapse data-toggle="offcanvas">
           <Nav className="ms-auto">
             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-            <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
+            {
+              user && <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
+            }
             <Nav.Link as={HashLink} to="/services">Services</Nav.Link>
             {/* <NavDropdown title="Services" id="basic-nav-dropdown">
               <NavDropdown.Item className='fw-bold' href="#action/3.1">Blood</NavDropdown.Item>
