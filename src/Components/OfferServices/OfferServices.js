@@ -14,7 +14,12 @@ import { Link } from 'react-router-dom';
 const OfferServices = () => {
     return (
         <div>
-            <h1 className='mt-5'>Services we provide</h1>
+            <div className="contact-title mt-5">
+            <h2>
+              Services
+              <p className="fs-6 fw-normal mt-2">What we provide to you!</p>
+            </h2>
+          </div>
         
         {/* Blood section 
           <div className='py-5'>
@@ -71,7 +76,7 @@ const OfferServices = () => {
                     <Col sm={12} md={5} lg={5}>
                         <div className="drone-wrapper">
                             <div className="drone-media">
-                                <img src="https://i.ibb.co/YL1ZwG1/happy-entrepreneur-analyzing-business-chart-during-web-conference-home.jpg" alt="" />
+                                <img className='vert-move' src="https://i.ibb.co/jGwSgbH/12145615-Wavy-Edu-05-Single-08-1.jpg" alt="" />
                             </div>
                             <div className="drone-info">
                                 <span>Courses</span>
@@ -122,7 +127,7 @@ const OfferServices = () => {
                     <Col sm={12} md={5} lg={5}>
                         <div className="drone-wrapper">
                             <div className="drone-media">
-                                <img src={service2} alt="" />
+                                <img className='vert-move' src='https://i.ibb.co/NSt3xsb/12291290-Wavy-Trv-01-Single-06-1.jpg' alt="" />
                             </div>
                             <div className="drone-info">
                                 <span>Travel</span>
@@ -154,7 +159,7 @@ const OfferServices = () => {
                                 <h5 className='ps-2'>Tent Benefit</h5>
                             </div>
                             <div className='mt-2'>
-                                <Button className='px-5 btn-danger offer-button'><a target="_blank" href='https://travel-booking-website-b1db8.web.app/'>See Places</a></Button>
+                                <Button className='px-5 btn-danger offer-button'>See Places</Button>
                             </div>
 
                         </div>

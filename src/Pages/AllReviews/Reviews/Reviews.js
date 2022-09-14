@@ -25,7 +25,7 @@ const Reviews = () => {
   >
 
       <div className="container mb-5 py-4">
-        <div className="review-title text-center">
+        <div className="contact-title text-center">
           <h2>
             Review
             <p className="fs-6 fw-normal mt-2">What our client say!</p>

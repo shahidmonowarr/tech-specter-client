@@ -57,7 +57,7 @@ const Login = () => {
   <MDBRow className='g-0'>
 
     <MDBCol md='6'>
-      <MDBCardImage src='https://i.ibb.co/V9FVW7n/4957136.jpg' alt="login form" className='rounded-start w-100'/>
+      <MDBCardImage src='https://i.ibb.co/V9FVW7n/4957136.jpg' alt="login form" className='vert-move rounded-start w-100'/>
     </MDBCol>
 
     <MDBCol md='6'>
@@ -65,7 +65,7 @@ const Login = () => {
 
         <div className='d-flex flex-row mt-2 mx-auto'>
           <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>
-          <span className="h1 fw-bold mb-0">Logo</span>
+          <span className="h1 fw-bold mb-0">TECH-SPECTER</span>
         </div>
 
         <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>SignIn to your account</h5>

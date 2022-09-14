@@ -18,6 +18,8 @@ const Dashboard = () => {
                 <Link to='/dashboard/addReview' style={{ textDecoration: "none" }}>Add Review</Link>
                 <br/>
                 {admin && <Link to='/dashboard/users' style={{ textDecoration: "none" }}>All Users</Link>}
+                <br/>
+                <Link to='/' style={{ textDecoration: "none" }}>Back to Home</Link>
 
                     {/* {admin ? (<div className="my-5">
                         <Link to={`${url}/manageOrders`} style={{ textDecoration: "none" }}>Manage all Orders</Link>

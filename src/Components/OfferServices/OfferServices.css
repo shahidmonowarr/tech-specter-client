@@ -92,3 +92,20 @@
     width: 30px;
     background: #d72323;
 }
+
+.vert-move {
+    -webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+}
+.vert-move {
+    -webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(-10px); }
+}

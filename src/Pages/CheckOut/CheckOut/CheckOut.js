@@ -22,7 +22,11 @@ const CheckOut = () => {
         email: user.email,
         service: course.name,
         serviceId: serviceId,
+        image: course.image,
+        price: course.price,
+        description: course.description,
         phone: event.target.phone.value,
+        status: "Pending"
 
     }
     axios.post('http://localhost:5000/order', order)
