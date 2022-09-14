@@ -2,10 +2,12 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useAdmin from '../../../hooks/useAdmin/useAdmin';
 import './Dashboard.css';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
 
     return (
         <div className="container">
@@ -14,6 +16,8 @@ const Dashboard = () => {
                 <Link to='/dashboard' style={{ textDecoration: "none" }}>My Orders</Link>
                         <br />
                 <Link to='/dashboard/addReview' style={{ textDecoration: "none" }}>Add Review</Link>
+                <br/>
+                {admin && <Link to='/dashboard/users' style={{ textDecoration: "none" }}>All Users</Link>}
 
                     {/* {admin ? (<div className="my-5">
                         <Link to={`${url}/manageOrders`} style={{ textDecoration: "none" }}>Manage all Orders</Link>
