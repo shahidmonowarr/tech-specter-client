@@ -1,28 +1,51 @@
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
-import auth from '../../../firebase.init';
-import useAdmin from '../../../hooks/useAdmin/useAdmin';
-import './Dashboard.css';
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, Outlet } from "react-router-dom";
+import auth from "../../../firebase.init";
+import useAdmin from "../../../hooks/useAdmin/useAdmin";
+import "./Dashboard.css";
 
 const Dashboard = () => {
-    const [user] = useAuthState(auth);
-    const [admin] = useAdmin(user);
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
 
-    return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-2 pt-5">
-                <Link to='/' style={{ textDecoration: "none" }}>Home</Link>
-                <br/>
-                <Link to='/addReview' style={{ textDecoration: "none" }}>Add Review</Link>
-                   <br/>     
-                {!admin && <Link to='/dashboard/myOrders' style={{ textDecoration: "none" }}>My Orders</Link>}
-                
-                {admin && <Link to='/dashboard/users' style={{ textDecoration: "none" }}>All Users</Link>}
-                <br/>
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-md-2 pt-5 my-auto">
+          <ul>
+            <li className="mx-1 my-2 rounded-3 btn-dark">
+              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                Home
+              </Link>
+            </li>
+            <li className="mx-1 my-2 rounded-3 btn-dark">
+              <Link
+                to="/dashboard/addReview"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Add Review
+              </Link>
+            </li>
+            <li className="mx-1 my-2 rounded-3 btn-dark">
+              <Link
+                to="/dashboard/myOrders"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                My Orders
+              </Link>
+            </li>
+            {admin && <li className="mx-1 my-2 rounded-3 btn-dark">
+              <Link
+                to="/dashboard/users"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                My Users
+              </Link>
+            </li>}
+          </ul>
 
-                    {/* {admin ? (<div className="my-5">
+          {/* {admin ? (<div className="my-5">
                         <Link to={`${url}/manageOrders`} style={{ textDecoration: "none" }}>Manage all Orders</Link>
                         <br />
                         <Link to={`${url}/addProducts`} style={{ textDecoration: "none" }}>Add Products</Link>
@@ -46,15 +69,14 @@ const Dashboard = () => {
                                 <Link to="" className="pb-2" style={{ textDecoration: "none" }} onClick={logOut} >Logout</Link>
                             }
                         </div>)} */}
-
-                </div>
-                <div className="col-md-10">
-                        <h1 className='fw-bolder shadow-sm'>Dashboard</h1>
-                    <Outlet></Outlet>
-                </div>
-            </div>
         </div>
-    );
+        <div className="col-md-10">
+          <h1 className="fw-bolder shadow-sm">Dashboard</h1>
+          <Outlet></Outlet>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
