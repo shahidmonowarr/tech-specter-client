@@ -5,6 +5,9 @@
     color: rgb(252, 249, 249);
     font-size: 30px;
 }
+.icon:hover{
+    color: rgb(228, 72, 72);
+}
 .footer-container{
     bottom: 0;
     background-color: rgb(30, 36, 30);

@@ -49,7 +49,7 @@ const Dashboard = () => {
 
                 </div>
                 <div className="col-md-10">
-                        <h2>Dashboard</h2>
+                        <h1 className='fw-bolder shadow-sm'>Dashboard</h1>
                     <Outlet></Outlet>
                 </div>
             </div>
