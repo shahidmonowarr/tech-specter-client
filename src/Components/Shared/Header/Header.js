@@ -44,7 +44,7 @@ const Header = () => {
                             </Navbar.Text>
                                 :
                                 <Nav.Link as={Link} to="/login"></Nav.Link>}
-            {user ? <button onClick={logOut} type="button" class="btn btn-light ms-2">Sign Out</button>: <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
+            {user ? <button onClick={logOut} type="button" className="btn btn-light ms-2">Sign Out</button>: <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
             
           </Nav>
         </Navbar.Collapse>

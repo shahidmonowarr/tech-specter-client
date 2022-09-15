@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Row, Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 
 const Orders = () => {
@@ -32,6 +33,28 @@ const Orders = () => {
         });
     }
   }, [user]);
+
+  const handleDeleteOrder = (id) => {
+    const proceed = window.confirm("Are Sure To Cancel This Order?");
+    if (proceed) {
+      const url = `http://localhost:5000/order/${id}`;
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            toast("Order Deleted SuccessFully");
+            const remaining = orders.filter((order) => order._id !== id);
+            setOrders(remaining);
+          }
+        });
+    }
+  };
+
   return (
     <div>
       <h1>My orders {orders.length}</h1>
@@ -72,7 +95,7 @@ const Orders = () => {
             md={6}
             lg={4}
           >
-            <Card style={{ height: "100%" }} className="mx-1 mb-3  shadow">
+            <Card style={{ height: "97%" }} className="mx-1 mb-3  shadow">
               <div className="text-center">
                 <Card.Img
                   style={{ width: "80%", height: "200px" }}
@@ -91,7 +114,7 @@ const Orders = () => {
                 <Card.Title>Price: {order.price}.00 BDT</Card.Title>
                 <Card.Text>{order.description.slice(0, 60)}...</Card.Text>
 
-                <button className="btn mt-1 btn-danger">Cancel Order</button>
+                <button className="btn btn-danger" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
               </Card.Body>
             </Card>
           </Col>

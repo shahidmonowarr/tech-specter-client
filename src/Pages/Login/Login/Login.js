@@ -57,7 +57,7 @@ const Login = () => {
   <MDBRow className='g-0'>
 
     <MDBCol md='6'>
-      <MDBCardImage src='https://i.ibb.co/V9FVW7n/4957136.jpg' alt="login form" className='vert-move rounded-start w-100'/>
+      <MDBCardImage style={{width:'100%', height: 'auto'}}  src='https://i.ibb.co/V9FVW7n/4957136.jpg' alt="login form" className='vert-move rounded-start w-100'/>
     </MDBCol>
 
     <MDBCol md='6'>

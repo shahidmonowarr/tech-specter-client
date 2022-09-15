@@ -18,7 +18,8 @@ const Contact = () => {
             <div className="col-md-6 col-sm-12">
               <div className="">
                 <img
-                  className="vert-move w-100 mt-2 pt-4 mb-4 rounded-3"
+                  style={{width:'90%', height: 'auto'}}
+                  className="vert-move mt-5"
                   src="https://i.ibb.co/M9DMtMd/20943953.jpg"
                   alt=""
                 />

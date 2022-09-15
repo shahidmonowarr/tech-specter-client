@@ -58,7 +58,7 @@ const Register = () => {
   <MDBRow className='g-0'>
 
     <MDBCol md='6'>
-      <MDBCardImage src='https://i.ibb.co/ZLNSMY4/6300959.jpg' alt="login form" className='vert-move rounded-start w-100'/>
+      <MDBCardImage style={{width:'100%', height: 'auto'}}  src='https://i.ibb.co/ZLNSMY4/6300959.jpg' alt="login form" className='vert-move rounded-start w-100'/>
     </MDBCol>
 
     <MDBCol md='6'>

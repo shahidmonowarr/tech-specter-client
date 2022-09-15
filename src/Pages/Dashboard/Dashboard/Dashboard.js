@@ -13,13 +13,14 @@ const Dashboard = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-2 pt-5">
-                <Link to='/dashboard' style={{ textDecoration: "none" }}>My Orders</Link>
-                        <br />
-                <Link to='/dashboard/addReview' style={{ textDecoration: "none" }}>Add Review</Link>
+                <Link to='/' style={{ textDecoration: "none" }}>Home</Link>
                 <br/>
+                <Link to='/addReview' style={{ textDecoration: "none" }}>Add Review</Link>
+                   <br/>     
+                {!admin && <Link to='/dashboard/myOrders' style={{ textDecoration: "none" }}>My Orders</Link>}
+                
                 {admin && <Link to='/dashboard/users' style={{ textDecoration: "none" }}>All Users</Link>}
                 <br/>
-                <Link to='/' style={{ textDecoration: "none" }}>Back to Home</Link>
 
                     {/* {admin ? (<div className="my-5">
                         <Link to={`${url}/manageOrders`} style={{ textDecoration: "none" }}>Manage all Orders</Link>
