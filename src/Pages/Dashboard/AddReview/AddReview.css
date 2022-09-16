@@ -1,3 +1,10 @@
+
+@media only screen and (max-width: 600px) {
+    .add-product {
+      height: 140vh;
+    }
+  }
+
 .add-product form{
     
     display: flex;
@@ -7,7 +14,7 @@
     }
     
 .add-product form input{
-        width: 40%;
+        width: 65%;
         margin-bottom: 5px;
         padding: 10px;
         border-radius: 10px;
@@ -15,17 +22,9 @@
     }
 
     .submit-btn:hover{
-        background-color: goldenrod;
+        background-color: rgb(250, 53, 53);
         color: white;
-        font-weight: 700;
+        font-weight: 900;
         transition: 0.5s;
-    }
 
-.add-product{
-    padding-top: 70px;
-    background-image: url('');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:90vh ;
-}
+    }

@@ -43,22 +43,10 @@ function App() {
             <Route path="addReview" element={<AddReview></AddReview>}></Route>
             <Route path="myOrders" element={<Orders></Orders>}></Route>
             <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+            <Route path="addCourse" element={<RequireAdmin><AddCourse></AddCourse></RequireAdmin>}></Route>
           </Route>
 
           <Route path="services" element={<OfferServices />} />
-          <Route
-            path="addCourse"
-            element={
-              <RequireAuth>
-                <AddCourse />
-              </RequireAuth>
-            }
-          />
-          {/* <Route path="addReview" element={
-          <RequireAuth>
-            <AddReview/>
-          </RequireAuth>
-        }/> */}
           <Route path="reviews" element={<Reviews />} />
           <Route path="allCourses" element={<AllCourses />} />
           <Route path="singleCourse" element={<SingleCourse />} />

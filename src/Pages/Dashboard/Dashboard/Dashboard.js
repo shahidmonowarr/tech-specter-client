@@ -12,14 +12,14 @@ const Dashboard = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-2 pt-5 my-auto">
-          <ul>
-            <li className="mx-1 my-2 rounded-3 btn-dark">
+        <div className="col-md-2 pt-2 my-auto shadow-lg">
+          <ul className="">
+            <li className="me-3 my-2 rounded-3 btn-dark">
               <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                 Home
               </Link>
             </li>
-            <li className="mx-1 my-2 rounded-3 btn-dark">
+            <li className="me-3 my-2 rounded-3 btn-dark">
               <Link
                 to="/dashboard/addReview"
                 style={{ textDecoration: "none", color: "white" }}
@@ -27,7 +27,7 @@ const Dashboard = () => {
                 Add Review
               </Link>
             </li>
-            <li className="mx-1 my-2 rounded-3 btn-dark">
+            <li className="me-3 my-2 rounded-3 btn-dark">
               <Link
                 to="/dashboard/myOrders"
                 style={{ textDecoration: "none", color: "white" }}
@@ -35,12 +35,20 @@ const Dashboard = () => {
                 My Orders
               </Link>
             </li>
-            {admin && <li className="mx-1 my-2 rounded-3 btn-dark">
+            {admin && <li className="me-3 my-2 rounded-3 btn-dark">
               <Link
                 to="/dashboard/users"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                My Users
+                All Users
+              </Link>
+            </li>}
+            {admin && <li className="me-3 my-2 rounded-3 btn-dark">
+              <Link
+                to="/dashboard/addCourse"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Add Course
               </Link>
             </li>}
           </ul>
