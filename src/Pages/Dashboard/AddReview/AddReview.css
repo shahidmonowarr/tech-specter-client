@@ -15,8 +15,7 @@
     
 .add-product form input{
         width: 65%;
-        margin-bottom: 5px;
-        padding: 10px;
+        padding: 5px;
         border-radius: 10px;
         font-weight: 600;
     }

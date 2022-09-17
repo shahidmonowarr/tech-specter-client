@@ -13,7 +13,7 @@ const Dashboard = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-2 pt-2 my-auto shadow-lg">
-          <ul className="">
+          {/* <ul className="">
             <li className="me-3 my-2 rounded-3 btn-dark">
               <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                 Home
@@ -51,34 +51,75 @@ const Dashboard = () => {
                 Add Course
               </Link>
             </li>}
-          </ul>
+            {admin && <li className="me-3 my-2 rounded-3 btn-dark">
+              <Link
+                to="/dashboard/manageOrders"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Manage Orders
+              </Link>
+            </li>}
+          </ul> */}
 
-          {/* {admin ? (<div className="my-5">
-                        <Link to={`${url}/manageOrders`} style={{ textDecoration: "none" }}>Manage all Orders</Link>
-                        <br />
-                        <Link to={`${url}/addProducts`} style={{ textDecoration: "none" }}>Add Products</Link>
-                        <br />
-                        <Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }}>Make Admin</Link>
-                        <br />
-                        <Link to={`${url}/manageProducts`} style={{ textDecoration: "none" }}>Manage Products</Link>
-                        <br />
-                        {user?.email &&
-                            <Link to="" className="pb-2" style={{ textDecoration: "none" }} onClick={logOut} >Logout</Link>
-                        }
-                    </div>)
-                        : (<div className="my-5">
-                            <Link to={`${url}/pay`} style={{ textDecoration: "none" }}>Pay</Link>
-                            <br />
-                            <Link to={`${url}/myOrder`} style={{ textDecoration: "none" }}>My Orders</Link>
-                            <br />
-                            <Link to={`${url}/addReview`} style={{ textDecoration: "none" }}>Review</Link>
-                            <br />
-                            {user?.email &&
-                                <Link to="" className="pb-2" style={{ textDecoration: "none" }} onClick={logOut} >Logout</Link>
-                            }
-                        </div>)} */}
+          {admin ? (
+            <ul>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                  Home
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
+                  to="/dashboard/users"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  All Users
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
+                  to="/dashboard/addCourse"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Add Course
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
+                  to="/dashboard/manageOrders"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Manage Orders
+                </Link>
+              </li>
+            </ul>
+          ) : (
+            <ul>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                  Home
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
+                  to="/dashboard/addReview"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Add Review
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
+                  to="/dashboard/myOrders"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  My Orders
+                </Link>
+              </li>
+            </ul>
+          )}
         </div>
-        <div className="col-md-10">
+        <div className="col-md-10 my-auto ">
           <h1 className="fw-bolder shadow-sm">Dashboard</h1>
           <Outlet></Outlet>
         </div>
