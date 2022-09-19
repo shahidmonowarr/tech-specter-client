@@ -2,6 +2,7 @@ import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row, Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
@@ -114,7 +115,13 @@ const Orders = () => {
                 <Card.Title>Price: {order.price}.00 BDT</Card.Title>
                 <Card.Text>{order.description.slice(0, 60)}...</Card.Text>
 
-                <button className="btn btn-danger" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
+                <button className="btn btn-danger me-2" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
+                {
+                  (order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className="btn btn-danger">Pay</button></Link>
+                }
+                {
+                  (order.price && order.paid) && <span className="btn btn-danger">Paid</span>
+                }
               </Card.Body>
             </Card>
           </Col>
