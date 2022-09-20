@@ -1,14 +1,7 @@
-.logo{
-    display: flex;
-}
+
 .logo img{
-    width: 8%;
+    width: 135px;
+    height: auto;
 }
-.logo h5{
-    padding-top: 5px;
-    font-size: 20px;
-    font-weight: 800;
-}
-.navbar-toggler-icon{
-    color: white;
-}
+
+

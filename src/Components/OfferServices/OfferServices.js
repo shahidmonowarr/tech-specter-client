@@ -1,7 +1,5 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import service2 from '../../images/travel-concept.jpg';
-import service3 from '../../images/delivery-concept.jpg';
 import ib1 from '../../images/blood-analysis.png';
 import ib2 from '../../images/blood-transfusion.png';
 import ib3 from '../../images/blood-bag.png';
@@ -74,11 +72,11 @@ const OfferServices = () => {
             <Container >
                 <Row spacing={10}>
                     <Col sm={12} md={5} lg={5}>
-                        <div className="drone-wrapper">
-                            <div className="drone-media">
+                        <div className="offer-wrapper">
+                            <div className="">
                                 <img style={{width:'100%', height: 'auto'}}  className='vert-move' src="https://i.ibb.co/jGwSgbH/12145615-Wavy-Edu-05-Single-08-1.jpg" alt="" />
                             </div>
-                            <div className="drone-info">
+                            <div className="offer-info">
                                 <span>Courses</span>
                                 <strong>For Programmers</strong>
                             </div>
@@ -91,20 +89,20 @@ const OfferServices = () => {
                                 <h5   color="#D72323" >About</h5>
 
                             </div>
-                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Develop your career with amazing resources 
-                                <br />    Grab your best courses</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>An online learning platform is a webspace or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more.
+                            <h2 >Develop your career with amazing resources 
+                                <br />    Grab your best courses</h2>
+                            <p  >An online learning platform is a web space or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more.
                             </p>
                             <div className='spec mb-2'>
-                                <img width="45px" src={ib1} alt="" />
+                                <img width="40px" src={ib1} alt="" />
                                 <h5 className='ps-2'>Development</h5>
                             </div>
-                            <div className='spec mb-3'>
-                                <img width="45px" src={ib2} alt="" />
+                            <div className='spec mb-2'>
+                                <img width="0px" src={ib2} alt="" />
                                 <h5 className='ps-2'>Design</h5>
                             </div>
-                            <div className='spec mb-3'>
-                                <img width="45px" src={ib3} alt="" />
+                            <div className='spec mb-2'>
+                                <img width="40px" src={ib3} alt="" />
                                 <h5 className='ps-2'>Marketing</h5>
                             </div>
                             <div className='mt-2'>
@@ -125,11 +123,11 @@ const OfferServices = () => {
             <Container >
                 <Row spacing={10}>
                     <Col sm={12} md={5} lg={5}>
-                        <div className="drone-wrapper">
-                            <div className="drone-media">
+                        <div className="offer-wrapper">
+                            <div >
                                 <img style={{width:'100%', height: 'auto'}} className='vert-move' src='https://i.ibb.co/NSt3xsb/12291290-Wavy-Trv-01-Single-06-1.jpg' alt="" />
                             </div>
-                            <div className="drone-info">
+                            <div className="offer-info">
                                 <span>Travel</span>
                                 <strong>For Refresh</strong>
                             </div>
@@ -142,20 +140,20 @@ const OfferServices = () => {
                                 <h5   color="#D72323" >About</h5>
 
                             </div>
-                            <h1 variant="h3" color="initial" sx={{ fontWeight: 500, mt: 1, mb: 3 }}>Best travel agency websites are a great source of information for travelers.
-                                <br />  We are here for you.</h1>
-                            <p  sx={{ width: { xs: 1, sm: '80%' } }}>If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Traveling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others.
+                            <h2>Best travel agency websites are a great source of information for travelers.
+                                <br />  We are here for you.</h2>
+                            <p>If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Traveling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others.
                             </p>
                             <div className='spec mb-2'>
-                                <img width="45px" src={it1} alt="" />
+                                <img width="40px" src={it1} alt="" />
                                 <h5 className='ps-2'>Date Analysis</h5>
                             </div>
-                            <div className='spec mb-3'>
-                                <img width="45px" src={it2} alt="" />
+                            <div className='spec mb-2'>
+                                <img width="40px" src={it2} alt="" />
                                 <h5 className='ps-2'>Pickup Transportation</h5>
                             </div>
-                            <div className='spec mb-3'>
-                                <img width="45px" src={it3} alt="" />
+                            <div className='spec mb-2'>
+                                <img width="40px" src={it3} alt="" />
                                 <h5 className='ps-2'>Tent Benefit</h5>
                             </div>
                             <div className='mt-2'>

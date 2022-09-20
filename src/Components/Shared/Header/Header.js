@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -9,7 +9,7 @@ import logo from '../../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const logOut = ()=>{
     signOut(auth);
@@ -21,30 +21,24 @@ const Header = () => {
       <Container>
         <Navbar.Brand as={HashLink} to="/home">
             <div className='logo'>
-            <img width="30px" src={logo} alt="" />
-            <h5>TECH SPECTER</h5>
+            <img width="100%" src={logo} alt="logo" />
             </div>
         </Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse data-toggle="offcanvas">
           <Nav className="ms-auto">
             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
+            <Nav.Link as={HashLink} to="/services">Services</Nav.Link>
             {
               user && <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
             }
-            <Nav.Link as={HashLink} to="/services">Services</Nav.Link>
-            {/* <NavDropdown title="Services" id="basic-nav-dropdown">
-              <NavDropdown.Item className='fw-bold' href="#action/3.1">Blood</NavDropdown.Item>
-              <NavDropdown.Item className='fw-bold' href="#action/3.1">Travel</NavDropdown.Item>
-              <NavDropdown.Item className='fw-bold' href="#action/3.1">Action</NavDropdown.Item>
-            </NavDropdown> */}
             {user ?
                                 <Navbar.Text>
                                 <a style={{ textDecoration: "none" }} href="#login"> {user?.displayName}</a>
                             </Navbar.Text>
                                 :
                                 <Nav.Link as={Link} to="/login"></Nav.Link>}
-            {user ? <button onClick={logOut} type="button" className="btn btn-light ms-2">Sign Out</button>: <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
+            {user ? <Button variant="outline-success" onClick={logOut} type="button" className="btn btn-light ms-2">Sign Out</Button>: <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
             
           </Nav>
         </Navbar.Collapse>

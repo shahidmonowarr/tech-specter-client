@@ -1,3 +1,8 @@
+.footer-logo img{
+    margin-left: 5px;
+    width: 200px;
+    height: auto;
+}
 .icon{
     cursor: pointer;
     margin: 5px;
@@ -11,7 +16,7 @@
 .footer-container{
     bottom: 0;
     background-color: rgb(30, 36, 30);
-    padding: 50px;
+    
     color: rgb(235, 227, 227);
 }
 
@@ -21,8 +26,5 @@
     margin-top: 20px;
     font-size: 16px;
     cursor: pointer;
-}
-.footer-menu:hover{
-    color: blue;
 }
 

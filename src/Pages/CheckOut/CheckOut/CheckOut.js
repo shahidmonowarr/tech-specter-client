@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import auth from "../../../firebase.init";
 import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
 import "./CheckOut.css";
@@ -11,6 +11,8 @@ const CheckOut = () => {
   const { serviceId } = useParams();
   const [course] = useCourseDetails(serviceId);
   const [user] = useAuthState(auth);
+
+  const navigate = useNavigate();
 
   if(user){
     console.log(user);
@@ -35,6 +37,7 @@ const CheckOut = () => {
             if (data.insertedId) {
                 toast('Your Order is Booked');
                 event.target.reset();
+                navigate('/dashboard/myOrders');
             }
             console.log(res);
         })
