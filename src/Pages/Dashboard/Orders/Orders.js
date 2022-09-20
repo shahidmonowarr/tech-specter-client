@@ -59,33 +59,6 @@ const Orders = () => {
   return (
     <div>
       <h1>My orders {orders.length}</h1>
-      {/* <Table striped bordered hover variant="dark">
-                <thead>
-                    <tr className="bg-dark text-white">
-                        <th>Index</th>
-                        <th>Customer Name</th>
-                        <th>Product Name</th>
-                        <th>Phone</th>
-                        <th>Order Status</th>
-                        <th>Approve</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        orders.map((order, index) => (
-                            <tr key={order._id}>
-                                <td>{index + 1}</td>
-                                <td>{user?.displayName}</td>
-                                <td>{order.service}</td>
-                                <td>{order.phone}</td>
-                                <td>{order.orderStatus}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </Table> */}
-
       <Row>
         {orders?.map((order) => (
           <Col
@@ -115,7 +88,10 @@ const Orders = () => {
                 <Card.Title>Price: {order.price}.00 BDT</Card.Title>
                 <Card.Text>{order.description.slice(0, 60)}...</Card.Text>
 
-                <button className="btn btn-danger me-2" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
+                
+                {
+                  (!order.paid) && <button className="btn btn-danger me-2" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
+                }
                 {
                   (order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className="btn btn-danger">Pay</button></Link>
                 }
