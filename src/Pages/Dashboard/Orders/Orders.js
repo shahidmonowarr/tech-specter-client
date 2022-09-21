@@ -86,6 +86,7 @@ const Orders = () => {
                 </Card.Title>
                 <h5 className="btn-danger mx-5 rounded-3">{order.status}</h5>
                 <Card.Title>Price: {order.price}.00 BDT</Card.Title>
+                {(order.date)&&<Card.Title>Date: {order.date}</Card.Title>}
                 <Card.Text>{order.description.slice(0, 60)}...</Card.Text>
 
                 

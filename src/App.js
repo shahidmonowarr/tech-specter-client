@@ -31,6 +31,7 @@ import AllPlaces from "./Pages/TravelPage/AllPlaces/AllPlaces";
 import SinglePlace from "./Pages/TravelPage/SinglePlace/SinglePlace";
 import PlaceDetails from "./Pages/TravelPage/PlaceDetails/PlaceDetails";
 import ManagePlaces from "./Pages/Dashboard/ManagePlaces/ManagePlaces";
+import PlaceBooking from "./Pages/PlaceBooking/PlaceBooking";
 
 function App() {
   return (
@@ -88,6 +89,14 @@ function App() {
             element={
               <RequireAuth>
                 <CheckOut />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="placeBooking/:serviceId"
+            element={
+              <RequireAuth>
+                <PlaceBooking/>
               </RequireAuth>
             }
           />

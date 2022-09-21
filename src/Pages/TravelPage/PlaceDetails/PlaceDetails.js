@@ -35,6 +35,9 @@ const PlaceDetails = () => {
                 <Card.Title>Price: 
                 {place.price} BDT
               </Card.Title>
+                <Card.Title>Date: 
+                {place.date}
+              </Card.Title>
               <Card.Text>
                 {place.description}
               </Card.Text>
@@ -47,7 +50,7 @@ const PlaceDetails = () => {
                   <li>Immediate solution to your problem.</li>
                   <li>Commitment to make your travel safe.</li>
                 </ul>
-              <Link to={`/checkOut/${serviceId}`}>
+              <Link to={`/placeBooking/${serviceId}`}>
               <Button variant="danger">Book Now</Button>
               </Link>
             </Card.Body>
