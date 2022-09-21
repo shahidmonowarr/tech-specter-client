@@ -86,6 +86,14 @@ const Dashboard = () => {
               </li>
               <li className="me-3 my-2 rounded-3 btn-dark">
                 <Link
+                  to="/dashboard/manageCourses"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Manage Courses
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
                   to="/dashboard/manageOrders"
                   style={{ textDecoration: "none", color: "white" }}
                 >
