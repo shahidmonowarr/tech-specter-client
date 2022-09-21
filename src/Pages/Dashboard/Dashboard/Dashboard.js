@@ -92,6 +92,14 @@ const Dashboard = () => {
                   Manage Orders
                 </Link>
               </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
+                  to="/dashboard/allTransaction"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  All Transaction
+                </Link>
+              </li>
             </ul>
           ) : (
             <ul>
