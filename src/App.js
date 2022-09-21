@@ -26,6 +26,11 @@ import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
 import Payment from "./Pages/Dashboard/Payment/Payment";
 import AllTransaction from "./Pages/Dashboard/AllTransaction/AllTransaction";
 import ManageCourses from "./Pages/Dashboard/ManageCourses/ManageCourses";
+import AddPlace from "./Pages/Dashboard/AddPlace/AddPlace";
+import AllPlaces from "./Pages/TravelPage/AllPlaces/AllPlaces";
+import SinglePlace from "./Pages/TravelPage/SinglePlace/SinglePlace";
+import PlaceDetails from "./Pages/TravelPage/PlaceDetails/PlaceDetails";
+import ManagePlaces from "./Pages/Dashboard/ManagePlaces/ManagePlaces";
 
 function App() {
   return (
@@ -49,8 +54,10 @@ function App() {
             <Route path="payment/:id" element={<Payment></Payment>}></Route>
             <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
             <Route path="addCourse" element={<RequireAdmin><AddCourse></AddCourse></RequireAdmin>}></Route>
+            <Route path="addPlace" element={<RequireAdmin><AddPlace></AddPlace></RequireAdmin>}></Route>
             <Route path="manageOrders" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
             <Route path="manageCourses" element={<RequireAdmin><ManageCourses></ManageCourses></RequireAdmin>}></Route>
+            <Route path="managePlaces" element={<RequireAdmin><ManagePlaces></ManagePlaces></RequireAdmin>}></Route>
             <Route path="allTransaction" element={<RequireAdmin><AllTransaction></AllTransaction></RequireAdmin>}></Route>
           </Route>
 
@@ -63,6 +70,16 @@ function App() {
             element={
               <RequireAuth>
                 <CourseDetails />
+              </RequireAuth>
+            }
+          />
+          <Route path="allPlaces" element={<AllPlaces />} />
+          <Route path="singlePlace" element={<SinglePlace />} />
+          <Route
+            path="placeDetails/:serviceId"
+            element={
+              <RequireAuth>
+                <PlaceDetails />
               </RequireAuth>
             }
           />

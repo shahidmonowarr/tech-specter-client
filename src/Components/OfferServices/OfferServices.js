@@ -156,9 +156,9 @@ const OfferServices = () => {
                                 <img width="40px" src={it3} alt="" />
                                 <h5 className='ps-2'>Tent Benefit</h5>
                             </div>
-                            <div className='mt-2'>
-                                <Button className='px-5 btn-danger offer-button'>See Places</Button>
-                            </div>
+                            <Link to='/allPlaces'>
+                                <Button className='px-5 btn-danger offer-button'>See Courses</Button>
+                            </Link>
 
                         </div>
                     </Col>
