@@ -17,7 +17,7 @@ const Header = () => {
   }
 
     return (
-        <Navbar bg="dark" variant='dark'sticky='top' expand="lg">
+        <Navbar style={{ backgroundColor: "#1c2331" }} variant='dark'sticky='top' expand="lg">
       <Container>
         <Navbar.Brand as={HashLink} to="/home">
             <div className='logo'>

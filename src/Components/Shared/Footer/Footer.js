@@ -1,10 +1,3 @@
-import {
-  faFacebookSquare,
-  faInstagramSquare,
-  faTwitterSquare,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo.png";
@@ -12,93 +5,146 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="footer-container">
-        <div className="container">
-          <div className="row pt-5">
-            <div className="col-md-4">
-              <div className="left-container mt-2 text-start">
-                <div className="footer-logo">
-                  <img src={logo} alt="footer" />
-                </div>
-                <div className="icons-container d-flex text-center">
-                  <div className="icon ms-3">
-                    <FontAwesomeIcon icon={faInstagramSquare} />
-                  </div>
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faFacebookSquare} />
-                  </div>
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faTwitterSquare} />
-                  </div>
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faYoutube} />
-                  </div>
-                </div>
-              </div>
+    <div  style={{ backgroundColor: "#1c2331" }}>
+      <div class="container mt-3">
+        <footer
+          class="text-center text-lg-start text-white"
+          style={{ backgroundColor: "#1c2331" }}
+        >
+          <section
+            class="d-flex justify-content-between p-4"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+          >
+            <div class="me-5">
+              <span>Get connected with us on social networks:</span>
             </div>
 
-            <div className="col-md-4">
-              <div className="">
-                <div className="mt-3">
-                  <div>
-                    <input
-                      className=" mt-1 mb-1 rounded-3"
-                      placeholder="Name"
-                      type="email"
-                      name=""
-                      id=""
-                    />
-                    <br />
-                    <input
-                      className=" mx-2 rounded-3"
-                      placeholder="Email"
-                      type="email"
-                      name=""
-                      id=""
-                    />
-                    <br />
-                    <button className=" my-2 btn-danger rounded-3 text-white">
-                      SUBSCRIBE NOW
-                    </button>
+            <div>
+              <a href="https://www.facebook.com/" class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/" class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.google.com/" class="text-white me-4">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/" class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/shahidmonowarr"
+                class="text-white me-4"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </section>
+
+          <section class="">
+            <div class="container text-center text-md-start mt-5">
+              <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Company name</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style={{
+                      width: " 60px",
+                      backgroundColor: "#7c4dff",
+                      height: "2px",
+                    }}
+                  />
+                  <div className="footer-logo mt-5">
+                    <img src={logo} alt="footer" />
                   </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Services</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style={{
+                      width: " 60px",
+                      backgroundColor: "#7c4dff",
+                      height: "2px",
+                    }}
+                  />
+                  <Link class="text-white" to="/allCourses">
+                    <p>Courses</p>
+                  </Link>
+                  <Link class="text-white" to="/allPlaces">
+                    <p>Travels</p>
+                  </Link>
+                  <Link class="text-white" to="/services">
+                    <p>About Us</p>
+                  </Link>
+                  <Link class="text-white" to="/">
+                    <p>Home</p>
+                  </Link>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Useful links</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style={{
+                      width: " 60px",
+                      backgroundColor: "#7c4dff",
+                      height: "2px",
+                    }}
+                  />
+                  <Link class="text-white" to="/dashboard">
+                    <p>Dashboard</p>
+                  </Link>
+                  <Link class="text-white" to="/dashboard/myOrders">
+                    <p>Your Orders</p>
+                  </Link>
+                  <Link class="text-white" to="/privacyPolicy">
+                    <p>Privacy</p>
+                  </Link>
+                  <Link class="text-white" to="/faq">
+                    <p>FAQ</p>
+                  </Link>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <h6 class="text-uppercase fw-bold">Contact</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style={{
+                      width: " 60px",
+                      backgroundColor: "#7c4dff",
+                      height: "2px",
+                    }}
+                  />
+                  <p>
+                    <i class="fas fa-home mr-3"></i> Dhaka, PT 2323, BD
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope mr-3"></i> info@example.com
+                  </p>
+                  <p>
+                    <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+                  </p>
+                  <p>
+                    <i class="fas fa-print mr-3"></i> + 01 234 567 89
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <div >
-                <ul className="mx-5">
-                  <li className="footer-menu mx-3 rounded-3 btn-danger">
-                    <Link
-                      to="/"
-                      style={{ textDecoration: "none", color: "white" }}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className="footer-menu mx-3 rounded-3 btn-danger">
-                    <Link
-                      to="/services"
-                      style={{ textDecoration: "none", color: "white" }}
-                    >
-                      Services
-                    </Link>
-                  </li>
-                  <li className="footer-menu mx-3 rounded-3 btn-danger">
-                    <Link
-                      to="/dashboard"
-                      style={{ textDecoration: "none", color: "white" }}
-                    >
-                      Dashboard
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          </section>
+          {/* Section: Links  */}
+
+          {/* Copyright */}
+          <div
+            class="text-center p-3"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+          >
+            © 2020 Copyright: Tech Specter
           </div>
-          <hr></hr>
-          <h6>TECH SPECTER Ⓒ All rights reserved</h6>
-        </div>
+        </footer>
       </div>
     </div>
   );

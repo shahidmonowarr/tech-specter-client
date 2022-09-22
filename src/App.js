@@ -32,6 +32,8 @@ import SinglePlace from "./Pages/TravelPage/SinglePlace/SinglePlace";
 import PlaceDetails from "./Pages/TravelPage/PlaceDetails/PlaceDetails";
 import ManagePlaces from "./Pages/Dashboard/ManagePlaces/ManagePlaces";
 import PlaceBooking from "./Pages/PlaceBooking/PlaceBooking";
+import PrivacyPolicy from "./Optional/PrivacyPolicy";
+import Faq from "./Optional/Faq";
 
 function App() {
   return (
@@ -102,6 +104,8 @@ function App() {
           />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="faq" element={<Faq />} />
+          <Route path="privacyPolicy" element={<PrivacyPolicy/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
