@@ -74,7 +74,7 @@ const OfferServices = () => {
                     <Col sm={12} md={5} lg={5}>
                         <div className="offer-wrapper">
                             <div className="">
-                                <img style={{width:'100%', height: 'auto'}}  className='vert-move' src="https://i.ibb.co/jGwSgbH/12145615-Wavy-Edu-05-Single-08-1.jpg" alt="" />
+                                <img style={{width:'100%', height: 'auto'}}  src="https://i.ibb.co/jGwSgbH/12145615-Wavy-Edu-05-Single-08-1.jpg" alt="" />
                             </div>
                             <div className="offer-info">
                                 <span>Courses</span>
@@ -125,7 +125,7 @@ const OfferServices = () => {
                     <Col sm={12} md={5} lg={5}>
                         <div className="offer-wrapper">
                             <div >
-                                <img style={{width:'100%', height: 'auto'}} className='vert-move' src='https://i.ibb.co/NSt3xsb/12291290-Wavy-Trv-01-Single-06-1.jpg' alt="" />
+                                <img style={{width:'100%', height: 'auto'}}  src='https://i.ibb.co/NSt3xsb/12291290-Wavy-Trv-01-Single-06-1.jpg' alt="" />
                             </div>
                             <div className="offer-info">
                                 <span>Travel</span>

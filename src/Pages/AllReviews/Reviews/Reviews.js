@@ -17,6 +17,11 @@ const Reviews = () => {
           })
           .catch((error) => Toast.error(error.message));
       }, []);
+
+      const filteredReviews = reviews?.filter(
+        (review) => review.category === "website"
+      );
+
     return (
         <div
     id="reviews"
@@ -38,7 +43,7 @@ const Reviews = () => {
         ) : (
           <Card className="mt-5 mb-5">
               <Row>
-            {reviews?.map((review) => (
+            {filteredReviews?.map((review) => (
               <Review key={review._id} review={review} />
             ))}
           </Row>

@@ -38,9 +38,10 @@ const AddReview = () => {
           </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input {...register("name")} placeholder="name" /> <br />
+            <input type="text" {...register("category")} placeholder="course / travel / website" /> 
             <div>
               <div>
-                <h5>Your Review</h5>
+                <h5>Rating</h5>
               </div>
               <div>
                 <Rating

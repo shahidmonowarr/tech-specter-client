@@ -8,7 +8,7 @@ const SinglePlace = ({singlePlace}) => {
 
     const navigateToTravelDetails = id=>{
       navigate(`/placeDetails/${id}`);
-      console.log(navigate);
+    //   console.log(navigate);
     }
     return (
         <Col className="my-3 text-center" sm={12} md={6} lg={4}>
