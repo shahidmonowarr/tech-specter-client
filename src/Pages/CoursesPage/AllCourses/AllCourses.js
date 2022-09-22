@@ -8,7 +8,7 @@ const AllCourses = () => {
   const [courses, setCourses] = useState([]);
   const count = courses.length;
   useEffect(() => {
-    fetch("http://localhost:5000/course")
+    fetch("https://tech-specter.onrender.com/course")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

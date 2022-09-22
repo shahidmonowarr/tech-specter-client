@@ -11,7 +11,7 @@ const ManagePlaces = () => {
         isLoading,
         refetch,
       } = useQuery("allPlaces", () =>
-        fetch("http://localhost:5000/travel", {
+        fetch("https://tech-specter.onrender.com/travel", {
           method: "GET",
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -23,7 +23,7 @@ const ManagePlaces = () => {
   const handleDeletePlace = (id) => {
     const proceed = window.confirm("Are Sure To Cancel This Order?");
     if (proceed) {
-      const url = `http://localhost:5000/travel/${id}`;
+      const url = `https://tech-specter.onrender.com/travel/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

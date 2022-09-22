@@ -16,7 +16,7 @@ const CourseDetails = () => {
   const [reviews, setReviews] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://tech-specter.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

@@ -31,7 +31,7 @@ const PlaceBooking = () => {
         status: "Pending"
 
     }
-    axios.post('http://localhost:5000/order', order)
+    axios.post('https://tech-specter.onrender.com/order', order)
         .then(res => {
             const {data}= res;
             if (data.insertedId) {

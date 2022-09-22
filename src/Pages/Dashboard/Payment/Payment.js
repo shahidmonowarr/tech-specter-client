@@ -16,7 +16,7 @@ const Payment = () => {
     const [user, loading, error] = useAuthState(auth);
 
     const {id} = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://tech-specter.onrender.com/order/${id}`;
 
     const {data: singleOrder, isLoading} = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

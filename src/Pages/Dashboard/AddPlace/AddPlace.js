@@ -10,7 +10,7 @@ const AddPlace = () => {
         console.log(data);
 
         
-        axios.post('http://localhost:5000/travel', data)
+        axios.post('https://tech-specter.onrender.com/travel', data)
             .then(res => {
                 if (res.data.insertedId) {
                     toast('Place Added Successfully');

@@ -10,7 +10,7 @@ const AddCourse = () => {
         console.log(data);
 
         
-        axios.post('http://localhost:5000/course', data)
+        axios.post('https://tech-specter.onrender.com/course', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully');

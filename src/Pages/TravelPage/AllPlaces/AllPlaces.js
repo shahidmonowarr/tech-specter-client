@@ -8,7 +8,7 @@ const AllPlaces = () => {
   const count = places.length;
 
   useEffect(() => {
-    fetch("http://localhost:5000/travel")
+    fetch("https://tech-specter.onrender.com/travel")
       .then((res) => res.json())
       .then((data) => {
         setPlaces(data);

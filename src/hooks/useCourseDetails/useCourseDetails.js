@@ -4,7 +4,7 @@ const useCourseDetails = serviceId => {
   const [course, setCourse] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/course/${serviceId}`;
+    const url = `https://tech-specter.onrender.com/course/${serviceId}`;
 
     fetch(url)
       .then((res) => res.json())

@@ -12,7 +12,7 @@ const AddReview = () => {
     console.log(data);
     data.rating = rating;
 
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
+    axios.post("https://tech-specter.onrender.com/reviews", data).then((res) => {
       if (res.data.insertedId) {
         alert("Added Successfully");
         reset();

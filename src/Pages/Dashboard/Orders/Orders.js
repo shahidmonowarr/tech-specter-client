@@ -14,7 +14,7 @@ const Orders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/order?email=${user.email}`, {
+      fetch(`https://tech-specter.onrender.com/order?email=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -38,7 +38,7 @@ const Orders = () => {
   const handleDeleteOrder = (id) => {
     const proceed = window.confirm("Are Sure To Cancel This Order?");
     if (proceed) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://tech-specter.onrender.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

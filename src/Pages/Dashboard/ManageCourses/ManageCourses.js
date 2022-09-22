@@ -11,7 +11,7 @@ const ManageCourses = () => {
         isLoading,
         refetch,
       } = useQuery("allCourses", () =>
-        fetch("http://localhost:5000/course", {
+        fetch("https://tech-specter.onrender.com/course", {
           method: "GET",
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -23,7 +23,7 @@ const ManageCourses = () => {
   const handleDeleteCourse = (id) => {
     const proceed = window.confirm("Are Sure To Cancel This Order?");
     if (proceed) {
-      const url = `http://localhost:5000/course/${id}`;
+      const url = `https://tech-specter.onrender.com/course/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

@@ -10,7 +10,7 @@ const AllTransaction = () => {
         isLoading,
         refetch,
       } = useQuery("allOrder", () =>
-        fetch("http://localhost:5000/order", {
+        fetch("https://tech-specter.onrender.com/order", {
           method: "GET",
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,

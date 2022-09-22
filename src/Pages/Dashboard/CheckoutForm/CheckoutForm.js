@@ -16,7 +16,7 @@ const CheckoutForm = ({ singleOrder }) => {
   const { _id, price, email } = singleOrder;
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://tech-specter.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -78,7 +78,7 @@ const CheckoutForm = ({ singleOrder }) => {
         singleOrder: _id,
         transactionId: paymentIntent.id
       }
-      fetch( `http://localhost:5000/order/${_id}`,{
+      fetch( `https://tech-specter.onrender.com/order/${_id}`,{
         method: "PATCH",
       headers: {
         "content-type": "application/json",
