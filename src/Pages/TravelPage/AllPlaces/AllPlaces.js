@@ -46,7 +46,7 @@ const AllPlaces = () => {
             What We provide to Our Customer!
           </p>
           <Container>
-            <ButtonGroup aria-label="Basic example">
+            <ButtonGroup className="flex-wrap" aria-label="Basic example">
               <Button variant="secondary" onClick={() => filterPlaces("All")}>
                 All
               </Button>
