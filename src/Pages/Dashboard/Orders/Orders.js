@@ -1,6 +1,6 @@
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Row, Table } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -21,7 +21,7 @@ const Orders = () => {
         },
       })
         .then((res) => {
-          console.log("res", res);
+          // console.log("res", res);
           if (res.status === 401 || res.status === 403) {
             signOut(auth);
             localStorage.removeItem("accessToken");
@@ -30,7 +30,9 @@ const Orders = () => {
           return res.json();
         })
         .then((data) => {
-          setOrders(data);
+          // console.log("data", data);
+          const myOrders = data.filter(singleData => singleData.email === user.email);
+                setOrders(myOrders);
         });
     }
   }, [user]);

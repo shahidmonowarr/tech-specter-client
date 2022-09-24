@@ -75,13 +75,13 @@ const AllCourses = () => {
             {tempCourses.length === 0
               ? courses?.map((singleCourse) => (
                   <SingleCourse
-                    kay={singleCourse._id}
+                    key={singleCourse._id}
                     singleCourse={singleCourse}
                   />
                 ))
               : tempCourses.map((singleCourse) => (
                   <SingleCourse
-                    kay={singleCourse._id}
+                    key={singleCourse._id}
                     singleCourse={singleCourse}
                   ></SingleCourse>
                 ))}

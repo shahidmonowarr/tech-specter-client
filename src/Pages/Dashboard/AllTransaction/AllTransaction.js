@@ -8,7 +8,6 @@ const AllTransaction = () => {
         data: allOrder,
         setAllOrder,
         isLoading,
-        refetch,
       } = useQuery("allOrder", () =>
         fetch("https://tech-specter.onrender.com/order", {
           method: "GET",

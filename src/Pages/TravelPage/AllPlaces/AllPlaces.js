@@ -74,13 +74,13 @@ const AllPlaces = () => {
             {tempPlaces.length === 0
               ? places?.map((singlePlace) => (
                   <SinglePlace
-                    kay={singlePlace._id}
+                    key={singlePlace._id}
                     singlePlace={singlePlace}
                   />
                 ))
               : tempPlaces.map((singlePlace) => (
                   <SinglePlace
-                    kay={singlePlace._id}
+                    key={singlePlace._id}
                     singlePlace={singlePlace}
                   ></SinglePlace>
                 ))}

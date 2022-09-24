@@ -3,20 +3,21 @@ import React from 'react';
 import './AddCourse.css';
 import { useForm } from 'react-hook-form';
 import { Col, Row } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const AddCourse = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
 
         
         axios.post('https://tech-specter.onrender.com/course', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('Added Successfully');
+                    toast('Added Successfully');
                     reset();
                 }
-                console.log(res);
+                // console.log(res);
             })
 
     };

@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const AddPlace = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
 
         
         axios.post('https://tech-specter.onrender.com/travel', data)
@@ -16,7 +16,7 @@ const AddPlace = () => {
                     toast('Place Added Successfully');
                     reset();
                 }
-                console.log(res);
+                // console.log(res);
             })
 
     };
@@ -35,13 +35,17 @@ const AddPlace = () => {
         <Col md="6">
         <h2 className="text-secondary fw-bold text-center banner-title">Add a Place</h2>
             <div className="container pt-1"></div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name",)} placeholder="name" /> <br />
-                <input type="number"{...register("price")} placeholder="price" /> <br />
-                <input type="text" {...register("image")} placeholder="image" /> <br />
-                <input type="text" {...register("category")} placeholder="ocean / mountain / heritage" /> <br />
-                <input type="date" {...register("date")} /> <br />
-                <input type="text" {...register("description")} placeholder="description" /> <br />
+            <form  onSubmit={handleSubmit(onSubmit)}>
+                <div className='w-100 mb-1'><input {...register("name",)} placeholder="name" /> <br /></div>
+                <div className='w-100 mb-1'><input type="number"{...register("price")} placeholder="price" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("image")} placeholder="image" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("image1")} placeholder="image 1" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("image2")} placeholder="image 2" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("category")} placeholder="ocean / mountain / city" /> </div>
+                <div className='w-100 mb-1'><input type="date" {...register("date")} /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("description1")} placeholder="description 1" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("description2")} placeholder="description 2" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("description3")} placeholder="description 2" /></div>
                 <input className='submit-btn' type="submit" />
             </form>
         </Col>

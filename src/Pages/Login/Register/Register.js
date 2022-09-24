@@ -76,7 +76,7 @@ const Register = () => {
           {/* for name */}
           <div>
            <div className='text-start ms-5'> <label >Name</label><br/></div>
-          <input ClassName='mb-2'
+          <input className='mb-2'
           placeholder='Enter Your Name'
           style={{ width: '82%', marginBottom: '10px', borderRadius: '8px', height:'40px' }}
            

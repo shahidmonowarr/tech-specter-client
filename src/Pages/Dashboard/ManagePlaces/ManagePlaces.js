@@ -51,7 +51,7 @@ const ManagePlaces = () => {
           <h1 className="text-dark fw-bold pt-5 pb-3 fs-1">
             Remove and Update places
           </h1>
-          <Table striped bplaceed hover responsive variant="dark">
+          <Table striped hover responsive variant="dark">
             <thead>
               <tr className="bg-dark text-white">
                 <th>Index</th>

@@ -4,20 +4,21 @@ import axios from "axios";
 import Rating from "react-rating";
 import { Col, Row } from "react-bootstrap";
 import './AddReview.css';
+import { toast } from "react-toastify";
 
 const AddReview = () => {
   const { register, handleSubmit, reset } = useForm();
   const [rating, setRating] = useState(5);
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     data.rating = rating;
 
     axios.post("https://tech-specter.onrender.com/reviews", data).then((res) => {
       if (res.data.insertedId) {
-        alert("Added Successfully");
+        toast("Review Added Successfully");
         reset();
       }
-      console.log(res);
+      // console.log(res);
     });
   };
 

@@ -15,7 +15,7 @@ const CheckOut = () => {
   const navigate = useNavigate();
 
   if(user){
-    console.log(user);
+    // console.log(user);
   }
 
   const handlePlaceOrder = event =>{
@@ -39,7 +39,7 @@ const CheckOut = () => {
                 event.target.reset();
                 navigate('/dashboard/myOrders');
             }
-            console.log(res);
+            // console.log(res);
         })
   }
 

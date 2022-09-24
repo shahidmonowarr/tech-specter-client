@@ -1,7 +1,7 @@
 import React from 'react';
 import './SingleCourse.css';
 import { Card, Col } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SingleCourse = ({singleCourse}) => {
     const { _id, name, description, price, image } = singleCourse;
@@ -9,7 +9,7 @@ const SingleCourse = ({singleCourse}) => {
 
     const navigateToCourseDetails = id=>{
       navigate(`/courseDetails/${id}`);
-      console.log(navigate);
+      // console.log(navigate);
     }
 
     return (
