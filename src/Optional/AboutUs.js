@@ -1,13 +1,13 @@
 import React from 'react';
 import { Accordion, Container } from 'react-bootstrap';
 
-const PrivacyPolicy = () => {
+const AboutUs = () => {
     return (
         <Container>
             <div className="contact-title mt-5">
             <h2>
-              Privacy Policy
-              <p className="fs-6 fw-normal mt-2">Terms and conditions of Tech specter!</p>
+              About Us
+              <p className="fs-6 fw-normal mt-2">About Tech specter!</p>
             </h2>
           </div>
             <Accordion className='text-start mb-5' defaultActiveKey="0" alwaysOpen>
@@ -34,4 +34,4 @@ const PrivacyPolicy = () => {
     );
 };
 
-export default PrivacyPolicy;
+export default AboutUs;

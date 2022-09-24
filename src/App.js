@@ -34,6 +34,7 @@ import ManagePlaces from "./Pages/Dashboard/ManagePlaces/ManagePlaces";
 import PlaceBooking from "./Pages/PlaceBooking/PlaceBooking";
 import PrivacyPolicy from "./Optional/PrivacyPolicy";
 import Faq from "./Optional/Faq";
+import AboutUs from "./Optional/AboutUs";
 
 function App() {
   return (
@@ -104,6 +105,7 @@ function App() {
           />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="aboutUs" element={<AboutUs />} />
           <Route path="faq" element={<Faq />} />
           <Route path="privacyPolicy" element={<PrivacyPolicy/>} />
           <Route path="*" element={<NotFound />} />
