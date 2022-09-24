@@ -17,7 +17,7 @@ const Users = () => {
 
     return (
         <div>
-            {/* <h2>All Users: {users.length} </h2> */}
+            <h2>All Users: {users.length} </h2>
             <Table striped bordered hover variant="dark" responsive>
                 <thead>
                     <tr className="bg-dark text-white">

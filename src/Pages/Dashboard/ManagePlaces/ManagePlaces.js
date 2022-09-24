@@ -8,8 +8,7 @@ const ManagePlaces = () => {
     const {
         data: allPlaces,
         setAllPlaces,
-        isLoading,
-        refetch,
+        isLoading
       } = useQuery("allPlaces", () =>
         fetch("https://tech-specter.onrender.com/travel", {
           method: "GET",
@@ -49,7 +48,7 @@ const ManagePlaces = () => {
       <div className=" manage-place">
         <div className="container">
           <h1 className="text-dark fw-bold pt-5 pb-3 fs-1">
-            Remove and Update places
+            Remove Places
           </h1>
           <Table striped hover responsive variant="dark">
             <thead>

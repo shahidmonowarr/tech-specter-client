@@ -71,7 +71,7 @@ const ManageOrders = () => {
       <div className=" manage-order">
         <div className="container">
           <h1 className="text-dark fw-bold pt-5 pb-3 fs-1">
-            Remove and Update Orders
+            Remove and Approve Orders
           </h1>
           <Table striped bordered hover responsive variant="dark">
             <thead>
