@@ -46,23 +46,23 @@ const AllPlaces = () => {
             What We provide to Our Customer!
           </p>
           <Container>
-            <ButtonGroup className="flex-wrap" aria-label="Basic example">
-              <Button variant="secondary" onClick={() => filterPlaces("All")}>
+            <ButtonGroup className="flex-wrap mb-2" aria-label="Basic example">
+              <Button className="mx-2 my-2 rounded-3" variant="secondary" onClick={() => filterPlaces("All")}>
                 All
               </Button>
-              <Button
+              <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterPlaces("ocean")}
               >
                 Ocean
               </Button>
-              <Button
+              <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterPlaces("mountain")}
               >
                 Mountain
               </Button>
-              <Button
+              <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterPlaces("heritage")}
               >

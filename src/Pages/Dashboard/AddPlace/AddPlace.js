@@ -39,11 +39,11 @@ const AddPlace = () => {
                 <div className='w-100 mb-1'><input {...register("name",)} placeholder="name" /> <br /></div>
                 <div className='w-100 mb-1'><input type="number"{...register("price")} placeholder="price" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("image")} placeholder="image" /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("image1")} placeholder="image 1" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("image2")} placeholder="image 2" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("image3")} placeholder="image 2" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("category")} placeholder="ocean / mountain / city" /> </div>
                 <div className='w-100 mb-1'><input type="date" {...register("date")} /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("description1")} placeholder="description 1" /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("description")} placeholder="description 1" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("description2")} placeholder="description 2" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("description3")} placeholder="description 2" /></div>
                 <input className='submit-btn' type="submit" />

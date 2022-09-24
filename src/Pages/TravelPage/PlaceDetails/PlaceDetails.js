@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Col, Container, Row, Toast } from "react-bootstrap";
+import { Carousel, Col, Container, Row, Toast } from "react-bootstrap";
 import Rating from "react-rating";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -32,28 +32,49 @@ const PlaceDetails = () => {
 
     return (
         <Container >
-      <h1 style={{textTransform:'uppercase', fontWeight:'bolder', fontSize:'60px'}}>{place.category}</h1>
+      <h1 style={{textTransform:'uppercase', fontWeight:'bolder', fontSize:'40px'}}>{place.category}</h1>
       <Row className="text-start">
         <Col>
-          <img
-            className="img-fluid"
-            alt=""
-            src={place.image}
-            style={{ height: "500px" }}
-          />
+          <Carousel variant="dark">
+      <Carousel.Item>
+        <img
+          className="d-block w-100 img-fluid"
+          src={place.image}
+          style={{ height: "360px" }}
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 img-fluid"
+          src={place.image2}
+          style={{ height: "360px" }}
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 img-fluid"
+          style={{ height: "360px" }}
+          src={place.image3}
+          
+          alt="Third slide"
+        />
+      </Carousel.Item>
+    </Carousel>
          <Card className="my-2">
             <h6 className="fw-bold ms-1 mt-1">Reviews</h6>
-            <Row>
+            <Row className="flex-wrap">
               {filteredReviews?.map((review) => (
                 <Col
                   key={review._id}
                   review={review}
-                  className="my-1 mx-1 text-start"
+                  className="my-1 text-start flex-wrap"
                   sm={12}
                   md={6}
                   lg={4}
                 >
-                    <Card style={{ width: '135%' }} className="ps-3 py-2">
+                    <Card style={{ width: 'auto' }} className="ps-3 py-2">
                       <h6>{review.name}</h6>
                       <h6>
                         <Rating
@@ -91,6 +112,15 @@ const PlaceDetails = () => {
               <Card.Text>
                 {place.description}
               </Card.Text>
+              <Card.Text>
+                {place.description1}
+              </Card.Text>
+              <Card.Text>
+                {place.description2}
+              </Card.Text>
+              <Card.Text>
+                {place.description3}
+              </Card.Text>
               <Card.Title>
                 What we provide?
               </Card.Title>
@@ -101,10 +131,10 @@ const PlaceDetails = () => {
                   <li>Commitment to make your travel safe.</li>
                 </ul>
               <Link to={`/placeBooking/${serviceId}`}>
-              <Button variant="danger">Book Now</Button>
+              <Button className="me-2" variant="danger">Book Now</Button>
               </Link>
               <Link to={`/placeBooking/${serviceId}`}>
-              <Button className="ms-2" variant="danger">Add Review</Button>
+              <Button className="mt-2" variant="danger">Add Review</Button>
               </Link>
             </Card.Body>
           </Card>

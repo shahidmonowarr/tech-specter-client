@@ -36,7 +36,7 @@ const CourseDetails = () => {
         style={{
           textTransform: "uppercase",
           fontWeight: "bolder",
-          fontSize: "60px",
+          fontSize: "35px",
         }}
       >
         {course.category}
@@ -56,12 +56,12 @@ const CourseDetails = () => {
                 <Col
                   key={review._id}
                   review={review}
-                  className="my-1 mx-3 text-start"
+                  className="my-1 text-start"
                   sm={12}
                   md={3}
                   lg={3}
                 >
-                    <Card style={{ width: '135%' }} className="ps-3 py-2">
+                    <Card style={{ width: 'auto' }} className="ps-3 py-2">
                       <h6>{review.name}</h6>
                       <h6>
                         <Rating
@@ -109,10 +109,10 @@ const CourseDetails = () => {
                 <li>Commitment to deliver your project on time</li>
               </ul>
               <Link to={`/checkOut/${serviceId}`}>
-                <Button variant="danger">Order Now</Button>
+                <Button className="me-2" variant="danger">Order Now</Button>
               </Link>
               <Link to="/dashboard/addReview">
-                <Button className="ms-2" variant="danger">
+                <Button className="mt-2" variant="danger">
                   Add Review
                 </Button>
               </Link>

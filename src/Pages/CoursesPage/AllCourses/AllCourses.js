@@ -48,22 +48,22 @@ const AllCourses = () => {
           </p>
           <Container>
             <ButtonGroup className="flex-wrap" aria-label="Basic example">
-              <Button variant="secondary" onClick={() => filterCourses("All")}>
+              <Button className="mx-2 my-2 rounded-3" variant="secondary" onClick={() => filterCourses("All")}>
                 All
               </Button>
-              <Button
+              <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterCourses("development")}
               >
                 Development
               </Button>
-              <Button
+              <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterCourses("design")}
               >
                 Design
               </Button>
-              <Button
+              <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterCourses("marketing")}
               >
