@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import PageTitle from '../../Components/Shared/PageTitle/PageTitle';
 import auth from '../../firebase.init';
 import usePlaceDetails from '../../hooks/usePlaceDetails/usePlaceDetails';
 
@@ -45,6 +46,7 @@ const PlaceBooking = () => {
 
     return (
         <div className="w-50 mx-auto">
+          <PageTitle title="Booking"></PageTitle>
       <div className="row">
         <div className="form-holder">
           <div className="form-content">

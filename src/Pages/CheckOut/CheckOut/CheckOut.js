@@ -6,6 +6,7 @@ import auth from "../../../firebase.init";
 import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
 import "./CheckOut.css";
 import { toast } from 'react-toastify';
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 
 const CheckOut = () => {
   const { serviceId } = useParams();
@@ -45,6 +46,7 @@ const CheckOut = () => {
 
   return (
     <div className="w-50 mx-auto">
+      <PageTitle title="CheckOut"></PageTitle>
       <div className="row">
         <div className="form-holder">
           <div className="form-content">
