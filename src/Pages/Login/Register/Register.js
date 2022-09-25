@@ -8,6 +8,7 @@ import Loading from '../../../Components/Shared/Loading/Loading';
 import { reload } from 'firebase/auth';
 import useToken from '../../../hooks/useToken/useToken';
 import '../Login/Login.css';
+import PageTitle from '../../../Components/Shared/PageTitle/PageTitle';
 
 const Register = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -52,6 +53,7 @@ const Register = () => {
 
     return (
         <div>
+          <PageTitle title="Register"></PageTitle>
             <MDBContainer className="my-5">
 
 <MDBCard>

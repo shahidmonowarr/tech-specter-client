@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, ButtonGroup, Container, Row, Spinner } from 'react-bootstrap';
 import { Toast } from "bootstrap";
 import SinglePlace from '../SinglePlace/SinglePlace';
+import PageTitle from '../../../Components/Shared/PageTitle/PageTitle';
 
 const AllPlaces = () => {
     const [places, setPlaces] = useState([]);
@@ -39,6 +40,7 @@ const AllPlaces = () => {
         </div>
       ) : (
         <Container className="mb-5">
+          <PageTitle title="Places"></PageTitle>
           <h2 className="text-center text-uppercase mt-5 mb-4 feature">
             LATEST Places
           </h2>

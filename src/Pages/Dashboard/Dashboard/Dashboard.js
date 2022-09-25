@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 import auth from "../../../firebase.init";
 import useAdmin from "../../../hooks/useAdmin/useAdmin";
 import "./Dashboard.css";
@@ -11,6 +12,7 @@ const Dashboard = () => {
 
   return (
     <div className="container">
+      <PageTitle title="Dashboard"></PageTitle>
       <div className="row">
         <div className="col-md-2 pt-2 my-auto shadow-lg">
           {admin ? (

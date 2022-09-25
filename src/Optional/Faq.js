@@ -1,9 +1,11 @@
 import React from 'react';
 import { Accordion, Container } from 'react-bootstrap';
+import PageTitle from '../Components/Shared/PageTitle/PageTitle';
 
 const Faq = () => {
     return (
         <Container>
+          <PageTitle title="Faq"></PageTitle>
             <div className="contact-title mt-5">
             <h2>
               FAQ

@@ -9,6 +9,7 @@ import { Spinner } from 'react-bootstrap';
 import Loading from '../../../Components/Shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import useToken from '../../../hooks/useToken/useToken';
+import PageTitle from '../../../Components/Shared/PageTitle/PageTitle';
 
 
 const Login = () => {
@@ -52,6 +53,7 @@ const Login = () => {
     return (
         <div>
             <MDBContainer className="my-5">
+            <PageTitle title="Login"></PageTitle>
 
 <MDBCard>
   <MDBRow className='g-0'>

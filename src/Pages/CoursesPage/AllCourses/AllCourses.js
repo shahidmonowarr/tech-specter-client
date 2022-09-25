@@ -3,6 +3,7 @@ import "./AllCourses.css";
 import { Button, ButtonGroup, Container, Row, Spinner } from "react-bootstrap";
 import { Toast } from "bootstrap";
 import SingleCourse from "../SingleCourse/SingleCourse";
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 
 const AllCourses = () => {
   const [courses, setCourses] = useState([]);
@@ -40,6 +41,7 @@ const AllCourses = () => {
         </div>
       ) : (
         <Container className="mb-5">
+          <PageTitle title="Courses"></PageTitle>
           <h2 className="text-center text-uppercase mt-5 mb-4 feature">
             LATEST courses
           </h2>

@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import usePlaceDetails from "../../../hooks/usePlaceDetails/usePlaceDetails";
 import { useEffect, useState } from "react";
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 
 
 const PlaceDetails = () => {
@@ -32,6 +33,7 @@ const PlaceDetails = () => {
 
     return (
         <Container >
+          <PageTitle title="Travel Details"></PageTitle>
       <h1 style={{textTransform:'uppercase', fontWeight:'bolder', fontSize:'40px'}}>{place.category}</h1>
       <Row className="text-start">
         <Col>

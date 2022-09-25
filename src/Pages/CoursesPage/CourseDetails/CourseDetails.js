@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 
 const CourseDetails = () => {
   const { serviceId } = useParams();
@@ -32,6 +33,7 @@ const CourseDetails = () => {
 
   return (
     <Container>
+      <PageTitle title="Course Details"></PageTitle>
       <h1
         style={{
           textTransform: "uppercase",
