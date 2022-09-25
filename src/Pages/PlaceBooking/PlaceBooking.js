@@ -77,10 +77,9 @@ const PlaceBooking = () => {
                 />
                 <input
                   className="form-control"
-                  type="text"
-                  name="name"
-                  value={place.date}
-                  required readOnly
+                  type="date"
+                  name="date"
+                  required
                 />
                 <input
                   className="form-control"

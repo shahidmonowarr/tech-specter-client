@@ -64,9 +64,9 @@ const AllPlaces = () => {
               </Button>
               <Button className="mx-2 my-2 rounded-3"
                 variant="secondary"
-                onClick={() => filterPlaces("heritage")}
+                onClick={() => filterPlaces("city")}
               >
-                Heritage
+                City
               </Button>
             </ButtonGroup>
           </Container>

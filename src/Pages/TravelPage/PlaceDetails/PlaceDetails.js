@@ -106,9 +106,6 @@ const PlaceDetails = () => {
                 <Card.Title>Price: 
                 {place.price} BDT
               </Card.Title>
-                <Card.Title>Date: 
-                {place.date}
-              </Card.Title>
               <Card.Text>
                 {place.description}
               </Card.Text>
