@@ -42,7 +42,7 @@ const AddPlace = () => {
                 <div className='w-100 mb-1'><input type="text" {...register("image2")} placeholder="image 2" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("image3")} placeholder="image 2" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("category")} placeholder="ocean / mountain / city" /> </div>
-                <div className='w-100 mb-1'><input type="text" {...register("period")} /></div>
+                <div className='w-100 mb-1'><input type="text" {...register("period")} placeholder="visit period" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("description")} placeholder="description 1" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("description2")} placeholder="description 2" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("description3")} placeholder="description 2" /></div>
