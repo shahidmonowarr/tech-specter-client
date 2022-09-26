@@ -24,7 +24,7 @@ const SinglePlace = ({singlePlace}) => {
               <Card.Title style={{ color: "#42a5f5" }} className="text-uppercase">
                 {name}
               </Card.Title>
-              <Card.Title>Price: {price}.00 BDT</Card.Title>
+              <Card.Title>Price: {price}.00 USD</Card.Title>
               <Card.Text>{description.slice(0,160)}...</Card.Text>
               
                 <button onClick={()=> navigateToTravelDetails(_id)} className="btn  btn-danger">See Details</button>

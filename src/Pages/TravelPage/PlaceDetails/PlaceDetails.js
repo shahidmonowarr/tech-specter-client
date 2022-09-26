@@ -106,7 +106,7 @@ const PlaceDetails = () => {
           <hr />
             <Card.Body>
                 <Card.Title>Price: 
-                {place.price} BDT
+                 {place.price}.00 USD
               </Card.Title>
               <Card.Text>
                 {place.description}
