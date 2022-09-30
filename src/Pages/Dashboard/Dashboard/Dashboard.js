@@ -48,6 +48,14 @@ const Dashboard = () => {
               </li>
               <li className="me-3 my-2 rounded-3 btn-dark">
                 <Link
+                  to="/dashboard/addBlog"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Add Blog
+                </Link>
+              </li>
+              <li className="me-3 my-2 rounded-3 btn-dark">
+                <Link
                   to="/dashboard/manageCourses"
                   style={{ textDecoration: "none", color: "white" }}
                 >

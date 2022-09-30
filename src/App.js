@@ -35,6 +35,9 @@ import PlaceBooking from "./Pages/PlaceBooking/PlaceBooking";
 import PrivacyPolicy from "./Optional/PrivacyPolicy";
 import Faq from "./Optional/Faq";
 import AboutUs from "./Optional/AboutUs";
+import AddBlog from "./Pages/Dashboard/AddBlog/AddBlog";
+import AllBlogs from "./Pages/EducationBlogsPage/AllBlogs/AllBlogs";
+import BlogDetails from "./Pages/EducationBlogsPage/BlogDetails/BlogDetails";
 
 function App() {
   return (
@@ -59,6 +62,7 @@ function App() {
             <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
             <Route path="addCourse" element={<RequireAdmin><AddCourse></AddCourse></RequireAdmin>}></Route>
             <Route path="addPlace" element={<RequireAdmin><AddPlace></AddPlace></RequireAdmin>}></Route>
+            <Route path="addBlog" element={<RequireAdmin><AddBlog></AddBlog></RequireAdmin>}></Route>
             <Route path="manageOrders" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
             <Route path="manageCourses" element={<RequireAdmin><ManageCourses></ManageCourses></RequireAdmin>}></Route>
             <Route path="managePlaces" element={<RequireAdmin><ManagePlaces></ManagePlaces></RequireAdmin>}></Route>
@@ -74,6 +78,16 @@ function App() {
             element={
               <RequireAuth>
                 <CourseDetails />
+              </RequireAuth>
+            }
+          />
+          
+          <Route path="allBlogs" element={<AllBlogs />} />
+          <Route
+            path="blogDetails/:blogId"
+            element={
+              <RequireAuth>
+                <BlogDetails />
               </RequireAuth>
             }
           />

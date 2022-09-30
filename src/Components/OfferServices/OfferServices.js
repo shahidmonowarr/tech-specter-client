@@ -166,6 +166,57 @@ const OfferServices = () => {
             </Container>
         </div> 
 
+        {/* Blog Section   */}
+        <div className='py-5'>
+            <Container >
+                <Row spacing={10}>
+                    <Col sm={12} md={5} lg={5}>
+                        <div className="offer-wrapper">
+                            <div className="">
+                                <img style={{width:'100%', height: 'auto'}}  src="https://i.ibb.co/ZHDZZtd/12083320-Wavy-Bus-15-Single-06-min.jpg" alt="blogs" />
+                            </div>
+                            <div className="offer-info">
+                                <span>Blog</span>
+                                <strong>For Students</strong>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col sm={12} md={7} lg={7}>
+                        <div className='text-start'>
+                            <div sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                <div className="dash" ></div>
+                                <h5   color="#D72323" >About</h5>
+
+                            </div>
+                            <h2 >Reading blogs will not only keep you updated with information but can help you in 
+                                <br />    [Becoming a great person as well]</h2>
+                            <p  >However, following a positive attitude as well as spreading that rationalist to other people will make your skills more rewarding. This blog will help you in becoming that positivist social butterfly with its everyday tips on how to be a better person as well as how to build stronger skills. Believe me, you will be surprised after reading a few posts. 
+                            </p>
+                            <div className='spec mb-2'>
+                                <img width="40px" src={ib1} alt="" />
+                                <h5 className='ps-2'>Development</h5>
+                            </div>
+                            <div className='spec mb-2'>
+                                <img width="0px" src={ib2} alt="" />
+                                <h5 className='ps-2'>Marketing</h5>
+                            </div>
+                            <div className='spec mb-2'>
+                                <img width="40px" src={ib3} alt="" />
+                                <h5 className='ps-2'>Health</h5>
+                            </div>
+                            <div className='mt-2'>
+                            <Link to='/allBlogs'>
+                                <Button className='px-5 btn-danger offer-button'>See Blogs</Button>
+                            </Link>
+                                
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
+        </div> 
+
         {/* Blood Bank Section   */}
         <div className='py-5'>
             <Container >
