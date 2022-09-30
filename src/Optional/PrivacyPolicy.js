@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
         By using our website, you hereby consent to our Privacy Policy and agree to its terms. This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Tech specter. This policy is not applicable to any information collected offline or via channels other than this website.
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
+      <Accordion.Item eventKey="2">
         <Accordion.Header>Information We Collect</Accordion.Header>
         <Accordion.Body>
         The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.
@@ -35,7 +35,7 @@ If you contact us directly, we may receive additional information about you such
 When you register for an Account, we may ask for your contact information, including items such as name, address, email address, and telephone number.
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
+      <Accordion.Item eventKey="3">
         <Accordion.Header>How We use your Information</Accordion.Header>
         <Accordion.Body>
         <ul>
@@ -48,13 +48,13 @@ When you register for an Account, we may ask for your contact information, inclu
         </ul>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
+      <Accordion.Item eventKey="4">
         <Accordion.Header>Refunds</Accordion.Header>
         <Accordion.Body>
         Our refund and returns policy lasts 30 days. If 30 days have passed since your purchase, we can't offer you a full refund or exchange. To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging. To complete your return, we require a receipt or proof of purchase. Please do not send your purchase back to the manufacturer. There are certain situations where only partial refunds are granted (if applicable). 
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2">
+      <Accordion.Item eventKey="5">
         <Accordion.Header>Cookies and Web Beacons</Accordion.Header>
         <Accordion.Body>
         Like any other website, One Tech specter uses 'cookies'. These cookies are used to store information including visitors preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users experience by customizing our web page content based on visitors browser type and/or other information.

@@ -37,13 +37,13 @@ const Faq = () => {
           Yes, you can make changes to an order you already placed if you not yet  paid. So You can contact us within 24 hours of placing the order. If you contact us after 24 hours, we will not be able to make any changes to your order.
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="5">
+      <Accordion.Item eventKey="4">
         <Accordion.Header>Where Is my Order?</Accordion.Header>
         <Accordion.Body>
         Please visit the My Orders page to the dashboard for a list of your confirmed orders. You can also check the status of your order by clicking on the order number. If you have any questions about your order, please contact us.
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="4">
+      <Accordion.Item eventKey="5">
         <Accordion.Header>Where are You Located?</Accordion.Header>
         <Accordion.Body>
         Mirpur DOHS, Dhaka North, Mirpur Thana of Dhaka City. The Neighborhood is located close to Mirpur Cantonment. The Postal Code of Mirpur DOHS is 1216.
