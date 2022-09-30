@@ -6,6 +6,10 @@ import ib3 from '../../images/blood-bag.png';
 import it1 from '../../images/calendar.png';
 import it2 from '../../images/pickup.png';
 import it3 from '../../images/tool.png';
+import bi1 from '../../images/development.png';
+import bi2 from '../../images/marketing.png';
+import bi3 from '../../images/health.png';
+import bi4 from '../../images/design.png';
 import './OfferServices.css';
 import { Link } from 'react-router-dom';
 
@@ -94,15 +98,15 @@ const OfferServices = () => {
                             <p  >An online learning platform is a web space or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more.
                             </p>
                             <div className='spec mb-2'>
-                                <img width="40px" src={ib1} alt="" />
+                                <img width="40px" src={bi1} alt="" />
                                 <h5 className='ps-2'>Development</h5>
                             </div>
                             <div className='spec mb-2'>
-                                <img width="0px" src={ib2} alt="" />
+                                <img width="0px" src={bi4} alt="" />
                                 <h5 className='ps-2'>Design</h5>
                             </div>
                             <div className='spec mb-2'>
-                                <img width="40px" src={ib3} alt="" />
+                                <img width="40px" src={bi2} alt="" />
                                 <h5 className='ps-2'>Marketing</h5>
                             </div>
                             <div className='mt-2'>
@@ -193,15 +197,15 @@ const OfferServices = () => {
                             <p  >However, following a positive attitude as well as spreading that rationalist to other people will make your skills more rewarding. This blog will help you in becoming that positivist social butterfly with its everyday tips on how to be a better person as well as how to build stronger skills. Believe me, you will be surprised after reading a few posts. 
                             </p>
                             <div className='spec mb-2'>
-                                <img width="40px" src={ib1} alt="" />
+                                <img width="40px" src={bi1} alt="" />
                                 <h5 className='ps-2'>Development</h5>
                             </div>
                             <div className='spec mb-2'>
-                                <img width="0px" src={ib2} alt="" />
+                                <img width="0px" src={bi2} alt="" />
                                 <h5 className='ps-2'>Marketing</h5>
                             </div>
                             <div className='spec mb-2'>
-                                <img width="40px" src={ib3} alt="" />
+                                <img width="40px" src={bi3} alt="" />
                                 <h5 className='ps-2'>Health</h5>
                             </div>
                             <div className='mt-2'>

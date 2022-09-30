@@ -102,7 +102,7 @@ const Footer = () => {
                     <p>Your Orders</p>
                   </Link>
                   <Link className="text-white" to="/privacyPolicy">
-                    <p>Privacy</p>
+                    <p>Privacy Policy</p>
                   </Link>
                   <Link className="text-white" to="/faq">
                     <p>FAQ</p>
