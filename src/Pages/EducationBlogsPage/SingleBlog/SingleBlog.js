@@ -13,21 +13,20 @@ const SingleBlog = ({singleBlog}) => {
     return (
         <Col className="my-3 text-center" sm={12} md={6} lg={4}>
           <Card style={{ height: "97%" }} className="mx-1 mb-3  shadow">
-          <Card.Title style={{ color: "#42a5f5" }} className="text-uppercase">
-                {name}
-              </Card.Title>
-            
-            <Card.Body>
-              <div className="text-center">
-              <Card.Img
-                style={{ width: "80%", height: "200px" }}
+          <div className="text-center">
+              <Card.Img className='img-fluid'
+                style={{ height: "200px" }}
                 variant="top"
                 src={image}
               />
             </div>
-              <Card.Text>{description.slice(0,160)}...</Card.Text>
+          <Card.Title style={{ color: "#42a5f5", marginTop:'5px' }} className="text-uppercase">
+                {name}
+              </Card.Title>
+            <Card.Body>
+              <Card.Text>{description.slice(0,140)}...</Card.Text>
               
-                <button onClick={()=> navigateToBlogDetails(_id)} className="btn  btn-danger">See Details</button>
+                <button onClick={()=> navigateToBlogDetails(_id)} className="btn  btn-danger">Read Details</button>
             </Card.Body>
           </Card>
       </Col>

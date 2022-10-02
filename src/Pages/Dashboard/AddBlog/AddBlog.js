@@ -38,12 +38,13 @@ const AddBlog = () => {
             <form  onSubmit={handleSubmit(onSubmit)}>
                 <div className='w-100 mb-1'><input {...register("name",)} placeholder="name" /> <br /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("image")} placeholder="image" /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("image2")} placeholder="image 2" /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("image3")} placeholder="image 3" /></div>
                 <div className='w-100 mb-1'><input type="text" {...register("category")} placeholder="development / design / marketing /travel / health" /> </div>
-                <div className='w-100 mb-1'><input type="text" {...register("description")} placeholder="description 1" /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("description2")} placeholder="description 2" /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("description3")} placeholder="description 2" /></div>
+                <div className='w-100 mb-1'><input  type="text" {...register("description")} placeholder="description" /></div>
+                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle1")} placeholder="des title1" /><input className='w-25 ' type="text" {...register("description1")} placeholder="description 1" /></div>
+                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle2")} placeholder="des title2" /><input className='w-25 ' type="text" {...register("description2")} placeholder="description 2" /></div>
+                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle3")} placeholder="des title3" /><input className='w-25 ' type="text" {...register("description3")} placeholder="description 3" /></div>
+                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle4")} placeholder="des title4" /><input className='w-25 ' type="text" {...register("description4")} placeholder="description 4" /></div>
+                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle5")} placeholder="des title5" /><input className='w-25 ' type="text" {...register("description5")} placeholder="description 5" /></div>
                 <input className='submit-btn' type="submit" />
             </form>
         </Col>
