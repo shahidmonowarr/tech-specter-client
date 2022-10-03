@@ -1,0 +1,38 @@
+.scroll-top{
+    position: fixed;
+    bottom: 30px;
+    right: 12px;
+    height: 30px;
+    width: 30px;
+    color: rgb(53, 14, 14);
+    background-color: rgb(185, 185, 154);
+    z-index: 10;
+    border-radius: 50%;
+    border: none;
+    padding-top: 5px;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.scroll-top:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.scroll-top {
+    -webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+}
+.scroll-top {
+    -webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(5px); }
+    100% { transform: translateY(-5px); }
+}
+@keyframes mover {
+    0% { transform: translateY(5px); }
+    100% { transform: translateY(-5px); }
+}

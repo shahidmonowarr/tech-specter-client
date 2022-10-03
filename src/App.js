@@ -38,10 +38,12 @@ import AboutUs from "./Optional/AboutUs";
 import AddBlog from "./Pages/Dashboard/AddBlog/AddBlog";
 import AllBlogs from "./Pages/EducationBlogsPage/AllBlogs/AllBlogs";
 import BlogDetails from "./Pages/EducationBlogsPage/BlogDetails/BlogDetails";
+import BackToTop from "./Components/Shared/BackToTop/BackToTop";
 
 function App() {
   return (
     <div className="App">
+      <BackToTop></BackToTop>
       <BrowserRouter>
         <Header />
         <Routes>
