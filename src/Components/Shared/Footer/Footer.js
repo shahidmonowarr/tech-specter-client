@@ -77,11 +77,11 @@ const Footer = () => {
                   <Link className="text-white" to="/allPlaces">
                     <p>Travels</p>
                   </Link>
-                  <Link className="text-white" to="/aboutUs">
-                    <p>About Us</p>
+                  <Link className="text-white" to="/allBlogs">
+                    <p>Blogs</p>
                   </Link>
-                  <Link className="text-white" to="/">
-                    <p>Home</p>
+                  <Link className="text-white" to="/allBloods">
+                    <p>Bloods</p>
                   </Link>
                 </div>
 
@@ -98,8 +98,8 @@ const Footer = () => {
                   <Link className="text-white" to="/dashboard">
                     <p>Dashboard</p>
                   </Link>
-                  <Link className="text-white" to="/dashboard/myOrders">
-                    <p>Your Orders</p>
+                  <Link className="text-white" to="/aboutUs">
+                    <p>About Us</p>
                   </Link>
                   <Link className="text-white" to="/privacyPolicy">
                     <p>Privacy Policy</p>

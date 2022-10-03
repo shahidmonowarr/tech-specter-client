@@ -16,19 +16,19 @@ const BlogDetails = () => {
             {blog.description}
         </Card.Text>
         <Card.Text>
-            <h6>{blog.desTitle1}</h6><hr></hr>{blog.description1}
+            <h6 className='fw-bold'>{blog.desTitle1} :</h6><hr></hr>{blog.description1}
         </Card.Text>
         <Card.Text>
-        <h6>{blog.desTitle2}</h6><hr></hr>{blog.description2}
+        <h6 className='fw-bold'>{blog.desTitle2} :</h6><hr></hr>{blog.description2}
         </Card.Text>
         <Card.Text>
-        <h6>{blog.desTitle3}</h6><hr></hr>{blog.description3}
+        <h6 className='fw-bold'>{blog.desTitle3} :</h6><hr></hr>{blog.description3}
         </Card.Text>
         <Card.Text>
-        <h6>{blog.desTitle4}</h6><hr></hr>{blog.description4}
+        <h6 className='fw-bold'>{blog.desTitle4} :</h6><hr></hr>{blog.description4}
         </Card.Text>
         <Card.Text>
-        <h6>{blog.desTitle5}</h6><hr></hr>{blog.description5}
+        <h6 className='fw-bold'>{blog.desTitle5} :</h6><hr></hr>{blog.description5}
         </Card.Text>
         <Button variant="danger">Add Reviews</Button>
       </Card.Body>
