@@ -1,0 +1,62 @@
+[
+    {
+      "header1": "Develop your career with amazing resources",
+      "header2": "[Grab your best courses]",
+      "image": "https://i.ibb.co/jGwSgbH/12145615-Wavy-Edu-05-Single-08-1.jpg",
+      "name": "Courses",
+      "subtitle": "For Programmers",
+      "category1": "Development",
+      "category2": "Design",
+      "category3": "Marketing",
+      "cateImg1": "https://i.ibb.co/0cvg9w4/development.png",
+        "cateImg2": "https://i.ibb.co/T810YGP/design.png",
+        "cateImg3": "https://i.ibb.co/FbhLZdp/marketing.png",
+        "btnText": "View All Courses",
+      "description": "An online learning platform is a web space or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more."
+    },
+    {
+        "header1": "Best travel agency websites are a great source of information for travelers.",
+        "header2": "[We are here for you.]",
+        "image": "https://i.ibb.co/NSt3xsb/12291290-Wavy-Trv-01-Single-06-1.jpg",
+        "name": "Travels ",
+        "subtitle": "For Refreshment",
+        "category1": "Date Analysis",
+        "category2": "Pickup Transportation",
+        "category3": "Tent Benefit",
+        "cateImg1": "https://i.ibb.co/HhNz1P8/calendar.png",
+        "cateImg2": "https://i.ibb.co/127QMyq/pickup.png",
+        "cateImg3": "https://i.ibb.co/YXy5v90/tool.png",
+        "btnText": "View All Places",
+        "description": "If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Traveling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others."
+    },
+    {
+        "header1": "Reading blogs will not only keep you updated with information but can help you in",
+        "header2": "[Becoming a great person as well]",
+        "image": "https://i.ibb.co/ZHDZZtd/12083320-Wavy-Bus-15-Single-06-min.jpg",
+        "name": "Blogs",
+        "subtitle": "For Students",
+        "category1": "Development",
+        "category2": "Marketing",
+        "category3": "Health",
+        "cateImg1": "https://i.ibb.co/0cvg9w4/development.png",
+        "cateImg2": "https://i.ibb.co/FbhLZdp/marketing.png",
+        "cateImg3": "https://i.ibb.co/XkK2zF3/health.png",
+        "btnText": "View All Blogs",
+        "description": "However, following a positive attitude as well as spreading that rationalist to other people will make your skills more rewarding. This blog will help you in becoming that positivist social butterfly with its everyday tips on how to be a better person as well as how to build stronger skills. Believe me, you will be surprised after reading a few posts."
+    },
+    {
+        "header1": "Blood donation is a safe process. Patient need blood for their treatment.",
+        "header2": "[Donate your blood or collect if needed]",
+        "image": "https://i.ibb.co/BnCpxq5/12146072-Wavy-Lst-04-Single-01-min-1.jpg",
+        "name": "Bloods",
+        "subtitle": "For Needy",
+        "category1": "Blood Donation",
+        "category2": "Platelet Donation",
+        "category3": "Plasma Donation",
+        "cateImg1": "https://i.ibb.co/CQJSGnJ/blood-analysis.png",
+        "cateImg2": "https://i.ibb.co/S769bW3/blood-bag.png",
+        "cateImg3": "https://i.ibb.co/qMQxZV0/blood-transfusion.png",
+        "btnText": "View All Bloods",
+        "description": "However, following a positive attitude as well as spreading that rationalist to other people will make your skills more rewarding. This blog will help you in becoming that positivist social butterfly with its everyday tips on how to be a better person as well as how to build stronger skills. Believe me, you will be surprised after reading a few posts."
+    }
+  ]
