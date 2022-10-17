@@ -12,6 +12,7 @@
         "cateImg2": "https://i.ibb.co/T810YGP/design.png",
         "cateImg3": "https://i.ibb.co/FbhLZdp/marketing.png",
         "btnText": "View All Courses",
+        "link": "/allCourses",
       "description": "An online learning platform is a web space or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more."
     },
     {
@@ -27,6 +28,7 @@
         "cateImg2": "https://i.ibb.co/127QMyq/pickup.png",
         "cateImg3": "https://i.ibb.co/YXy5v90/tool.png",
         "btnText": "View All Places",
+        "link": "/allPlaces",
         "description": "If a man stays at one place for a long time, he becomes monotonous and his life becomes boring and callous. Traveling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. A good traveler can easily educate others."
     },
     {
@@ -42,6 +44,7 @@
         "cateImg2": "https://i.ibb.co/FbhLZdp/marketing.png",
         "cateImg3": "https://i.ibb.co/XkK2zF3/health.png",
         "btnText": "View All Blogs",
+        "link": "/allBlogs",
         "description": "However, following a positive attitude as well as spreading that rationalist to other people will make your skills more rewarding. This blog will help you in becoming that positivist social butterfly with its everyday tips on how to be a better person as well as how to build stronger skills. Believe me, you will be surprised after reading a few posts."
     },
     {
@@ -57,6 +60,7 @@
         "cateImg2": "https://i.ibb.co/S769bW3/blood-bag.png",
         "cateImg3": "https://i.ibb.co/qMQxZV0/blood-transfusion.png",
         "btnText": "View All Bloods",
+        "link": "/allBlogs",
         "description": "However, following a positive attitude as well as spreading that rationalist to other people will make your skills more rewarding. This blog will help you in becoming that positivist social butterfly with its everyday tips on how to be a better person as well as how to build stronger skills. Believe me, you will be surprised after reading a few posts."
     }
   ]
