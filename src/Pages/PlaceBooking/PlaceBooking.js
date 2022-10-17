@@ -15,7 +15,7 @@ const PlaceBooking = () => {
   const navigate = useNavigate();
 
   if(user){
-    console.log(user);
+    // console.log(user);
   }
 
   const handlePlaceOrder = event =>{
@@ -40,7 +40,7 @@ const PlaceBooking = () => {
                 event.target.reset();
                 navigate('/dashboard/myOrders');
             }
-            console.log(res);
+            // console.log(res);
         })
   }
 
@@ -51,7 +51,7 @@ const PlaceBooking = () => {
         <div className="form-holder">
           <div className="form-content">
             <div className="form-items">
-              <h3>Place Your Order</h3>
+              <h3>Place Your Booking</h3>
               <p>Fill in the data below.</p>
               <form onSubmit={handlePlaceOrder}>
                 <input

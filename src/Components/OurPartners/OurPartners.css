@@ -1,0 +1,9 @@
+.brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.brand img{
+    width: 100%;
+    cursor: pointer;
+}

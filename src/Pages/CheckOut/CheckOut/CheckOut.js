@@ -7,6 +7,7 @@ import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
 import "./CheckOut.css";
 import { toast } from 'react-toastify';
 import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
+import { Container } from "react-bootstrap";
 
 const CheckOut = () => {
   const { serviceId } = useParams();
@@ -45,7 +46,7 @@ const CheckOut = () => {
   }
 
   return (
-    <div className="w-50 mx-auto">
+    <Container className="w-50 mx-auto">
       <PageTitle title="CheckOut"></PageTitle>
       <div className="row">
         <div className="form-holder">
@@ -84,13 +85,13 @@ const CheckOut = () => {
                   autoComplete="off"
                   placeholder="Phone"
                 />
-                <input id='submit' className="btn-danger fw-bold mt-3 w-25" value='Place Order' type="submit" />
+                <input id='submit' className="btn-danger fw-bold mt-3 w-50" value='Place Order' type="submit" />
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
