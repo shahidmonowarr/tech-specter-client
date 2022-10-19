@@ -90,7 +90,7 @@ const PlaceBooking = () => {
                   autoComplete="off"
                   placeholder="Phone"
                 />
-                <input id='submit' className="btn-danger fw-bold mt-3 w-25" value='Place Order' type="submit" />
+                <input id='submit' className="btn-danger fw-bold mt-3 w-50" value='Place Booking' type="submit" />
               </form>
             </div>
           </div>

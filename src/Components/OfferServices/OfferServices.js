@@ -63,7 +63,7 @@ const OfferServices = () => {
                             </div>
                             <div className='mt-2'>
                             <Link to={service.link}>
-                                <Button className='px-5 btn-danger offer-button'>{service.btnText}</Button>
+                                <Button className='px-3 btn-danger offer-button'>{service.btnText}</Button>
                             </Link>
                                 
                             </div>
