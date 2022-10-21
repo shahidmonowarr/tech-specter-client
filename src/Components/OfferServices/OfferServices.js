@@ -43,7 +43,6 @@ const OfferServices = () => {
                             <div sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                 <div className="dash" ></div>
                                 <h5   color="#D72323" >About</h5>
-                            //services we provide to you
                             </div>
                             <h2 >{service.header1} 
                                 <br />    {service.header2}</h2>
