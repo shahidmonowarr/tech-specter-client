@@ -8,8 +8,8 @@
 03. Authentication system is available for both user and admin.
 04. User can add their review and also can see others.
 05. Dashboard is available for both user and admin.
-06. Payment method is included. Users can view and delete their purchases or bookings
-    and can add reviews. Admin can add an admin, delete or update services, and approve
-    orders.
+06. Payment method is included. 
+07. Users can view and delete their purchases or bookings also can add reviews. 
+08. Admin can make an admin, delete or update services, and approve orders.
 
 ```
