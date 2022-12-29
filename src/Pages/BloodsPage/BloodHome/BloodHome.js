@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
-import AvailableBlood from "../AvailableBlood/AvailableBlood";
 import BloodDonate from "../BloodDonate/BloodDonate";
+import BloodPatient from "../BloodPatient/BloodPatient";
 
 const BloodHome = () => {
   return (
@@ -27,7 +27,7 @@ const BloodHome = () => {
           </ButtonGroup>
         </Container>
         <BloodDonate/>
-        <AvailableBlood/>
+        <BloodPatient/>
       </Container>
     </>
   );
