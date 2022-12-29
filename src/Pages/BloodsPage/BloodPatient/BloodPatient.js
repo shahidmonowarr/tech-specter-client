@@ -10,13 +10,13 @@ const BloodPatient = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    axios.post("http://localhost:5000/patient", data).then((res) => {
+    // console.log(data);
+    axios.post("https://tech-specter.onrender.com/patient", data).then((res) => {
       if (res.data.insertedId) {
         toast("Request Added Successfully, We will contact you soon");
         reset();
       }
-      console.log(res);
+      // console.log(res);
     });
   };
 

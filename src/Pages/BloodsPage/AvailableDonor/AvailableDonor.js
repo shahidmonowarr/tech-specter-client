@@ -5,10 +5,10 @@ const AvailableDonor = () => {
   const [donors, setDonors] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/blood")
+    fetch("https://tech-specter.onrender.com/blood")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setDonors(data);
       })
       .catch((error) => Toast.error(error.message));

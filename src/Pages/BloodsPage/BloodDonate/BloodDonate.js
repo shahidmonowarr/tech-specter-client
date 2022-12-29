@@ -11,14 +11,14 @@ const BloodDonate = () => {
     const { register, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
     const onSubmit = data => {
-        console.log(data);
-        axios.post('http://localhost:5000/blood', data)
+        // console.log(data);
+        axios.post('https://tech-specter.onrender.com/blood', data)
             .then(res => {
                 if (res.data.insertedId) {
                     toast('Details Added Successfully, We will contact you soon');
                     reset();
                 }
-                console.log(res);
+                // console.log(res);
             })
     };
   return (

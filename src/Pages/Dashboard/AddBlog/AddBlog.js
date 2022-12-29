@@ -1,29 +1,26 @@
-import axios from 'axios';
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
+import axios from "axios";
+import React from "react";
+import { Col, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const AddBlog = () => {
-    const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
-    const onSubmit = data => {
-        console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
 
-        
-        axios.post('https://tech-specter.onrender.com/blogs', data)
-            .then(res => {
-                if (res.data.insertedId) {
-                    toast('Blog Added Successfully');
-                    reset();
-                }
-                console.log(res);
-            })
-
-    };
-    return (
-        <div className="container add-product">
-            <Row>
+    axios.post("https://tech-specter.onrender.com/blogs", data).then((res) => {
+      if (res.data.insertedId) {
+        toast("Blog Added Successfully");
+        reset();
+      }
+      console.log(res);
+    });
+  };
+  return (
+    <div style={{ height: "165vh" }} className="container add-product">
+      <Row>
         <Col md="6">
           <img
             style={{ width: "100%", height: "auto" }}
@@ -33,25 +30,112 @@ const AddBlog = () => {
           />
         </Col>
         <Col md="6">
-        <h2 className="text-secondary fw-bold text-center banner-title">Add a Blog</h2>
-            <div className="container"></div>
-            <form  onSubmit={handleSubmit(onSubmit)}>
-                <div className='w-100 mb-1'><input {...register("name",)} placeholder="name" /> <br /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("image")} placeholder="image" /></div>
-                <div className='w-100 mb-1'><input type="text" {...register("category")} placeholder="development / design / marketing /travel / health" /> </div>
-                <div className='w-100 mb-1'><input  type="text" {...register("description")} placeholder="description" /></div>
-                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle1")} placeholder="des title1" /><input className='w-25 ' type="text" {...register("description1")} placeholder="description 1" /></div>
-                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle2")} placeholder="des title2" /><input className='w-25 ' type="text" {...register("description2")} placeholder="description 2" /></div>
-                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle3")} placeholder="des title3" /><input className='w-25 ' type="text" {...register("description3")} placeholder="description 3" /></div>
-                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle4")} placeholder="des title4" /><input className='w-25 ' type="text" {...register("description4")} placeholder="description 4" /></div>
-                <div className='w-100 mb-1'><input className='w-25 me-3' type="text" {...register("desTitle5")} placeholder="des title5" /><input className='w-25 ' type="text" {...register("description5")} placeholder="description 5" /></div>
-                <input className='submit-btn' type="submit" />
+          <div className="card py-2">
+            <h2 className="text-secondary fw-bold text-center banner-title">
+              Add a Blog
+            </h2>
+
+            <form className=" " onSubmit={handleSubmit(onSubmit)}>
+              <input
+                className="form-control md-form w-75 mb-1"
+                {...register("name")}
+                placeholder="name"
+              />
+              <input
+                className="form-control md-form w-75 mb-1"
+                type="text"
+                {...register("image")}
+                placeholder="image"
+              />
+              <select
+                {...register("category")}
+                className="form-control md-form w-75 mb-1"
+              >
+                <option selected disabled>
+                  Select Category:
+                </option>
+                <option>development</option>
+                <option>design</option>
+                <option>marketing</option>
+                <option>travel</option>
+                <option>health</option>
+              </select>
+              <input
+                className="form-control md-form w-75 mb-1"
+                type="text"
+                {...register("description")}
+                placeholder="description"
+              />
+              <input
+                className="form-control md-form w-75 mb-1"
+                type="text"
+                {...register("desTitle1")}
+                placeholder="des title1"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("description1")}
+                placeholder="description 1"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("desTitle2")}
+                placeholder="des title2"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("description2")}
+                placeholder="description 2"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("desTitle3")}
+                placeholder="des title3"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("description3")}
+                placeholder="description 3"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("desTitle4")}
+                placeholder="des title4"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("description4")}
+                placeholder="description 4"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("desTitle5")}
+                placeholder="des title5"
+              />
+              <input
+                className="form-control w-75 mb-1"
+                type="text"
+                {...register("description5")}
+                placeholder="description 5"
+              />
+              <input
+                className="form-control w-75 mb-1 submit-btn"
+                type="submit"
+              />
             </form>
+          </div>
         </Col>
       </Row>
-            
-        </div>
-    );
+    </div>
+  );
 };
 
 export default AddBlog;
