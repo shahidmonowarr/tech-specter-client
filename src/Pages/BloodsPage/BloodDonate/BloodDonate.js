@@ -111,7 +111,7 @@ const BloodDonate = () => {
                 className="btn btn-danger btn-rounded btn-block w-50 mx-auto my-4 waves-effect z-depth-0"
                 type="submit"
               >
-                GET APPOINTMENT
+                Register
               </button>
             </form>
             {/* <!-- Form --> */}
