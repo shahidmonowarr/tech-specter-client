@@ -4,7 +4,7 @@ import { Card, Container } from "react-bootstrap";
 const Guidelines = () => {
   return (
     <Container>
-      <Card className="text-start mx-auto col-sm-6 col-md-6 col-lg-8">
+      <Card className="text-start my-5 mx-auto col-sm-6 col-md-6 col-lg-8">
         <Card.Body>
           <Card.Title
             style={{ textTransform: "uppercase", fontWeight: "bold" }}
@@ -93,7 +93,7 @@ const Guidelines = () => {
             sufficient supply of blood available for those in need.
           </Card.Text>
           <Card.Text>
-            In conclusion, donating blood is a simple and selfless act that can
+            <strong>In conclusion,</strong> donating blood is a simple and selfless act that can
             save the lives of countless people. If you are eligible to donate,
             consider making an appointment to give blood today. You never know
             when you or someone you love may need a blood transfusion, and by

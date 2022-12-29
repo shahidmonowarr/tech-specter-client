@@ -10,8 +10,11 @@ import AboutUs from "./Optional/AboutUs";
 import Faq from "./Optional/Faq";
 import PrivacyPolicy from "./Optional/PrivacyPolicy";
 import Reviews from "./Pages/AllReviews/Reviews/Reviews";
-import AvailableBlood from "./Pages/BloodsPage/AvailableDonor/AvailableDonor";
+import { default as AvailableBlood, default as AvailableDonor } from "./Pages/BloodsPage/AvailableDonor/AvailableDonor";
+import BloodDonate from "./Pages/BloodsPage/BloodDonate/BloodDonate";
 import BloodHome from "./Pages/BloodsPage/BloodHome/BloodHome";
+import BloodPatient from "./Pages/BloodsPage/BloodPatient/BloodPatient";
+import Guidelines from "./Pages/BloodsPage/Guidelines/Guidelines";
 import CheckOut from "./Pages/CheckOut/CheckOut/CheckOut";
 import AllCourses from "./Pages/CoursesPage/AllCourses/AllCourses";
 import CourseDetails from "./Pages/CoursesPage/CourseDetails/CourseDetails";
@@ -128,6 +131,18 @@ function App() {
           <Route path="faq" element={<Faq />} />
           <Route path="privacyPolicy" element={<PrivacyPolicy/>} />
           <Route path="blood" element={<BloodHome/>} />
+          <Route
+            path="blood"
+            element={
+              <BloodHome/>
+            }
+          > 
+            <Route index element={<AvailableDonor/>}></Route>
+            <Route path="availableDonor" element={<AvailableDonor/>}></Route>
+            <Route path="bloodDonate" element={<BloodDonate/>}></Route>
+            <Route path="bloodPatient" element={<BloodPatient/>}></Route>
+            <Route path="guidelines" element={<Guidelines/>}></Route>
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

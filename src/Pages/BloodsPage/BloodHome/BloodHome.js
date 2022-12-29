@@ -1,8 +1,6 @@
 import React from "react";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
-import BloodDonate from "../BloodDonate/BloodDonate";
-import BloodPatient from "../BloodPatient/BloodPatient";
-import Guidelines from "../Guidelines/Guidelines";
+import { Link, Outlet } from "react-router-dom";
 
 const BloodHome = () => {
   return (
@@ -16,23 +14,41 @@ const BloodHome = () => {
         </p>
         <Container>
           <ButtonGroup className="flex-wrap" aria-label="Basic example">
-            <Button className="mx-2 my-2 rounded-3" variant="secondary" o>
-              Available Donor
-            </Button>
-            <Button className="mx-2 my-2 rounded-3" variant="secondary">
-              Donate Blood
-            </Button>
-            <Button className="mx-2 my-2 rounded-3" variant="secondary">
-              Request Blood
-            </Button>
-            <Button className="mx-2 my-2 rounded-3" variant="secondary">
-              Guidelines
-            </Button>
+            <Link
+              to="/blood/availableDonor"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Button className="mx-2 my-2 rounded-3" variant="secondary" o>
+                Available Donor
+              </Button>
+            </Link>
+            <Link
+              to="/blood/bloodDonate"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Button className="mx-2 my-2 rounded-3" variant="secondary">
+                Donate Blood
+              </Button>
+            </Link>
+            <Link
+              to="/blood/bloodPatient"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Button className="mx-2 my-2 rounded-3" variant="secondary">
+                Request Blood
+              </Button>
+            </Link>
+            <Link
+              to="/blood/guidelines"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Button className="mx-2 my-2 rounded-3" variant="secondary">
+                Guidelines
+              </Button>
+            </Link>
           </ButtonGroup>
         </Container>
-        <BloodDonate/>
-        <BloodPatient/>
-        <Guidelines/>
+        <Outlet></Outlet>
       </Container>
     </>
   );
