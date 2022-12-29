@@ -1,10 +1,12 @@
 import React from "react";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 
 const BloodHome = () => {
   return (
     <>
+        <PageTitle title="Bloods"></PageTitle>
       <Container>
         <h2 className="text-center text-uppercase mt-5 mb-4 feature">
           Available Blood Donor

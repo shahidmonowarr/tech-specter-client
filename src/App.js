@@ -10,7 +10,10 @@ import AboutUs from "./Optional/AboutUs";
 import Faq from "./Optional/Faq";
 import PrivacyPolicy from "./Optional/PrivacyPolicy";
 import Reviews from "./Pages/AllReviews/Reviews/Reviews";
-import { default as AvailableBlood, default as AvailableDonor } from "./Pages/BloodsPage/AvailableDonor/AvailableDonor";
+import {
+  default as AvailableBlood,
+  default as AvailableDonor
+} from "./Pages/BloodsPage/AvailableDonor/AvailableDonor";
 import BloodDonate from "./Pages/BloodsPage/BloodDonate/BloodDonate";
 import BloodHome from "./Pages/BloodsPage/BloodHome/BloodHome";
 import BloodPatient from "./Pages/BloodsPage/BloodPatient/BloodPatient";
@@ -61,19 +64,75 @@ function App() {
                 <Dashboard />
               </RequireAuth>
             }
-          > 
+          >
             <Route index element={<DashboardHome></DashboardHome>}></Route>
             <Route path="addReview" element={<AddReview></AddReview>}></Route>
             <Route path="myOrders" element={<Orders></Orders>}></Route>
             <Route path="payment/:id" element={<Payment></Payment>}></Route>
-            <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
-            <Route path="addCourse" element={<RequireAdmin><AddCourse></AddCourse></RequireAdmin>}></Route>
-            <Route path="addPlace" element={<RequireAdmin><AddPlace></AddPlace></RequireAdmin>}></Route>
-            <Route path="addBlog" element={<RequireAdmin><AddBlog></AddBlog></RequireAdmin>}></Route>
-            <Route path="manageOrders" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
-            <Route path="manageCourses" element={<RequireAdmin><ManageCourses></ManageCourses></RequireAdmin>}></Route>
-            <Route path="managePlaces" element={<RequireAdmin><ManagePlaces></ManagePlaces></RequireAdmin>}></Route>
-            <Route path="allTransaction" element={<RequireAdmin><AllTransaction></AllTransaction></RequireAdmin>}></Route>
+            <Route
+              path="users"
+              element={
+                <RequireAdmin>
+                  <Users></Users>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="addCourse"
+              element={
+                <RequireAdmin>
+                  <AddCourse></AddCourse>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="addPlace"
+              element={
+                <RequireAdmin>
+                  <AddPlace></AddPlace>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="addBlog"
+              element={
+                <RequireAdmin>
+                  <AddBlog></AddBlog>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="manageOrders"
+              element={
+                <RequireAdmin>
+                  <ManageOrders></ManageOrders>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="manageCourses"
+              element={
+                <RequireAdmin>
+                  <ManageCourses></ManageCourses>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="managePlaces"
+              element={
+                <RequireAdmin>
+                  <ManagePlaces></ManagePlaces>
+                </RequireAdmin>
+              }
+            ></Route>
+            <Route
+              path="allTransaction"
+              element={
+                <RequireAdmin>
+                  <AllTransaction></AllTransaction>
+                </RequireAdmin>
+              }
+            ></Route>
           </Route>
 
           <Route path="services" element={<OfferServices />} />
@@ -89,7 +148,7 @@ function App() {
               </RequireAuth>
             }
           />
-          
+
           <Route path="allBlogs" element={<AllBlogs />} />
           <Route
             path="blogDetails/:blogId"
@@ -121,7 +180,7 @@ function App() {
             path="placeBooking/:serviceId"
             element={
               <RequireAuth>
-                <PlaceBooking/>
+                <PlaceBooking />
               </RequireAuth>
             }
           />
@@ -129,19 +188,21 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="aboutUs" element={<AboutUs />} />
           <Route path="faq" element={<Faq />} />
-          <Route path="privacyPolicy" element={<PrivacyPolicy/>} />
-          <Route path="blood" element={<BloodHome/>} />
+          <Route path="privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="blood" element={<BloodHome />} />
           <Route
             path="blood"
             element={
-              <BloodHome/>
+              <RequireAuth>
+                <BloodHome />
+              </RequireAuth>
             }
-          > 
-            <Route index element={<AvailableDonor/>}></Route>
-            <Route path="availableDonor" element={<AvailableDonor/>}></Route>
-            <Route path="bloodDonate" element={<BloodDonate/>}></Route>
-            <Route path="bloodPatient" element={<BloodPatient/>}></Route>
-            <Route path="guidelines" element={<Guidelines/>}></Route>
+          >
+            <Route index element={<AvailableDonor />}></Route>
+            <Route path="availableDonor" element={<AvailableDonor />}></Route>
+            <Route path="bloodDonate" element={<BloodDonate />}></Route>
+            <Route path="bloodPatient" element={<BloodPatient />}></Route>
+            <Route path="guidelines" element={<Guidelines />}></Route>
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
