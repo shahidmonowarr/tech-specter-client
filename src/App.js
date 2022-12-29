@@ -10,7 +10,7 @@ import AboutUs from "./Optional/AboutUs";
 import Faq from "./Optional/Faq";
 import PrivacyPolicy from "./Optional/PrivacyPolicy";
 import Reviews from "./Pages/AllReviews/Reviews/Reviews";
-import AvailableBlood from "./Pages/BloodsPage/AvailableBlood/AvailableBlood";
+import AvailableBlood from "./Pages/BloodsPage/AvailableDonor/AvailableDonor";
 import BloodHome from "./Pages/BloodsPage/BloodHome/BloodHome";
 import CheckOut from "./Pages/CheckOut/CheckOut/CheckOut";
 import AllCourses from "./Pages/CoursesPage/AllCourses/AllCourses";
