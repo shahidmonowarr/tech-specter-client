@@ -11,6 +11,7 @@ import Faq from "./Optional/Faq";
 import PrivacyPolicy from "./Optional/PrivacyPolicy";
 import Reviews from "./Pages/AllReviews/Reviews/Reviews";
 import AvailableBlood from "./Pages/BloodsPage/AvailableBlood/AvailableBlood";
+import BloodHome from "./Pages/BloodsPage/BloodHome/BloodHome";
 import CheckOut from "./Pages/CheckOut/CheckOut/CheckOut";
 import AllCourses from "./Pages/CoursesPage/AllCourses/AllCourses";
 import CourseDetails from "./Pages/CoursesPage/CourseDetails/CourseDetails";
@@ -126,6 +127,7 @@ function App() {
           <Route path="aboutUs" element={<AboutUs />} />
           <Route path="faq" element={<Faq />} />
           <Route path="privacyPolicy" element={<PrivacyPolicy/>} />
+          <Route path="blood" element={<BloodHome/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

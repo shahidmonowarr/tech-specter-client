@@ -2,9 +2,9 @@ import React from 'react';
 
 const AvailableBlood = () => {
     return (
-        <div>
+        <>
             
-        </div>
+        </>
     );
 };
 
