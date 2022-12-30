@@ -123,13 +123,13 @@ const Footer = () => {
                     <i className="fas fa-home mr-3"></i> Dhaka, PT 2323, BD
                   </p>
                   <p>
-                    <i className="fas fa-envelope mr-3"></i> info@example.com
+                    <i className="fas fa-envelope mr-3"></i>  shahid@gmail.com
                   </p>
                   <p>
-                    <i className="fas fa-phone mr-3"></i> + 01 234 567 88
+                    <i className="fas fa-phone mr-3"></i> + 01 737 149 954
                   </p>
                   <p>
-                    <i className="fas fa-print mr-3"></i> + 01 234 567 89
+                    <i className="fas fa-phone mr-3"></i> + 01 704 894 643
                   </p>
                 </div>
               </div>

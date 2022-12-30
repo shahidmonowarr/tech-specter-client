@@ -79,7 +79,7 @@ const DashboardHome = () => {
             >
               <div className="text-center">
                 <Card.Img
-                  style={{ width: "50%", marginTop: "10px", height: "150px" }}
+                  style={{ width: "50%", marginTop: "10px", height: "auto" }}
                   variant="top"
                   src={profile.image}
                 />
