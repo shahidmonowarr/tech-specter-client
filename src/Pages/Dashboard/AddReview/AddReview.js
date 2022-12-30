@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
-import Rating from "react-rating";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import './AddReview.css';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+import Rating from "react-rating";
 import { toast } from "react-toastify";
+import auth from "../../../firebase.init";
+import './AddReview.css';
 
 const AddReview = () => {
   const { register, handleSubmit, reset } = useForm();
   const [rating, setRating] = useState(5);
+  const [user] = useAuthState(auth);
   const onSubmit = (data) => {
     // console.log(data);
     data.rating = rating;
@@ -38,8 +41,19 @@ const AddReview = () => {
             Please Add A Review
           </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <input {...register("name")} placeholder="name" /> <br />
-            <input type="text" {...register("category")} placeholder="course / travel / website" /> 
+            <input className="form-control w-75 mb-1" {...register("name")} value={user?.displayName} />{" "}
+            <select
+                {...register("category")}
+                type="text"
+                className="form-control md-form w-75 mb-1"
+              >
+                <option selected disabled>
+                  Review is About:
+                </option>
+                <option>course</option>
+                <option>travel</option>
+                <option>website</option>
+              </select> 
             <div>
               <div>
                 <h5>Rating</h5>
@@ -56,13 +70,12 @@ const AddReview = () => {
                 <h4 className="d-inline-block ms-2">{rating}</h4>
               </div>
             </div>
-            <input
+            <input className="form-control w-75 mb-1" 
               type="text"
               {...register("description")}
               placeholder="description"
             />{" "}
-            <br />
-            <input className="submit-btn" type="submit" />
+            <input className="form-control w-75 mb-1 submit-btn" type="submit" />
           </form>
         </Col>
       </Row>

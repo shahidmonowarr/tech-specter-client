@@ -1,5 +1,5 @@
 import axios from "axios";
-import { signOut } from "firebase/auth";
+import { reload, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -56,13 +56,14 @@ const DashboardHome = () => {
       if (data.insertedId) {
         toast("Your Profile is Updated");
         event.target.reset();
+        reload();
         navigate("/dashboard");
       }
-      console.log(res);
+      // console.log(res);
     });
   };
   return (
-    <div className="container add-product">
+    <div style={{ height: "auto" }} className="container add-product">
       <h2>
         Welcome to Dashboard,{" "}
         <span style={{ color: "#e64088" }}>{user?.displayName}</span>.
@@ -78,7 +79,7 @@ const DashboardHome = () => {
             >
               <div className="text-center">
                 <Card.Img
-                  style={{ width: "60%", height: "150px" }}
+                  style={{ width: "50%", marginTop: "10px", height: "150px" }}
                   variant="top"
                   src={profile.image}
                 />

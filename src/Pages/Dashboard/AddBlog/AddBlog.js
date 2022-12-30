@@ -19,7 +19,7 @@ const AddBlog = () => {
     });
   };
   return (
-    <div style={{ height: "165vh" }} className="container add-product">
+    <div style={{ height: "auto" }} className="container add-product">
       <Row>
         <Col md="6">
           <img
