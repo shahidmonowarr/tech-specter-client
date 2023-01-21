@@ -1,14 +1,13 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../../../Components/Shared/Loading/Loading';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
-import CheckoutForm from '../CheckoutForm/CheckoutForm';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import CheckoutForm from '../CheckoutForm/CheckoutForm';
 
 const stripePromise = loadStripe('pk_test_51LjQDsIuMYzXtkmkPWiH8MIT8tMlHG55vpMv5QaXhcfHkIY4eizKa4r6CYgaKe3SY2g0vMfFREqLqhOutCTY1WvZ00R5WjrT5n');
 
@@ -16,7 +15,7 @@ const Payment = () => {
     const [user, loading, error] = useAuthState(auth);
 
     const {id} = useParams();
-    const url = `https://tech-specter.onrender.com/order/${id}`;
+    const url = `https://tech-specter-server.vercel.app/order/${id}`;
 
     const {data: singleOrder, isLoading} = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

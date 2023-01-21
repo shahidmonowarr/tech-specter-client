@@ -2,8 +2,7 @@ import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 
@@ -14,7 +13,7 @@ const Orders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://tech-specter.onrender.com/order?email=${user.email}`, {
+      fetch(`https://tech-specter-server.vercel.app/order?email=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -40,7 +39,7 @@ const Orders = () => {
   const handleDeleteOrder = (id) => {
     const proceed = window.confirm("Are Sure To Cancel This Order?");
     if (proceed) {
-      const url = `https://tech-specter.onrender.com/order/${id}`;
+      const url = `https://tech-specter-server.vercel.app/order/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

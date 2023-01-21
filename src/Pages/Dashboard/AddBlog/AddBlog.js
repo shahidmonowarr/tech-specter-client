@@ -10,7 +10,7 @@ const AddBlog = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("https://tech-specter.onrender.com/blogs", data).then((res) => {
+    axios.post("https://tech-specter-server.vercel.app/blogs", data).then((res) => {
       if (res.data.insertedId) {
         toast("Blog Added Successfully");
         reset();

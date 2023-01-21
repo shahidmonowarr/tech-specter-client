@@ -11,7 +11,7 @@ const BloodPatient = () => {
 
   const onSubmit = (data) => {
     // console.log(data);
-    axios.post("https://tech-specter.onrender.com/patient", data).then((res) => {
+    axios.post("https://tech-specter-server.vercel.app/patient", data).then((res) => {
       if (res.data.insertedId) {
         toast("Request Added Successfully, We will contact you soon");
         reset();

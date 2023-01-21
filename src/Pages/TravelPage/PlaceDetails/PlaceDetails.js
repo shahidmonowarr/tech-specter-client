@@ -1,12 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Carousel, Col, Container, Row, Toast } from "react-bootstrap";
-import Rating from "react-rating";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
-import usePlaceDetails from "../../../hooks/usePlaceDetails/usePlaceDetails";
-import { useEffect, useState } from "react";
+import Rating from "react-rating";
+import { Link, useParams } from "react-router-dom";
 import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
+import usePlaceDetails from "../../../hooks/usePlaceDetails/usePlaceDetails";
 
 
 const PlaceDetails = () => {
@@ -17,7 +16,7 @@ const PlaceDetails = () => {
   const [reviews, setReviews] = useState();
 
   useEffect(() => {
-    fetch("https://tech-specter.onrender.com/reviews")
+    fetch("https://tech-specter-server.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

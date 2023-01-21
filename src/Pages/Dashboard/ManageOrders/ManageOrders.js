@@ -10,7 +10,7 @@ const ManageOrders = () => {
     isLoading,
     refetch,
   } = useQuery("allOrder", () =>
-    fetch("https://tech-specter.onrender.com/order", {
+    fetch("https://tech-specter-server.vercel.app/order", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -27,7 +27,7 @@ const ManageOrders = () => {
     const matchedOrder = allOrder.filter((order) => order._id === id);
     matchedOrder[0].status = "Confirmed";
 
-    fetch(`https://tech-specter.onrender.com/order/${id}`, {
+    fetch(`https://tech-specter-server.vercel.app/order/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const ManageOrders = () => {
   const handleDeleteOrder = (id) => {
     const proceed = window.confirm("Are Sure To Cancel This Order?");
     if (proceed) {
-      const url = `https://tech-specter.onrender.com/order/${id}`;
+      const url = `https://tech-specter-server.vercel.app/order/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

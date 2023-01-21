@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Table } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 import Loading from '../../../Components/Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://tech-specter.onrender.com/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://tech-specter-server.vercel.app/user', {
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

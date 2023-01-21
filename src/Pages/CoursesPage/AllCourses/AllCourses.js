@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import "./AllCourses.css";
-import { Button, ButtonGroup, Container, Row, Spinner } from "react-bootstrap";
 import { Toast } from "bootstrap";
-import SingleCourse from "../SingleCourse/SingleCourse";
+import React, { useEffect, useState } from "react";
+import { Button, ButtonGroup, Container, Row, Spinner } from "react-bootstrap";
 import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
+import SingleCourse from "../SingleCourse/SingleCourse";
+import "./AllCourses.css";
 
 const AllCourses = () => {
   const [courses, setCourses] = useState([]);
   const count = courses.length;
   useEffect(() => {
-    fetch("https://tech-specter.onrender.com/course")
+    fetch("https://tech-specter-server.vercel.app/course")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

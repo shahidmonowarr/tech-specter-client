@@ -1,15 +1,15 @@
+import { Toast } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
-import './Reviews.css';
 import { Card, Row, Spinner } from "react-bootstrap";
 import Review from '../Review/Review';
-import { Toast } from 'bootstrap';
+import './Reviews.css';
 
 
 const Reviews = () => {
     const [loading, setLoading] = useState(true);
     const [reviews, setReviews]=useState();
     useEffect(() => {
-        fetch("https://tech-specter.onrender.com/reviews")
+        fetch("https://tech-specter-server.vercel.app/reviews")
           .then((res) => res.json())
           .then((data) => {
             setReviews(data);

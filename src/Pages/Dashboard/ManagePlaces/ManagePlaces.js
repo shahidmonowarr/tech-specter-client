@@ -10,7 +10,7 @@ const ManagePlaces = () => {
         setAllPlaces,
         isLoading
       } = useQuery("allPlaces", () =>
-        fetch("https://tech-specter.onrender.com/travel", {
+        fetch("https://tech-specter-server.vercel.app/travel", {
           method: "GET",
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -22,7 +22,7 @@ const ManagePlaces = () => {
   const handleDeletePlace = (id) => {
     const proceed = window.confirm("Are Sure To Cancel This Order?");
     if (proceed) {
-      const url = `https://tech-specter.onrender.com/travel/${id}`;
+      const url = `https://tech-specter-server.vercel.app/travel/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

@@ -1,13 +1,13 @@
 import axios from "axios";
 import React from "react";
+import { Container } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from 'react-toastify';
+import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 import auth from "../../../firebase.init";
 import useCourseDetails from "../../../hooks/useCourseDetails/useCourseDetails";
 import "./CheckOut.css";
-import { toast } from 'react-toastify';
-import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
-import { Container } from "react-bootstrap";
 
 const CheckOut = () => {
   const { serviceId } = useParams();
@@ -33,7 +33,7 @@ const CheckOut = () => {
         status: "Pending"
 
     }
-    axios.post('https://tech-specter.onrender.com/order', order)
+    axios.post('https://tech-specter-server.vercel.app/order', order)
         .then(res => {
             const {data}= res;
             if (data.insertedId) {

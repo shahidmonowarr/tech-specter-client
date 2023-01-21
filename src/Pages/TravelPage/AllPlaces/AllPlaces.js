@@ -1,15 +1,15 @@
+import { Toast } from "bootstrap";
 import React, { useEffect, useState } from 'react';
 import { Button, ButtonGroup, Container, Row, Spinner } from 'react-bootstrap';
-import { Toast } from "bootstrap";
-import SinglePlace from '../SinglePlace/SinglePlace';
 import PageTitle from '../../../Components/Shared/PageTitle/PageTitle';
+import SinglePlace from '../SinglePlace/SinglePlace';
 
 const AllPlaces = () => {
     const [places, setPlaces] = useState([]);
   const count = places.length;
 
   useEffect(() => {
-    fetch("https://tech-specter.onrender.com/travel")
+    fetch("https://tech-specter-server.vercel.app/travel")
       .then((res) => res.json())
       .then((data) => {
         setPlaces(data);

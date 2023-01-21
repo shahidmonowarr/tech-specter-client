@@ -8,7 +8,7 @@ const AllBlogs = () => {
   const count = blogs.length;
 
   useEffect(() => {
-    fetch("https://tech-specter.onrender.com/blogs")
+    fetch("https://tech-specter-server.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
