@@ -7,7 +7,7 @@ import auth from "../../../firebase.init";
 
 const BloodPatient = () => {
   const [user] = useAuthState(auth);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
     // console.log(data);
@@ -62,12 +62,34 @@ const BloodPatient = () => {
                 <div className="col">
                   <div className="md-form">
                     <input
-                      {...register("phone")}
+                      {...register("phone", {
+                        required: {
+                          value: true,
+                          message: "phone number is required",
+                        },
+                        pattern: {
+                          value: /^01\d{9}$/,
+                          message:
+                            "Provide phone no. in this format 01xxxxxxxxx",
+                        },
+                      })}
                       type="number"
                       className="form-control"
-                      placeholder="Your Number"
+                      placeholder="01xxxxxxxxx"
                     />
-                    <label for="materialRegisterFormEmail">Phone Number</label>
+                    <label className="label mb-2 text-danger">
+                      {errors.phone?.type === "required" && (
+                        <span className="label-text-alt text-red">
+                          {errors.phone.message}
+                        </span>
+                      )}
+                      {errors.phone?.type === "pattern" && (
+                        <span className="label-text-alt text-red">
+                          {errors.phone.message}
+                        </span>
+                      )}
+                    </label>
+                    <label for="">Phone Number</label>
                   </div>
                 </div>
                 <div className="col">

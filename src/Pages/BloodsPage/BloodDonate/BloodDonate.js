@@ -2,25 +2,29 @@ import axios from "axios";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import 'react-phone-number-input/style.css';
+import "react-phone-number-input/style.css";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 import "./BloodDonate.css";
 
 const BloodDonate = () => {
-    const { register, handleSubmit, reset } = useForm();
-    const [user] = useAuthState(auth);
-    const onSubmit = data => {
-        // console.log(data);
-        axios.post('https://tech-specter.onrender.com/blood', data)
-            .then(res => {
-                if (res.data.insertedId) {
-                    toast('Details Added Successfully, We will contact you soon');
-                    reset();
-                }
-                // console.log(res);
-            })
-    };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const [user] = useAuthState(auth);
+  const onSubmit = (data) => {
+    // console.log(data);
+    axios.post("https://tech-specter.onrender.com/blood", data).then((res) => {
+      if (res.data.insertedId) {
+        toast("Details Added Successfully, We will contact you soon");
+        reset();
+      }
+      // console.log(res);
+    });
+  };
   return (
     <div>
       <div className="col-sm-6 col-md-6 col-lg-8 mx-auto my-5">
@@ -37,20 +41,19 @@ const BloodDonate = () => {
               <div className="form-row">
                 <div className="col">
                   <div className="md-form">
-                    <input {...register("name")}
+                    <input
+                      {...register("name")}
                       type="text"
                       value={user?.displayName}
                       className="form-control"
                     />
-                    <label for="materialRegisterFormFirstName">
-                      Name
-                    </label>
+                    <label for="materialRegisterFormFirstName">Name</label>
                   </div>
                 </div>
                 <div className="col">
                   <div className="md-form">
                     <input
-                        {...register("email")}
+                      {...register("email")}
                       type="email"
                       value={user?.email}
                       className="form-control"
@@ -64,18 +67,41 @@ const BloodDonate = () => {
                 <div className="col">
                   <div className="md-form">
                     <input
-                        {...register("phone")}
-                    type="number"
+                      id="formControlLg"
+                      {...register("phone", {
+                        required: {
+                          value: true,
+                          message: "phone number is required",
+                        },
+                        pattern: {
+                          value: /^01\d{9}$/,
+                          message:
+                            "Provide phone no. in this format 01xxxxxxxxx",
+                        },
+                      })}
+                      type="number"
                       className="form-control"
-                      placeholder="Your Number"
+                      placeholder="01xxxxxxxxx"
                     />
-                    <label for="materialRegisterFormEmail">Phone Number</label>
+                    <label className="label mb-2 text-danger">
+                      {errors.phone?.type === "required" && (
+                        <span className="label-text-alt text-red">
+                          {errors.phone.message}
+                        </span>
+                      )}
+                      {errors.phone?.type === "pattern" && (
+                        <span className="label-text-alt text-red">
+                          {errors.phone.message}
+                        </span>
+                      )}
+                    </label>
+                    <label for="">Phone Number</label>
                   </div>
                 </div>
                 <div className="col">
                   <div className="md-form">
-                  <input
-                        {...register("dateOfBirth")}
+                    <input
+                      {...register("dateOfBirth")}
                       type="date"
                       id="materialRegisterFormDate"
                       className="form-control"
@@ -89,19 +115,23 @@ const BloodDonate = () => {
                 <div className="col">
                   <div className="md-form">
                     <input
-                        {...register("lastBloodDonateDate")}
+                      required
+                      {...register("lastBloodDonateDate")}
                       type="date"
                       id="materialRegisterFormDate"
                       className="form-control"
                     />
-                    <label for="materialRegisterFormEmail">Last Blood Donate Date</label>
+                    <label for="materialRegisterFormEmail">
+                      Last Blood Donate Date
+                    </label>
                   </div>
                 </div>
                 <div className="col">
                   <div className="md-form">
-                    <select 
-                        {...register("bloodGroup")}
-                    className="form-control">
+                    <select
+                      {...register("bloodGroup")}
+                      className="form-control"
+                    >
                       <option selected disabled>
                         Select Blood Type:
                       </option>
@@ -120,17 +150,15 @@ const BloodDonate = () => {
               </div>
 
               <div className="md-form">
-                    <input
-                        {...register("address")}
-                      type="text"
-                      placeholder="Your Address"
-                      id="materialRegisterFormFirstName"
-                      className="form-control"
-                    />
-                    <label for="materialRegisterFormFirstName">
-                      Address
-                    </label>
-                  </div>
+                <input
+                  {...register("address")}
+                  type="text"
+                  placeholder="Your Address"
+                  id="materialRegisterFormFirstName"
+                  className="form-control"
+                />
+                <label for="materialRegisterFormFirstName">Address</label>
+              </div>
               <button
                 className="btn btn-danger btn-rounded btn-block w-50 mx-auto my-4 waves-effect z-depth-0"
                 type="submit"
