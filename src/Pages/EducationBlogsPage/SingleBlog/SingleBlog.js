@@ -24,7 +24,7 @@ const SingleBlog = ({singleBlog}) => {
                 {name}
               </Card.Title>
             <Card.Body>
-              <Card.Text>{description.slice(0,140)}...</Card.Text>
+              <Card.Text>{description.slice(0,97)}...</Card.Text>
               
                 <button onClick={()=> navigateToBlogDetails(_id)} className="btn  btn-danger">Read Details</button>
             </Card.Body>

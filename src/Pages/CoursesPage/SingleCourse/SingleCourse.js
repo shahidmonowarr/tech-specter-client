@@ -1,7 +1,7 @@
 import React from 'react';
-import './SingleCourse.css';
 import { Card, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import './SingleCourse.css';
 
 const SingleCourse = ({singleCourse}) => {
     const { _id, name, description, price, image } = singleCourse;
@@ -27,7 +27,7 @@ const SingleCourse = ({singleCourse}) => {
                 {name}
               </Card.Title>
               <Card.Title>Price: {price}.00 BDT</Card.Title>
-              <Card.Text>{description.slice(0,160)}...</Card.Text>
+              <Card.Text>{description.slice(0,60)}...</Card.Text>
               
                 <button onClick={()=> navigateToCourseDetails(_id)} className="btn  btn-danger">See Details</button>
             </Card.Body>

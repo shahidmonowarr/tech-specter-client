@@ -142,8 +142,9 @@ const DashboardHome = () => {
               />
               <input
                 className="form-control w-75 mb-1"
+                required
                 type="number"
-                placeholder="Your Phone Number"
+                placeholder="01xxxxxxxxx"
                 name="phone"
               />
               <input

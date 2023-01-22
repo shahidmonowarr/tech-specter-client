@@ -83,7 +83,8 @@ const CheckOut = () => {
                   type="number"
                   name="phone"
                   autoComplete="off"
-                  placeholder="Phone"
+                  required
+                  placeholder="01xxxxxxxxx"
                 />
                 <input id='submit' className="btn-danger fw-bold mt-3 w-50" value='Place Order' type="submit" />
               </form>
