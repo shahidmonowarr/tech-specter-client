@@ -29,7 +29,7 @@ const OfferServices = () => {
         </h2>
       </div>
 
-      <Container className="my-5">
+      <Container style={{overflow: 'hidden'}} className="my-5">
         {services.map((service) => (
           <Container className="my-5">
             <Row spacing={10}>
