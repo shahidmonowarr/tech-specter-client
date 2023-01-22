@@ -14,7 +14,7 @@ const SingleCourse = ({singleCourse}) => {
 
     return (
         <Col className="my-3 text-center" sm={12} md={6} lg={4}>
-          <Card style={{ height: "97%" }} className="mx-1 mb-3  shadow">
+          <Card data-aos="zoom-in" style={{ height: "97%" }} className="mx-1 mb-3  shadow">
             <div className="text-center">
               <Card.Img
                 style={{ width: "80%", height: "200px" }}

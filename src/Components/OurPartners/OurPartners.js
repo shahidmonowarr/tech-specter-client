@@ -7,7 +7,7 @@ const OurPartners = () => {
         <div>
             <Container>
             <div className="contact-title mt-5">
-            <h2>
+            <h2 data-aos="zoom-in-up">
               Our Partners
               <p className="fs-6 fw-normal mt-2">We are with!</p>
             </h2>

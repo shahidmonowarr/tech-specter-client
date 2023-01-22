@@ -70,27 +70,24 @@ const Orders = () => {
             md={6}
             lg={4}
           >
-            <Card style={{ height: "97%" }} className="mx-1 mb-3  shadow">
+            <Card data-aos="zoom-in" style={{ height: "97%" }} className="mx-1 mb-3  shadow">
               <div className="text-center">
                 <Card.Img
-                  style={{ width: "80%", height: "200px" }}
+                  style={{ width: "90%", height: "200px" }}
                   variant="top"
                   src={order.image}
                 />
               </div>
               <Card.Body>
                 <Card.Title
-                  style={{ color: "#42a5f5" }}
+                  style={{ color: "#42a5f5", fontSize: "15px" }}
                   className="text-uppercase"
                 >
                   {order.service}
                 </Card.Title>
-                <h5 className="btn-danger mx-5 rounded-3">{order.status}</h5>
-                <Card.Title>Price: {order.price}.00 BDT</Card.Title>
+                <h6 className="btn-danger mx-5 rounded-3">{order.status}</h6>
+                <Card.Text>Price: {order.price}.00 BDT</Card.Text>
                 {(order.date)&&<Card.Title>Date: {order.date}</Card.Title>}
-                <Card.Text>{order.description.slice(0, 60)}...</Card.Text>
-
-                
                 {
                   (!order.paid) && <button className="btn btn-danger me-2" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
                 }

@@ -18,8 +18,9 @@ const Contact = () => {
             <div className="col-md-6 col-sm-12">
               <div className="">
                 <img
-                  style={{width:'90%', height: 'auto'}}
-                  className="vert-move mt-5"
+                  data-aos="zoom-in-up"
+                  style={{width:'100%', height: 'auto'}}
+                  className="mt-5"
                   src="https://i.ibb.co/M9DMtMd/20943953.jpg"
                   alt=""
                 />
