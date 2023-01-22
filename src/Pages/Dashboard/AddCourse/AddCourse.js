@@ -10,7 +10,7 @@ const AddCourse = () => {
   const onSubmit = (data) => {
     // console.log(data);
 
-    axios.post("https://tech-specter-server.vercel.app/course", data).then((res) => {
+    axios.post("https://tech-specter.onrender.com/course", data).then((res) => {
       if (res.data.insertedId) {
         toast("Added Successfully");
         reset();

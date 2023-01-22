@@ -5,7 +5,7 @@ const AvailableDonor = () => {
   const [donors, setDonors] = useState([]);
 
   useEffect(() => {
-    fetch("https://tech-specter-server.vercel.app/blood")
+    fetch("https://tech-specter.onrender.com/blood")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

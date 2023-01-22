@@ -9,7 +9,7 @@ const AllPlaces = () => {
   const count = places.length;
 
   useEffect(() => {
-    fetch("https://tech-specter-server.vercel.app/travel")
+    fetch("https://tech-specter.onrender.com/travel")
       .then((res) => res.json())
       .then((data) => {
         setPlaces(data);

@@ -17,7 +17,7 @@ const BloodDonate = () => {
   const [user] = useAuthState(auth);
   const onSubmit = (data) => {
     // console.log(data);
-    axios.post("https://tech-specter-server.vercel.app/blood", data).then((res) => {
+    axios.post("https://tech-specter.onrender.com/blood", data).then((res) => {
       if (res.data.insertedId) {
         toast("Details Added Successfully, We will contact you soon");
         reset();

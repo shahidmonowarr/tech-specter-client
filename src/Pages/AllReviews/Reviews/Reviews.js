@@ -9,7 +9,7 @@ const Reviews = () => {
     const [loading, setLoading] = useState(true);
     const [reviews, setReviews]=useState();
     useEffect(() => {
-        fetch("https://tech-specter-server.vercel.app/reviews")
+        fetch("https://tech-specter.onrender.com/reviews")
           .then((res) => res.json())
           .then((data) => {
             setReviews(data);

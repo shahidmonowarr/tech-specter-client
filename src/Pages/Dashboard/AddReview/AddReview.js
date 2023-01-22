@@ -16,7 +16,7 @@ const AddReview = () => {
     // console.log(data);
     data.rating = rating;
 
-    axios.post("https://tech-specter-server.vercel.app/reviews", data).then((res) => {
+    axios.post("https://tech-specter.onrender.com/reviews", data).then((res) => {
       if (res.data.insertedId) {
         toast("Review Added Successfully");
         reset();

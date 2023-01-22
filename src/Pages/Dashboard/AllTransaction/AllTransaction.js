@@ -9,7 +9,7 @@ const AllTransaction = () => {
         setAllOrder,
         isLoading,
       } = useQuery("allOrder", () =>
-        fetch("https://tech-specter-server.vercel.app/order", {
+        fetch("https://tech-specter.onrender.com/order", {
           method: "GET",
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,

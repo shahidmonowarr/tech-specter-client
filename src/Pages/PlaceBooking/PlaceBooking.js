@@ -32,7 +32,7 @@ const PlaceBooking = () => {
         status: "Pending"
 
     }
-    axios.post('https://tech-specter-server.vercel.app/order', order)
+    axios.post('https://tech-specter.onrender.com/order', order)
         .then(res => {
             const {data}= res;
             if (data.insertedId) {

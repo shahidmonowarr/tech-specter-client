@@ -9,7 +9,7 @@ const AllCourses = () => {
   const [courses, setCourses] = useState([]);
   const count = courses.length;
   useEffect(() => {
-    fetch("https://tech-specter-server.vercel.app/course")
+    fetch("https://tech-specter.onrender.com/course")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

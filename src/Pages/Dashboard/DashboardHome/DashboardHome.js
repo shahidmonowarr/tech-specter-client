@@ -14,7 +14,7 @@ const DashboardHome = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://tech-specter-server.vercel.app/userProfile?email=${user.email}`, {
+      fetch(`https://tech-specter.onrender.com/userProfile?email=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -51,7 +51,7 @@ const DashboardHome = () => {
       address: event.target.address.value,
       about: event.target.about.value,
     };
-    axios.post("https://tech-specter-server.vercel.app/userProfile", profile).then((res) => {
+    axios.post("https://tech-specter.onrender.com/userProfile", profile).then((res) => {
       const { data } = res;
       if (data.insertedId) {
         toast("Your Profile is Updated");

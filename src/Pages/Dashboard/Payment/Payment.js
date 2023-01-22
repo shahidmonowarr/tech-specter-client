@@ -15,7 +15,7 @@ const Payment = () => {
     const [user, loading, error] = useAuthState(auth);
 
     const {id} = useParams();
-    const url = `https://tech-specter-server.vercel.app/order/${id}`;
+    const url = `https://tech-specter.onrender.com/order/${id}`;
 
     const {data: singleOrder, isLoading} = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

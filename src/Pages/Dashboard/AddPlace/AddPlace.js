@@ -9,7 +9,7 @@ const AddPlace = () => {
   const onSubmit = (data) => {
     // console.log(data);
 
-    axios.post("https://tech-specter-server.vercel.app/travel", data).then((res) => {
+    axios.post("https://tech-specter.onrender.com/travel", data).then((res) => {
       if (res.data.insertedId) {
         toast("Place Added Successfully");
         reset();
