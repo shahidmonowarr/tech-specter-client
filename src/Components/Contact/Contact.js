@@ -1,8 +1,20 @@
+import emailjs from 'emailjs-com';
 import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import "./Contact.css";
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_j5ax74i', 'template_r30vlp2', e.target, 'user_D6NRRRQqBmKlFFSRdDwrA')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    e.target.reset();
+};
   return (
     <div id="contact">
       <div className="container overflow-hidden">
@@ -37,18 +49,15 @@ const Contact = () => {
               <h4 className="text-primary">We'd Love To Hear From You</h4>
 
               <div className=" text-start p-2 mt-2">
-                <Form className="mt-2">
+                <Form onSubmit={sendEmail} className="mt-2">
                   <Row className="pb-3">
                     <Col>
-                      <Form.Control placeholder="First name" />
-                    </Col>
-                    <Col>
-                      <Form.Control placeholder="Last name" />
+                      <Form.Control type="text" name="name" placeholder="Your Name" />
                     </Col>
                   </Row>
                   <Form.Group className="pb-3" controlId="formBasicEmail">
                     
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" name="email" placeholder="Enter Email" />
                     <Form.Text className="text-muted">
                       We'll never share your email with anyone else.
                     </Form.Text>
@@ -60,6 +69,7 @@ const Contact = () => {
                   >
                     <Form.Control
                       as="textarea"
+                      name="message"
                       rows={3}
                       placeholder="Message..."
                     />
