@@ -1,4 +1,4 @@
-# 📌📌📌 Tech Specter An Organization Management Web Application with Daily Needs 📌📌📌
+## 📌Tech Specter An Organization Management Web Application with Daily Needs📌
 
 It's a web-based application that will help those users who want to make their life easier and secure. User can be getting amazing resources, great source of information for travelers, reading vlogs and most important is blood management in our project, there are lot of services provide which we need in our mechanical life.
 
@@ -12,8 +12,8 @@ It's a web-based application that will help those users who want to make their l
 
 ## 💎 Features :
 
-01. Tech Specter is an Organization Management MERNStack and Responsive website.
-02. Users can purchase different types of courses, can booked travel, can read different types of blogs and also can request donors for blood.
+01. Tech Specter is a Fully Responsive website.
+02. Users can purchase different types of courses, can booked travel, can read different types of blogs, and also can checkout availabel donors for blood.
 03. Authentication system is available for both user and admin.
 04. User can add their review and also can see others.
 05. Dashboard is available for both user and admin.
@@ -43,30 +43,30 @@ We can recapitulate a problem here:
 * There is a manual mechanism for order, but it is all done online.
 * Using a variety of platforms may not be sufficient for all user.
 The system can be accessed at any time and from any location. This system is highly straightforward and user-friendly; a few examples are:
-● There is huge collection of donor.
-● Anyone can get blood on time.
-● Smart way of appointment.
-● Can upload prescription for future
-● Reduce cost
-● Best courses
-● Can know acceptability by rating and many more.
+* There is huge collection of donor.
+* Anyone can get blood on time.
+* Smart way of appointment.
+* Can upload prescription for future
+* Reduce cost
+* Best courses
+* Can know acceptability by rating and many more.
 
 ## 💡 Challenges: 
 Reliability and satisfaction is the main factor of a perfect website. Our main challenges are to ensure the reliability and satisfaction to the user. However, choosing a suitable platform and relying on hardware is an important issue. These Projects have been created for the Bangladeshi Patient and Doctors help assistance.
 Every job has its own set of difficulties. As a result, we must also face a modest number of challenges.
-● Because it's a Web-based system, folks that ought to build appointments and
+* Because it's a Web-based system, folks that ought to build appointments and
 bookings on-line victimization any web-connected device (computer, laptop,
 sensible phone, tablet, etc.) would be unable to try and do so.
-● If a user fails to review the notification for confirmation of a booking, the
+* If a user fails to review the notification for confirmation of a booking, the
 system's main goal will be failed. 
 
 For this we perfectly maintain those requirements:
 
-● UI and UX design
-● Security
-● Performance
-● Authorization
-● Scalability
+* UI and UX design
+* Security
+* Performance
+* Authorization
+* Scalability
    
     
 ## 🔥 Motivation
