@@ -1,6 +1,13 @@
 import { Toast } from "bootstrap";
 import React, { useEffect, useState } from "react";
-import { Button, ButtonGroup, Container, Row, Spinner } from "react-bootstrap";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Pagination,
+  Row,
+  Spinner
+} from "react-bootstrap";
 import PageTitle from "../../../Components/Shared/PageTitle/PageTitle";
 import SingleCourse from "../SingleCourse/SingleCourse";
 import "./AllCourses.css";
@@ -18,6 +25,8 @@ const AllCourses = () => {
   }, []);
 
   const [tempCourses, setTempCourses] = useState(courses);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [coursesPerPage, setCoursesPerPage] = useState(6);
 
   const filterCourses = (courseCate) => {
     const cateServices = courses.filter((currentCourses) => {
@@ -28,7 +37,21 @@ const AllCourses = () => {
     } else {
       setTempCourses(cateServices);
     }
+    setCurrentPage(1);
   };
+
+  const totalPages = Math.ceil(tempCourses.length / coursesPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastCourse = currentPage * coursesPerPage;
+  const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
+  const currentCourses = tempCourses.slice(
+    indexOfFirstCourse,
+    indexOfLastCourse
+  );
 
   return (
     <>
@@ -50,22 +73,29 @@ const AllCourses = () => {
           </p>
           <Container>
             <ButtonGroup className="flex-wrap" aria-label="Basic example">
-              <Button className="mx-2 my-2 rounded-3" variant="secondary" onClick={() => filterCourses("All")}>
+              <Button
+                className="mx-2 my-2 rounded-3"
+                variant="secondary"
+                onClick={() => filterCourses("All")}
+              >
                 All
               </Button>
-              <Button className="mx-2 my-2 rounded-3"
+              <Button
+                className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterCourses("development")}
               >
                 Development
               </Button>
-              <Button className="mx-2 my-2 rounded-3"
+              <Button
+                className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterCourses("design")}
               >
                 Design
               </Button>
-              <Button className="mx-2 my-2 rounded-3"
+              <Button
+                className="mx-2 my-2 rounded-3"
                 variant="secondary"
                 onClick={() => filterCourses("marketing")}
               >
@@ -74,20 +104,33 @@ const AllCourses = () => {
             </ButtonGroup>
           </Container>
           <Row>
-            {tempCourses.length === 0
+            {currentCourses.length === 0
               ? courses?.map((singleCourse) => (
                   <SingleCourse
                     key={singleCourse._id}
                     singleCourse={singleCourse}
                   />
                 ))
-              : tempCourses.map((singleCourse) => (
+              : currentCourses.map((singleCourse) => (
                   <SingleCourse
                     key={singleCourse._id}
                     singleCourse={singleCourse}
                   ></SingleCourse>
                 ))}
           </Row>
+          <div className="d-flex justify-content-center">
+          <Pagination className="mt-4">
+            {[...Array(totalPages)].map((_, index) => (
+              <Pagination.Item
+                key={index + 1}
+                active={index + 1 === currentPage}
+                onClick={() => handlePageChange(index + 1)}
+              >
+                {index + 1}
+              </Pagination.Item>
+            ))}
+          </Pagination>
+          </div>
         </Container>
       )}
     </>
