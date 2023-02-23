@@ -1,9 +1,13 @@
-import { Button, Table } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Pagination, Table } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { toast } from "react-toastify";
 import Loading from "../../../Components/Shared/Loading/Loading";
 
 const ManageOrders = () => {
+  const pageSize = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+
   const {
     data: allOrder,
     setAllOrder,
@@ -21,6 +25,15 @@ const ManageOrders = () => {
   if (isLoading) {
     return <Loading />;
   }
+
+  const totalPages = Math.ceil(allOrder.length / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const currentOrders = allOrder.slice(startIndex, endIndex);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   //for confirm
   const handleConfirmOrder = (id) => {
@@ -71,7 +84,7 @@ const ManageOrders = () => {
       <div className=" manage-order">
         <div className="container">
           <h1 className="text-dark fw-bold pt-5 pb-3 fs-1">
-            Remove and Approve Orders
+            Remove and Approve Orders [Total: {allOrder.length}]
           </h1>
           <Table striped bordered hover responsive variant="dark">
             <thead>
@@ -85,9 +98,14 @@ const ManageOrders = () => {
               </tr>
             </thead>
             <tbody>
-              {allOrder.map((order, index) => (
-                <tr key={order._id}>
-                  <td>{index + 1}</td>
+              {currentOrders.map((order, index) => (
+                <tr 
+                key={order._id}
+                order={order}
+                index={startIndex + index + 1}
+                refetch={refetch}
+                >
+                  <td>{startIndex + index + 1}</td>
                   <td>{order.email}</td>
                   <td>{order.service}</td>
                   <td>{order.status}</td>
@@ -118,6 +136,19 @@ const ManageOrders = () => {
               ))}
             </tbody>
           </Table>
+          <div className="d-flex justify-content-center">
+        <Pagination>
+          <Pagination.First onClick={() => handlePageChange(1)} disabled={currentPage === 1} />
+          <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
+          {Array.from({ length: totalPages }, (_, i) => (
+            <Pagination.Item key={i + 1} active={i + 1 === currentPage} onClick={() => handlePageChange(i + 1)}>
+              {i + 1}
+            </Pagination.Item>
+          ))}
+          <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
+          <Pagination.Last onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages} />
+        </Pagination>
+      </div>
         </div>
       </div>
     </div>

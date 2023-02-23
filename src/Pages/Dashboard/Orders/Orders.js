@@ -59,7 +59,7 @@ const Orders = () => {
 
   return (
     <div>
-      <h1>My orders {orders.length}</h1>
+      <h1>My Orders [Total {orders.length}]</h1>
       <Row>
         {orders?.map((order) => (
           <Col
