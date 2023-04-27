@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loading from '../../../Components/Shared/Loading/Loading';
 
@@ -45,18 +46,17 @@ const ManageCourses = () => {
         return <Loading />;
       }
     return (
-        <div>
+      <div>
       <div className=" manage-course">
         <div className="container">
-          <h1 className="text-dark fw-bold pt-5 pb-3 fs-1">
-            Remove Courses
-          </h1>
+          <h1 className="text-dark fw-bold pt-5 pb-3 fs-1">Remove Courses</h1>
           <Table striped hover responsive variant="dark">
             <thead>
               <tr className="bg-dark text-white">
                 <th>Index</th>
                 <th>course Name</th>
                 <th>course Category</th>
+                <th>Update</th>
                 <th>Delete</th>
               </tr>
             </thead>
@@ -66,6 +66,11 @@ const ManageCourses = () => {
                   <td>{index + 1}</td>
                   <td>{course.name}</td>
                   <td>{course.category}</td>
+                  <td>
+                    <Link to={`update/${course._id}`}>
+                      <Button className="px-3 btn-success">Update</Button>
+                    </Link>
+                  </td>
                   <td>
                     <Button
                       className="px-3 btn-danger"

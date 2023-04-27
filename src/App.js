@@ -30,6 +30,7 @@ import AllTransaction from "./Pages/Dashboard/AllTransaction/AllTransaction";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./Pages/Dashboard/DashboardHome/DashboardHome";
 import ManageCourses from "./Pages/Dashboard/ManageCourses/ManageCourses";
+import UpdateCourse from "./Pages/Dashboard/ManageCourses/UpdateCourse";
 import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
 import ManagePlaces from "./Pages/Dashboard/ManagePlaces/ManagePlaces";
 import Orders from "./Pages/Dashboard/Orders/Orders";
@@ -117,6 +118,16 @@ function App() {
                 </RequireAdmin>
               }
             ></Route>
+            <Route path="manageCourses">
+              <Route
+                path="update/:courseId"
+                element={
+                  <RequireAdmin>
+                    <UpdateCourse />
+                  </RequireAdmin>
+                }
+              />
+            </Route>
             <Route
               path="managePlaces"
               element={
