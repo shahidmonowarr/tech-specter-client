@@ -142,7 +142,7 @@ const Footer = () => {
             className="text-center p-3"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
-            © 2022 Copyright Tech Specter
+            © 2023 Copyright Tech Specter
           </div>
         </footer>
       </div>

@@ -2,7 +2,6 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import auth from "../../../firebase.init";
 import logo from "../../../images/logo.png";
@@ -29,8 +28,18 @@ const Header = () => {
             <img width="100%" src={logo} alt="logo" />
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse data-toggle="offcanvas">
+        <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i className="fas fa-bars text-danger"></i>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <Nav className="ms-auto">
             <Nav.Link as={HashLink} to="/home#home">
               Home
@@ -43,14 +52,6 @@ const Header = () => {
                 Dashboard
               </Nav.Link>
             )}
-            {/* {user ?
-                                <Navbar.Text>
-                                <a style={{ textDecoration: "none" }} href="#login"> {user?.displayName}</a>
-                            </Navbar.Text>
-                                :
-                                <Nav.Link as={Link} to="/login"></Nav.Link>}
-            {user ? <Button variant="outline-success" onClick={logOut} type="button" className="btn btn-light ms-2">Sign Out</Button>: <Nav.Link as={HashLink} to="/login">Login</Nav.Link>} */}
-
            {
             user? ( <NavDropdown className="text-uppercase fw-bold shadow-lg" title={user?.displayName} id="collasible-nav-dropdown">
               
@@ -59,7 +60,7 @@ const Header = () => {
           </NavDropdown>):(<Nav.Link className="fw-bold shadow-sm" as={HashLink} to="/login">Login</Nav.Link>)
            }
           </Nav>
-        </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
   );

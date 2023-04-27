@@ -9,7 +9,7 @@ const OfferServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 500 });
   }, []);
 
   useEffect(() => {
